@@ -173,10 +173,10 @@ set fmri(threshmask) ""
 # 1 : Uncorrected
 # 2 : Voxel
 # 3 : Cluster
-set fmri(thresh) 3
+set fmri(thresh) 1
 
 # P threshold
-set fmri(prob_thresh) 0.05
+set fmri(prob_thresh) 0.001
 
 # Z threshold
 set fmri(z_thresh) 2.3
