@@ -1,4 +1,4 @@
-SPM results of subject one from task001_run001 of the OpenfMRI ds000052 Classification Learning and Baseline experiment, used for exporting uncorrected p=0.001 NIDM-results.
+SPM results of subject one from task001_run001 of the OpenfMRI ds000052 Classification Learning and Baseline experiment, used for exporting FWE p=0.05 NIDM-results.
 
 Contrasts used:
 positive vs negative
