@@ -2,8 +2,8 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix niiri: <http://iri.nidash.org/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix crypto <http://id.loc.gov/vocabulary/preservation/cryptographicHashFunctions#>
-@prefix dct <http://purl.org/dc/terms/>
+@prefix crypto: <http://id.loc.gov/vocabulary/preservation/cryptographicHashFunctions#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 @prefix nidm_MaskMap: <http://purl.org/nidash/nidm#NIDM_0000054> .
 @prefix nidm_isUserDefined: <http://purl.org/nidash/nidm#NIDM_0000106> .
