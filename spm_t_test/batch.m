@@ -1,9 +1,9 @@
 %-----------------------------------------------------------------------
-% Job saved on 30-Nov-2015 11:11:39 by cfg_util (rev $Rev: 6460 $)
+% Job saved on 01-Dec-2015 14:26:25 by cfg_util (rev $Rev: 6460 $)
 % spm SPM - SPM12 (6470)
 % cfg_basicio BasicIO - Unknown
 %-----------------------------------------------------------------------
-matlabbatch{1}.spm.stats.factorial_design.dir = {'/storage/essicd/data/NIDM-Ex/Data/ds000052/RESULTS/Group/Con1'};
+matlabbatch{1}.spm.stats.factorial_design.dir = {'/storage/essicd/data/NIDM-Ex/Data/ds000006/RESULTS/Group/Con1'};
 %%
 matlabbatch{1}.spm.stats.factorial_design.des.t1.scans = {
                                                           '/storage/essicd/data/NIDM-Ex/Data/ds000052/RESULTS/Sub01/con_0001.nii,1'
@@ -21,7 +21,10 @@ matlabbatch{1}.spm.stats.factorial_design.des.t1.scans = {
                                                           '/storage/essicd/data/NIDM-Ex/Data/ds000052/RESULTS/Sub13/con_0001.nii,1'
                                                           };
 %%
-matlabbatch{1}.spm.stats.factorial_design.cov = struct('c', {}, 'cname', {}, 'iCFI', {}, 'iCC', {});
+matlabbatch{1}.spm.stats.factorial_design.cov.c = '<UNDEFINED>';
+matlabbatch{1}.spm.stats.factorial_design.cov.cname = '<UNDEFINED>';
+matlabbatch{1}.spm.stats.factorial_design.cov.iCFI = 1;
+matlabbatch{1}.spm.stats.factorial_design.cov.iCC = 1;
 matlabbatch{1}.spm.stats.factorial_design.multi_cov = struct('files', {}, 'iCFI', {}, 'iCC', {});
 matlabbatch{1}.spm.stats.factorial_design.masking.tm.tm_none = 1;
 matlabbatch{1}.spm.stats.factorial_design.masking.im = 1;
