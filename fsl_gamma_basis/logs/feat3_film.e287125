@@ -1,0 +1,10 @@
+cat: absbrainthresh.txt: No such file or directory
+    while executing
+"if { [ catch {
+
+for { set argindex 1 } { $argindex < $argc } { incr argindex 1 } {
+    switch -- [ lindex $argv $argindex ] {
+
+	-I {
+	    incr arginde..."
+    (file "/usr/local/packages/fsl-5.0.8/bin/feat" line 310)

@@ -1,0 +1,104 @@
+<HTML><HEAD>
+<!--refreshstart-->
+
+<!--refreshstop-->
+<link REL=stylesheet TYPE=text/css href=.files/fsl.css>
+<TITLE>FSL</TITLE></HEAD><BODY><OBJECT data=report.html></OBJECT>
+<h2>Progress Report / Log</h2>
+Started at Wed Dec  2 18:37:21 GMT 2015<p>
+Feat main script<br><pre>
+
+/bin/cp /storage/essicd/data/NIDM-Ex/Testing/ds000052/RESULTS/Sub01GammaBasis.fsf design.fsf
+
+/usr/local/packages/fsl-5.0.8/bin/feat_model design 
+
+mkdir .files;cp /usr/local/packages/fsl-5.0.8/doc/fsl.css .files;cp -r /usr/local/packages/fsl-5.0.8/doc/images .files/images
+
+/usr/local/packages/fsl-5.0.8/bin/fsl_sub -T 10 -l logs -N feat0_init   /usr/local/packages/fsl-5.0.8/bin/feat /storage/essicd/data/NIDM-Ex/Testing/ds000052/RESULTS/Sub01GammaBasis.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/Testing/ds000052/RESULTS/Sub01GammaBasis.feat -I 1 -init
+job
+287123
+
+/usr/local/packages/fsl-5.0.8/bin/fsl_sub -T 52 -l logs -N feat2_pre -j 287123  /usr/local/packages/fsl-5.0.8/bin/feat /storage/essicd/data/NIDM-Ex/Testing/ds000052/RESULTS/Sub01GammaBasis.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/Testing/ds000052/RESULTS/Sub01GammaBasis.feat -I 1 -prestats
+job
+287124
+
+/usr/local/packages/fsl-5.0.8/bin/fsl_sub -T 1 -l logs -N feat3_film -j 287124  /usr/local/packages/fsl-5.0.8/bin/feat /storage/essicd/data/NIDM-Ex/Testing/ds000052/RESULTS/Sub01GammaBasis.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/Testing/ds000052/RESULTS/Sub01GammaBasis.feat -I 1 -stats
+job
+287125
+
+/usr/local/packages/fsl-5.0.8/bin/fsl_sub -T 119 -l logs -N feat4_post -j 287125  /usr/local/packages/fsl-5.0.8/bin/feat /storage/essicd/data/NIDM-Ex/Testing/ds000052/RESULTS/Sub01GammaBasis.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/Testing/ds000052/RESULTS/Sub01GammaBasis.feat -poststats 0 
+job
+287126
+
+/usr/local/packages/fsl-5.0.8/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 287124,287125,287126  /usr/local/packages/fsl-5.0.8/bin/feat /storage/essicd/data/NIDM-Ex/Testing/ds000052/RESULTS/Sub01GammaBasis.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/Testing/ds000052/RESULTS/Sub01GammaBasis.feat -stop
+job
+287127
+</pre><hr>Initialisation<br><pre>
+
+/usr/local/packages/fsl-5.0.8/bin/fslmaths /storage/essicd/data/NIDM-Ex/Data/ds000052/sub001/BOLD/task001_run001/bold prefiltered_func_data -odt float
+Total original volumes = 225
+
+/usr/local/packages/fsl-5.0.8/bin/fslroi prefiltered_func_data example_func 112 1
+</pre><hr>Preprocessing:Stage 1<br><pre>
+
+/usr/local/packages/fsl-5.0.8/bin/mainfeatreg -F 6.00 -d /storage/essicd/data/NIDM-Ex/Testing/ds000052/RESULTS/Sub01GammaBasis.feat -l /storage/essicd/data/NIDM-Ex/Testing/ds000052/RESULTS/Sub01GammaBasis.feat/logs/feat2_pre -R /storage/essicd/data/NIDM-Ex/Testing/ds000052/RESULTS/Sub01GammaBasis.feat/report_unwarp.html -r /storage/essicd/data/NIDM-Ex/Testing/ds000052/RESULTS/Sub01GammaBasis.feat/report_reg.html  -i /storage/essicd/data/NIDM-Ex/Testing/ds000052/RESULTS/Sub01GammaBasis.feat/example_func.nii.gz  -h /storage/essicd/data/NIDM-Ex/Data/ds000052/sub001/anatomy/highres001_brain -w  BBR -x 90 -s /storage/essicd/fsl-5.0.8/data/standard/MNI152_T1_2mm_brain -y 12 -z 90 
+Option -F ( FEAT version parameter ) selected with  argument "6.00"
+Option -d ( output directory ) selected with  argument "/storage/essicd/data/NIDM-Ex/Testing/ds000052/RESULTS/Sub01GammaBasis.feat"
+Option -l ( logfile )input with argument "/storage/essicd/data/NIDM-Ex/Testing/ds000052/RESULTS/Sub01GammaBasis.feat/logs/feat2_pre"
+Option -R ( html unwarping report ) selected with  argument "/storage/essicd/data/NIDM-Ex/Testing/ds000052/RESULTS/Sub01GammaBasis.feat/report_unwarp.html"
+Option -r ( html registration report ) selected with  argument "/storage/essicd/data/NIDM-Ex/Testing/ds000052/RESULTS/Sub01GammaBasis.feat/report_reg.html"
+Option -i ( main input ) input with argument "/storage/essicd/data/NIDM-Ex/Testing/ds000052/RESULTS/Sub01GammaBasis.feat/example_func.nii.gz"
+Option -h ( high-res structural image ) selected with  argument "/storage/essicd/data/NIDM-Ex/Data/ds000052/sub001/anatomy/highres001_brain"
+Option -w ( highres dof ) selected with  argument "BBR"
+Option -x ( highres search ) selected with  argument "90"
+Option -s ( standard image ) selected with  argument "/storage/essicd/fsl-5.0.8/data/standard/MNI152_T1_2mm_brain"
+Option -y ( standard dof ) selected with  argument "12"
+Option -z ( standard search ) selected with  argument "90"
+</pre><hr>Registration<br><pre>
+
+/bin/mkdir -p /storage/essicd/data/NIDM-Ex/Testing/ds000052/RESULTS/Sub01GammaBasis.feat/reg
+
+
+/usr/local/packages/fsl-5.0.8/bin/fslmaths /storage/essicd/data/NIDM-Ex/Data/ds000052/sub001/anatomy/highres001_brain highres
+
+
+/usr/local/packages/fsl-5.0.8/bin/fslmaths /storage/essicd/data/NIDM-Ex/Data/ds000052/sub001/anatomy/highres001  highres_head
+
+
+/usr/local/packages/fsl-5.0.8/bin/fslmaths /storage/essicd/fsl-5.0.8/data/standard/MNI152_T1_2mm_brain standard
+
+did not find file: example_func2highres.mat. Generating transform.
+
+/usr/local/packages/fsl-5.0.8/bin/epi_reg --epi=example_func --t1=highres_head --t1brain=highres --out=example_func2highres
+12/02/2015 18:39:42|  main|exec8|W|job 287124.1 exceeds job hard limit "h_vmem" of queue "short.q@exec8.cluster.stats.local" (1280376832.00000 > limit:1073741824.00000) - sending SIGKILL
+cat: absbrainthresh.txt: No such file or directory
+    while executing
+"if { [ catch {
+
+for { set argindex 1 } { $argindex < $argc } { incr argindex 1 } {
+    switch -- [ lindex $argv $argindex ] {
+
+	-I {
+	    incr arginde..."
+    (file "/usr/local/packages/fsl-5.0.8/bin/feat" line 310)
+Error encountered while running in main feat script, halting.
+cat: absbrainthresh.txt: No such file or directory
+</pre><hr>Stats<br><pre>
+
+mkdir -p custom_timing_files ; /usr/local/packages/fsl-5.0.8/bin/fslFixText /storage/essicd/data/NIDM-Ex/Data/ds000052/sub001/model/model001/onsets/task001_run001/cond001.txt custom_timing_files/ev1.txt
+
+mkdir -p custom_timing_files ; /usr/local/packages/fsl-5.0.8/bin/fslFixText /storage/essicd/data/NIDM-Ex/Data/ds000052/sub001/model/model001/onsets/task001_run001/cond002.txt custom_timing_files/ev2.txt
+</pre><hr>Post-stats<br><pre>
+couldn't change working directory to "/storage/essicd/data/NIDM-Ex/Testing/ds000052/RESULTS/Sub01GammaBasis.feat/stats": no such file or directory
+    while executing
+"if { [ catch {
+
+for { set argindex 1 } { $argindex < $argc } { incr argindex 1 } {
+    switch -- [ lindex $argv $argindex ] {
+
+	-I {
+	    incr arginde..."
+    (file "/usr/local/packages/fsl-5.0.8/bin/feat" line 310)
+Error encountered while running in main feat script, halting.
+couldn't change working directory to "/storage/essicd/data/NIDM-Ex/Testing/ds000052/RESULTS/Sub01GammaBasis.feat/stats": no such file or directory
+</pre><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></BODY></HTML>
