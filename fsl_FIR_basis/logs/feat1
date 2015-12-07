@@ -1,0 +1,26 @@
+
+/bin/cp /storage/essicd/data/NIDM-Ex/Testing/ds000052/RESULTS/Sub01FIRBasis.fsf design.fsf
+
+/usr/local/packages/fsl-5.0.8/bin/feat_model design 
+
+mkdir .files;cp /usr/local/packages/fsl-5.0.8/doc/fsl.css .files;cp -r /usr/local/packages/fsl-5.0.8/doc/images .files/images
+
+/usr/local/packages/fsl-5.0.8/bin/fsl_sub -T 10 -l logs -N feat0_init   /usr/local/packages/fsl-5.0.8/bin/feat /storage/essicd/data/NIDM-Ex/Testing/ds000052/RESULTS/Sub01FIRBasis.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/Testing/ds000052/RESULTS/Sub01FIRBasis.feat -I 1 -init
+job
+287128
+
+/usr/local/packages/fsl-5.0.8/bin/fsl_sub -T 52 -l logs -N feat2_pre -j 287128  /usr/local/packages/fsl-5.0.8/bin/feat /storage/essicd/data/NIDM-Ex/Testing/ds000052/RESULTS/Sub01FIRBasis.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/Testing/ds000052/RESULTS/Sub01FIRBasis.feat -I 1 -prestats
+job
+287129
+
+/usr/local/packages/fsl-5.0.8/bin/fsl_sub -T 1 -l logs -N feat3_film -j 287129  /usr/local/packages/fsl-5.0.8/bin/feat /storage/essicd/data/NIDM-Ex/Testing/ds000052/RESULTS/Sub01FIRBasis.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/Testing/ds000052/RESULTS/Sub01FIRBasis.feat -I 1 -stats
+job
+287130
+
+/usr/local/packages/fsl-5.0.8/bin/fsl_sub -T 119 -l logs -N feat4_post -j 287130  /usr/local/packages/fsl-5.0.8/bin/feat /storage/essicd/data/NIDM-Ex/Testing/ds000052/RESULTS/Sub01FIRBasis.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/Testing/ds000052/RESULTS/Sub01FIRBasis.feat -poststats 0 
+job
+287131
+
+/usr/local/packages/fsl-5.0.8/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 287129,287130,287131  /usr/local/packages/fsl-5.0.8/bin/feat /storage/essicd/data/NIDM-Ex/Testing/ds000052/RESULTS/Sub01FIRBasis.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/Testing/ds000052/RESULTS/Sub01FIRBasis.feat -stop
+job
+287132
