@@ -1,0 +1,14 @@
+/ContrastName1	mr vs plain 
+/ContrastName2	switch vs nonswitch 
+/ContrastName3	switch vs nonswitch mronly 
+/ContrastName4	switch vs nonswitch plainonly 
+/NumWaves	5
+/NumContrasts	4
+/PPheights		3.430171e-01	3.297778e-01	5.311789e-01	5.150474e-01
+/RequiredEffect		1.466	1.485	1.706	1.473
+
+/Matrix
+1.000000e+00 1.000000e+00 -1.000000e+00 -1.000000e+00 0.000000e+00 
+1.000000e+00 -1.000000e+00 1.000000e+00 -1.000000e+00 0.000000e+00 
+1.000000e+00 -1.000000e+00 0.000000e+00 0.000000e+00 0.000000e+00 
+0.000000e+00 0.000000e+00 1.000000e+00 -1.000000e+00 0.000000e+00 
