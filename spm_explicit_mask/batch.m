@@ -1,5 +1,5 @@
 %-----------------------------------------------------------------------
-% Job saved on 25-Nov-2015 14:38:25 by cfg_util (rev $Rev: 6460 $)
+% Job saved on 08-Dec-2015 10:39:51 by cfg_util (rev $Rev: 6460 $)
 % spm SPM - SPM12 (6470)
 % cfg_basicio BasicIO - Unknown
 %-----------------------------------------------------------------------
@@ -249,15 +249,15 @@ matlabbatch{1}.spm.stats.fmri_spec.global = 'None';
 matlabbatch{1}.spm.stats.fmri_spec.mthresh = 0.8;
 matlabbatch{1}.spm.stats.fmri_spec.mask = {'/storage/essicd/data/NIDM-Ex/Testing/ds000052/RESULTS/Sub02/mask.nii,1'};
 matlabbatch{1}.spm.stats.fmri_spec.cvi = 'AR(1)';
-matlabbatch{2}.spm.stats.fmri_est.spmmat = {'/storage/essicd/data/NIDM-Ex/Testing/ds000052/RESULTS/Sub01/ExplicitMask/SPM.mat'};
+matlabbatch{2}.spm.stats.fmri_est.spmmat(1) = cfg_dep('fMRI model specification: SPM.mat File', substruct('.','val', '{}',{1}, '.','val', '{}',{1}, '.','val', '{}',{1}), substruct('.','spmmat'));
 matlabbatch{2}.spm.stats.fmri_est.write_residuals = 0;
 matlabbatch{2}.spm.stats.fmri_est.method.Classical = 1;
-matlabbatch{3}.spm.stats.con.spmmat = {'/storage/essicd/data/NIDM-Ex/Testing/ds000052/RESULTS/Sub01/ExplicitMask/SPM.mat'};
+matlabbatch{3}.spm.stats.con.spmmat(1) = cfg_dep('Model estimation: SPM.mat File', substruct('.','val', '{}',{2}, '.','val', '{}',{1}, '.','val', '{}',{1}), substruct('.','spmmat'));
 matlabbatch{3}.spm.stats.con.consess{1}.tcon.name = 'pos vs neg';
 matlabbatch{3}.spm.stats.con.consess{1}.tcon.weights = [1 -1];
 matlabbatch{3}.spm.stats.con.consess{1}.tcon.sessrep = 'none';
 matlabbatch{3}.spm.stats.con.delete = 0;
-matlabbatch{4}.spm.stats.results.spmmat = {'/storage/essicd/data/NIDM-Ex/Testing/ds000052/RESULTS/Sub01/ExplicitMask/SPM.mat'};
+matlabbatch{4}.spm.stats.results.spmmat(1) = cfg_dep('Contrast Manager: SPM.mat File', substruct('.','val', '{}',{3}, '.','val', '{}',{1}, '.','val', '{}',{1}), substruct('.','spmmat'));
 matlabbatch{4}.spm.stats.results.conspec.titlestr = '';
 matlabbatch{4}.spm.stats.results.conspec.contrasts = Inf;
 matlabbatch{4}.spm.stats.results.conspec.threshdesc = 'none';

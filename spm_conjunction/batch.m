@@ -1,6 +1,6 @@
 %-----------------------------------------------------------------------
-% Job saved on 07-Dec-2015 11:33:29 by cfg_util (rev $Rev: 6460 $)
-% spm SPM - SPM12 (12.1)
+% Job saved on 08-Dec-2015 10:38:13 by cfg_util (rev $Rev: 6460 $)
+% spm SPM - SPM12 (6470)
 % cfg_basicio BasicIO - Unknown
 %-----------------------------------------------------------------------
 matlabbatch{1}.spm.stats.fmri_spec.dir = {'/storage/essicd/data/NIDM-Ex/Testing/ds000006/RESULTS/Sub01'};
@@ -229,10 +229,10 @@ matlabbatch{1}.spm.stats.fmri_spec.global = 'None';
 matlabbatch{1}.spm.stats.fmri_spec.mthresh = 0.8;
 matlabbatch{1}.spm.stats.fmri_spec.mask = {'/storage/essicd/data/NIDM-Ex/Testing/ds000006/RESULTS/Sub01/mask.nii,1'};
 matlabbatch{1}.spm.stats.fmri_spec.cvi = 'AR(1)';
-matlabbatch{2}.spm.stats.fmri_est.spmmat = {'/storage/essicd/data/NIDM-Ex/Testing/ds000006/RESULTS/Sub01/SPM.mat'};
+matlabbatch{2}.spm.stats.fmri_est.spmmat(1) = cfg_dep('fMRI model specification: SPM.mat File', substruct('.','val', '{}',{1}, '.','val', '{}',{1}, '.','val', '{}',{1}), substruct('.','spmmat'));
 matlabbatch{2}.spm.stats.fmri_est.write_residuals = 0;
 matlabbatch{2}.spm.stats.fmri_est.method.Classical = 1;
-matlabbatch{3}.spm.stats.con.spmmat = {'/storage/essicd/data/NIDM-Ex/Testing/ds000006/RESULTS/Sub01/SPM.mat'};
+matlabbatch{3}.spm.stats.con.spmmat(1) = cfg_dep('Model estimation: SPM.mat File', substruct('.','val', '{}',{2}, '.','val', '{}',{1}, '.','val', '{}',{1}), substruct('.','spmmat'));
 matlabbatch{3}.spm.stats.con.consess{1}.tcon.name = 'mr vs plain';
 matlabbatch{3}.spm.stats.con.consess{1}.tcon.weights = [1 1 -1 -1 0];
 matlabbatch{3}.spm.stats.con.consess{1}.tcon.sessrep = 'none';
@@ -246,13 +246,12 @@ matlabbatch{3}.spm.stats.con.consess{4}.tcon.name = 'switch vs nonswitch plainon
 matlabbatch{3}.spm.stats.con.consess{4}.tcon.weights = [0 0 1 -1 0];
 matlabbatch{3}.spm.stats.con.consess{4}.tcon.sessrep = 'none';
 matlabbatch{3}.spm.stats.con.delete = 0;
-matlabbatch{4}.spm.stats.results.spmmat = {'/storage/essicd/data/NIDM-Ex/Testing/ds000006/RESULTS/Sub01/SPM.mat'};
+matlabbatch{4}.spm.stats.results.spmmat(1) = cfg_dep('Contrast Manager: SPM.mat File', substruct('.','val', '{}',{3}, '.','val', '{}',{1}, '.','val', '{}',{1}), substruct('.','spmmat'));
 matlabbatch{4}.spm.stats.results.conspec.titlestr = '';
 matlabbatch{4}.spm.stats.results.conspec.contrasts = [1 2];
 matlabbatch{4}.spm.stats.results.conspec.threshdesc = 'none';
 matlabbatch{4}.spm.stats.results.conspec.thresh = 0.05;
 matlabbatch{4}.spm.stats.results.conspec.extent = 0;
-matlabbatch{4}.spm.stats.results.conspec.conjunction = 1;
 matlabbatch{4}.spm.stats.results.conspec.mask.none = 1;
 matlabbatch{4}.spm.stats.results.units = 1;
 matlabbatch{4}.spm.stats.results.print = 'pdf';
