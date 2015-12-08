@@ -1,4 +1,4 @@
-SPM  results of subject one from task001_run001 of the OpenfMRI ds000006 living-nonliving decision experiment, used for exporting uncorrected p=0.001 NIDM-results with a F-test.
+SPM  2nd-level results from task001_run001 of the OpenfMRI ds000006 living-nonliving decision experiment, used for exporting uncorrected p=0.001 NIDM-results with a covariate.
 
 Contrasts used:
 mr vs plain
