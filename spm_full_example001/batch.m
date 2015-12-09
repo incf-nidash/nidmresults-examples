@@ -1,0 +1,10 @@
+matlabbatch{4}.spm.stats.results.spmmat(1) = cfg_dep('Contrast Manager: SPM.mat File', substruct('.','val', '{}',{3}, '.','val', '{}',{1}, '.','val', '{}',{1}), substruct('.','spmmat'));
+matlabbatch{4}.spm.stats.results.conspec.titlestr = '';
+matlabbatch{4}.spm.stats.results.conspec.contrasts = Inf;
+matlabbatch{4}.spm.stats.results.conspec.threshdesc = 'none';
+matlabbatch{4}.spm.stats.results.conspec.thresh = 0.001;
+matlabbatch{4}.spm.stats.results.conspec.extent = 0;
+matlabbatch{4}.spm.stats.results.conspec.mask.none = 1;
+matlabbatch{4}.spm.stats.results.units = 1;
+matlabbatch{4}.spm.stats.results.print = 'pdf';
+matlabbatch{4}.spm.stats.results.write.none = 1;
