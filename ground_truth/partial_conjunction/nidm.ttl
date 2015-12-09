@@ -10,6 +10,6 @@
 
 
 niiri:inference_id a prov:Activity , spm_PartialConjunctionInference: ;
-	rdfs:label "Conjunction Inference" ;
+	rdfs:label "Partial Conjunction Inference" ;
 	nidm_hasAlternativeHypothesis: nidm_OneTailedTest: ;
-	spm_partialConjunctionDegree: "1"^^xsd:int .
+	spm_partialConjunctionDegree: "2"^^xsd:int .
