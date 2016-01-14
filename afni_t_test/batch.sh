@@ -15,4 +15,4 @@
              13 "Sub13_con0001.nii[0]" \
              14 "Sub14_con0001.nii[0]" 
 
- 3dclust -1Dformat -nosum -1dindex 0 -1tindex 1 -2thresh -4.221 4.221 -dxyz=1 1.01 2 /.
+ 3dclust -1Dformat -nosum -1dindex 0 -1tindex 1 -2thresh -4.221 4.221 -dxyz=1 1.01 2 ./ttest++_result+tlrc.HEAD
