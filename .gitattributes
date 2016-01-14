@@ -6,3 +6,5 @@
 *.jpg filter=lfs diff=lfs merge=lfs -text
 *.gif filter=lfs diff=lfs merge=lfs -text
 *.ppm filter=lfs diff=lfs merge=lfs -text
+*.BRIK filter=lfs diff=lfs merge=lfs -text
+*.HEAD filter=lfs diff=lfs merge=lfs -text
