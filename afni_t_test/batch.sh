@@ -15,4 +15,4 @@
              13 "Sub13_con0001.nii[0]" \
              14 "Sub14_con0001.nii[0]" 
 
- 3dclust -1Dformat -nosum -1dindex 0 -1tindex 1 -2thresh -4.221 4.221 -dxyz=1 1.01 2 /Users/u1591557/Documents/PhD work/WMG Lab Placement 1/AFNI/DS000006_Contrasts/ttest++_result+tlrc.HEAD
+ 3dclust -1Dformat -nosum -1dindex 0 -1tindex 1 -2thresh -4.221 4.221 -dxyz=1 1.01 2 /.
