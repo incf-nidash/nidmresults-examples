@@ -1,0 +1,6 @@
+*+ WARNING: Smallest FDR q [2 mr_sw#0_Tstat] = 0.393931 ==> very few (if any) true detections
+*+ WARNING: Smallest FDR q [3 mr_sw_Fstat] = 0.393194 ==> very few (if any) true detections
+*+ WARNING: Smallest FDR q [8 pl_sw#0_Tstat] = 0.321687 ==> very few (if any) true detections
+*+ WARNING: Smallest FDR q [9 pl_sw_Fstat] = 0.321272 ==> very few (if any) true detections
+*+ WARNING: Smallest FDR q [17 S-NS_GLT#0_Tstat] = 0.15759 ==> very few (if any) true detections
+*+ WARNING: Smallest FDR q [18 S-NS_GLT_Fstat] = 0.15728 ==> very few (if any) true detections
