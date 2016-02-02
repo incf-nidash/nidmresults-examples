@@ -30,13 +30,13 @@ set fmri(featwatcher_yn) 0
 set fmri(sscleanup_yn) 0
 
 # Output directory
-set fmri(outputdir) "/storage/essicd/data/NIDM-Ex/Testing/ds000052/RESULTS/Sub01ContrastMask"
+set fmri(outputdir) "/storage/essicd/data/NIDM-Ex/Testing/ds000006/RESULTS/Sub01ContrastMask"
 
 # TR(s)
 set fmri(tr) 2.000000
 
 # Total volumes
-set fmri(npts) 225
+set fmri(npts) 205
 
 # Delete volumes
 set fmri(ndelete) 0
@@ -106,7 +106,7 @@ set fmri(st_file) ""
 set fmri(bet_yn) 1
 
 # Spatial smoothing FWHM (mm)
-set fmri(smooth) 5
+set fmri(smooth) 6
 
 # Intensity normalization
 set fmri(norm_yn) 0
@@ -147,13 +147,13 @@ set fmri(robust_yn) 0
 set fmri(mixed_yn) 2
 
 # Number of EVs
-set fmri(evs_orig) 2
-set fmri(evs_real) 2
+set fmri(evs_orig) 5
+set fmri(evs_real) 5
 set fmri(evs_vox) 0
 
 # Number of contrasts
-set fmri(ncon_orig) 1
-set fmri(ncon_real) 1
+set fmri(ncon_orig) 4
+set fmri(ncon_real) 4
 
 # Number of F-tests
 set fmri(nftests_orig) 0
@@ -239,7 +239,7 @@ set fmri(regstandard_yn) 1
 set fmri(alternateReference_yn) 0
 
 # Standard image
-set fmri(regstandard) "/storage/essicd/fsl-5.0.8/data/standard/MNI152_T1_2mm_brain"
+set fmri(regstandard) "/export/software/packages-x86_64-linux-gnu/packages/fsl-4.1.9/data/standard/MNI152_T1_2mm_brain"
 
 # Search space for registration to standard space
 # 0   : No search
@@ -257,26 +257,26 @@ set fmri(regstandard_nonlinear_yn) 0
 set fmri(regstandard_nonlinear_warpres) 10 
 
 # High pass filter cutoff
-set fmri(paradigm_hp) 100
+set fmri(paradigm_hp) 60
 
 # Total voxels
-set fmri(totalVoxels) 19353600
+set fmri(totalVoxels) 20992000
 
 
 # Number of lower-level copes feeding into higher-level analysis
 set fmri(ncopeinputs) 0
 
 # 4D AVW data or FEAT directory (1)
-set feat_files(1) "/storage/essicd/data/NIDM-Ex/Data/ds000052/sub001/BOLD/task001_run001/bold"
+set feat_files(1) "/storage/essicd/data/NIDM-Ex/Data/ds000006/sub001/BOLD/task001_run001/bold"
 
 # Add confound EVs text file
 set fmri(confoundevs) 0
 
 # Subject's structural image for analysis 1
-set highres_files(1) "/storage/essicd/data/NIDM-Ex/Data/ds000052/sub001/anatomy/highres001_brain"
+set highres_files(1) "/storage/essicd/data/NIDM-Ex/Data/ds000006/sub001/anatomy/mprage_defaced_brain"
 
 # EV 1 title
-set fmri(evtitle1) "positive feedback"
+set fmri(evtitle1) "mr_sw"
 
 # Basic waveform shape (EV 1)
 # 0 : Square
@@ -307,7 +307,7 @@ set fmri(tempfilt_yn1) 1
 set fmri(deriv_yn1) 0
 
 # Custom EV file (EV 1)
-set fmri(custom1) "/storage/essicd/data/NIDM-Ex/Data/ds000052/sub001/model/model001/onsets/task001_run001/cond001.txt"
+set fmri(custom1) "/storage/essicd/data/NIDM-Ex/Data/ds000006/sub001/model/model001/onsets/task001_run001/cond001.txt"
 
 # Gamma sigma (EV 1)
 set fmri(gammasigma1) 3
@@ -324,8 +324,17 @@ set fmri(ortho1.1) 0
 # Orthogonalise EV 1 wrt EV 2
 set fmri(ortho1.2) 0
 
+# Orthogonalise EV 1 wrt EV 3
+set fmri(ortho1.3) 0
+
+# Orthogonalise EV 1 wrt EV 4
+set fmri(ortho1.4) 0
+
+# Orthogonalise EV 1 wrt EV 5
+set fmri(ortho1.5) 0
+
 # EV 2 title
-set fmri(evtitle2) "negative feedback"
+set fmri(evtitle2) "mr_ns"
 
 # Basic waveform shape (EV 2)
 # 0 : Square
@@ -356,7 +365,7 @@ set fmri(tempfilt_yn2) 1
 set fmri(deriv_yn2) 0
 
 # Custom EV file (EV 2)
-set fmri(custom2) "/storage/essicd/data/NIDM-Ex/Data/ds000052/sub001/model/model001/onsets/task001_run001/cond002.txt"
+set fmri(custom2) "/storage/essicd/data/NIDM-Ex/Data/ds000006/sub001/model/model001/onsets/task001_run001/cond002.txt"
 
 # Gamma sigma (EV 2)
 set fmri(gammasigma2) 3
@@ -373,6 +382,189 @@ set fmri(ortho2.1) 0
 # Orthogonalise EV 2 wrt EV 2
 set fmri(ortho2.2) 0
 
+# Orthogonalise EV 2 wrt EV 3
+set fmri(ortho2.3) 0
+
+# Orthogonalise EV 2 wrt EV 4
+set fmri(ortho2.4) 0
+
+# Orthogonalise EV 2 wrt EV 5
+set fmri(ortho2.5) 0
+
+# EV 3 title
+set fmri(evtitle3) "pl_sw"
+
+# Basic waveform shape (EV 3)
+# 0 : Square
+# 1 : Sinusoid
+# 2 : Custom (1 entry per volume)
+# 3 : Custom (3 column format)
+# 4 : Interaction
+# 10 : Empty (all zeros)
+set fmri(shape3) 3
+
+# Convolution (EV 3)
+# 0 : None
+# 1 : Gaussian
+# 2 : Gamma
+# 3 : Double-Gamma HRF
+# 4 : Gamma basis functions
+# 5 : Sine basis functions
+# 6 : FIR basis functions
+set fmri(convolve3) 2
+
+# Convolve phase (EV 3)
+set fmri(convolve_phase3) 0
+
+# Apply temporal filtering (EV 3)
+set fmri(tempfilt_yn3) 1
+
+# Add temporal derivative (EV 3)
+set fmri(deriv_yn3) 0
+
+# Custom EV file (EV 3)
+set fmri(custom3) "/storage/essicd/data/NIDM-Ex/Data/ds000006/sub001/model/model001/onsets/task001_run001/cond003.txt"
+
+# Gamma sigma (EV 3)
+set fmri(gammasigma3) 3
+
+# Gamma delay (EV 3)
+set fmri(gammadelay3) 6
+
+# Orthogonalise EV 3 wrt EV 0
+set fmri(ortho3.0) 0
+
+# Orthogonalise EV 3 wrt EV 1
+set fmri(ortho3.1) 0
+
+# Orthogonalise EV 3 wrt EV 2
+set fmri(ortho3.2) 0
+
+# Orthogonalise EV 3 wrt EV 3
+set fmri(ortho3.3) 0
+
+# Orthogonalise EV 3 wrt EV 4
+set fmri(ortho3.4) 0
+
+# Orthogonalise EV 3 wrt EV 5
+set fmri(ortho3.5) 0
+
+# EV 4 title
+set fmri(evtitle4) "pl_ns"
+
+# Basic waveform shape (EV 4)
+# 0 : Square
+# 1 : Sinusoid
+# 2 : Custom (1 entry per volume)
+# 3 : Custom (3 column format)
+# 4 : Interaction
+# 10 : Empty (all zeros)
+set fmri(shape4) 3
+
+# Convolution (EV 4)
+# 0 : None
+# 1 : Gaussian
+# 2 : Gamma
+# 3 : Double-Gamma HRF
+# 4 : Gamma basis functions
+# 5 : Sine basis functions
+# 6 : FIR basis functions
+set fmri(convolve4) 2
+
+# Convolve phase (EV 4)
+set fmri(convolve_phase4) 0
+
+# Apply temporal filtering (EV 4)
+set fmri(tempfilt_yn4) 1
+
+# Add temporal derivative (EV 4)
+set fmri(deriv_yn4) 0
+
+# Custom EV file (EV 4)
+set fmri(custom4) "/storage/essicd/data/NIDM-Ex/Data/ds000006/sub001/model/model001/onsets/task001_run001/cond004.txt"
+
+# Gamma sigma (EV 4)
+set fmri(gammasigma4) 3
+
+# Gamma delay (EV 4)
+set fmri(gammadelay4) 6
+
+# Orthogonalise EV 4 wrt EV 0
+set fmri(ortho4.0) 0
+
+# Orthogonalise EV 4 wrt EV 1
+set fmri(ortho4.1) 0
+
+# Orthogonalise EV 4 wrt EV 2
+set fmri(ortho4.2) 0
+
+# Orthogonalise EV 4 wrt EV 3
+set fmri(ortho4.3) 0
+
+# Orthogonalise EV 4 wrt EV 4
+set fmri(ortho4.4) 0
+
+# Orthogonalise EV 4 wrt EV 5
+set fmri(ortho4.5) 0
+
+# EV 5 title
+set fmri(evtitle5) "junk"
+
+# Basic waveform shape (EV 5)
+# 0 : Square
+# 1 : Sinusoid
+# 2 : Custom (1 entry per volume)
+# 3 : Custom (3 column format)
+# 4 : Interaction
+# 10 : Empty (all zeros)
+set fmri(shape5) 3
+
+# Convolution (EV 5)
+# 0 : None
+# 1 : Gaussian
+# 2 : Gamma
+# 3 : Double-Gamma HRF
+# 4 : Gamma basis functions
+# 5 : Sine basis functions
+# 6 : FIR basis functions
+set fmri(convolve5) 2
+
+# Convolve phase (EV 5)
+set fmri(convolve_phase5) 0
+
+# Apply temporal filtering (EV 5)
+set fmri(tempfilt_yn5) 1
+
+# Add temporal derivative (EV 5)
+set fmri(deriv_yn5) 0
+
+# Custom EV file (EV 5)
+set fmri(custom5) "/storage/essicd/data/NIDM-Ex/Data/ds000006/sub001/model/model001/onsets/task001_run001/cond005.txt"
+
+# Gamma sigma (EV 5)
+set fmri(gammasigma5) 3
+
+# Gamma delay (EV 5)
+set fmri(gammadelay5) 6
+
+# Orthogonalise EV 5 wrt EV 0
+set fmri(ortho5.0) 0
+
+# Orthogonalise EV 5 wrt EV 1
+set fmri(ortho5.1) 0
+
+# Orthogonalise EV 5 wrt EV 2
+set fmri(ortho5.2) 0
+
+# Orthogonalise EV 5 wrt EV 3
+set fmri(ortho5.3) 0
+
+# Orthogonalise EV 5 wrt EV 4
+set fmri(ortho5.4) 0
+
+# Orthogonalise EV 5 wrt EV 5
+set fmri(ortho5.5) 0
+
 # Contrast & F-tests mode
 # real : control real EVs
 # orig : control original EVs
@@ -383,31 +575,211 @@ set fmri(con_mode) orig
 set fmri(conpic_real.1) 1
 
 # Title for contrast_real 1
-set fmri(conname_real.1) "positive vs negative"
+set fmri(conname_real.1) "mr vs plain"
 
 # Real contrast_real vector 1 element 1
-set fmri(con_real1.1) 1
+set fmri(con_real1.1) 1.0
 
 # Real contrast_real vector 1 element 2
-set fmri(con_real1.2) -1
+set fmri(con_real1.2) 1.0
+
+# Real contrast_real vector 1 element 3
+set fmri(con_real1.3) -1.0
+
+# Real contrast_real vector 1 element 4
+set fmri(con_real1.4) -1.0
+
+# Real contrast_real vector 1 element 5
+set fmri(con_real1.5) 0
+
+# Display images for contrast_real 2
+set fmri(conpic_real.2) 1
+
+# Title for contrast_real 2
+set fmri(conname_real.2) "switch vs nonswitch"
+
+# Real contrast_real vector 2 element 1
+set fmri(con_real2.1) 1.0
+
+# Real contrast_real vector 2 element 2
+set fmri(con_real2.2) -1.0
+
+# Real contrast_real vector 2 element 3
+set fmri(con_real2.3) 1.0
+
+# Real contrast_real vector 2 element 4
+set fmri(con_real2.4) -1.0
+
+# Real contrast_real vector 2 element 5
+set fmri(con_real2.5) 0
+
+# Display images for contrast_real 3
+set fmri(conpic_real.3) 1
+
+# Title for contrast_real 3
+set fmri(conname_real.3) "switch vs nonswitch mronly"
+
+# Real contrast_real vector 3 element 1
+set fmri(con_real3.1) 1.0
+
+# Real contrast_real vector 3 element 2
+set fmri(con_real3.2) -1.0
+
+# Real contrast_real vector 3 element 3
+set fmri(con_real3.3) 0
+
+# Real contrast_real vector 3 element 4
+set fmri(con_real3.4) 0
+
+# Real contrast_real vector 3 element 5
+set fmri(con_real3.5) 0
+
+# Display images for contrast_real 4
+set fmri(conpic_real.4) 1
+
+# Title for contrast_real 4
+set fmri(conname_real.4) "switch vs nonswitch plainonly"
+
+# Real contrast_real vector 4 element 1
+set fmri(con_real4.1) 0
+
+# Real contrast_real vector 4 element 2
+set fmri(con_real4.2) 0
+
+# Real contrast_real vector 4 element 3
+set fmri(con_real4.3) 1.0
+
+# Real contrast_real vector 4 element 4
+set fmri(con_real4.4) -1.0
+
+# Real contrast_real vector 4 element 5
+set fmri(con_real4.5) 0
 
 # Display images for contrast_orig 1
 set fmri(conpic_orig.1) 1
 
 # Title for contrast_orig 1
-set fmri(conname_orig.1) "positive vs negative"
+set fmri(conname_orig.1) "mr vs plain"
 
 # Real contrast_orig vector 1 element 1
-set fmri(con_orig1.1) 1
+set fmri(con_orig1.1) 1.0
 
 # Real contrast_orig vector 1 element 2
-set fmri(con_orig1.2) -1
+set fmri(con_orig1.2) 1.0
+
+# Real contrast_orig vector 1 element 3
+set fmri(con_orig1.3) -1.0
+
+# Real contrast_orig vector 1 element 4
+set fmri(con_orig1.4) -1.0
+
+# Real contrast_orig vector 1 element 5
+set fmri(con_orig1.5) 0
+
+# Display images for contrast_orig 2
+set fmri(conpic_orig.2) 1
+
+# Title for contrast_orig 2
+set fmri(conname_orig.2) "switch vs nonswitch"
+
+# Real contrast_orig vector 2 element 1
+set fmri(con_orig2.1) 1.0
+
+# Real contrast_orig vector 2 element 2
+set fmri(con_orig2.2) -1.0
+
+# Real contrast_orig vector 2 element 3
+set fmri(con_orig2.3) 1.0
+
+# Real contrast_orig vector 2 element 4
+set fmri(con_orig2.4) -1.0
+
+# Real contrast_orig vector 2 element 5
+set fmri(con_orig2.5) 0
+
+# Display images for contrast_orig 3
+set fmri(conpic_orig.3) 1
+
+# Title for contrast_orig 3
+set fmri(conname_orig.3) "switch vs nonswitch mronly"
+
+# Real contrast_orig vector 3 element 1
+set fmri(con_orig3.1) 1.0
+
+# Real contrast_orig vector 3 element 2
+set fmri(con_orig3.2) -1.0
+
+# Real contrast_orig vector 3 element 3
+set fmri(con_orig3.3) 0
+
+# Real contrast_orig vector 3 element 4
+set fmri(con_orig3.4) 0
+
+# Real contrast_orig vector 3 element 5
+set fmri(con_orig3.5) 0
+
+# Display images for contrast_orig 4
+set fmri(conpic_orig.4) 1
+
+# Title for contrast_orig 4
+set fmri(conname_orig.4) "switch vs nonswitch plainonly"
+
+# Real contrast_orig vector 4 element 1
+set fmri(con_orig4.1) 0
+
+# Real contrast_orig vector 4 element 2
+set fmri(con_orig4.2) 0
+
+# Real contrast_orig vector 4 element 3
+set fmri(con_orig4.3) 1.0
+
+# Real contrast_orig vector 4 element 4
+set fmri(con_orig4.4) -1.0
+
+# Real contrast_orig vector 4 element 5
+set fmri(con_orig4.5) 0
 
 # Contrast masking - use >0 instead of thresholding?
-set fmri(conmask_zerothresh_yn) 1
+set fmri(conmask_zerothresh_yn) 0
+
+# Mask real contrast/F-test 1 with real contrast/F-test 2?
+set fmri(conmask1_2) 1
+
+# Mask real contrast/F-test 1 with real contrast/F-test 3?
+set fmri(conmask1_3) 0
+
+# Mask real contrast/F-test 1 with real contrast/F-test 4?
+set fmri(conmask1_4) 0
+
+# Mask real contrast/F-test 2 with real contrast/F-test 1?
+set fmri(conmask2_1) 0
+
+# Mask real contrast/F-test 2 with real contrast/F-test 3?
+set fmri(conmask2_3) 1
+
+# Mask real contrast/F-test 2 with real contrast/F-test 4?
+set fmri(conmask2_4) 0
+
+# Mask real contrast/F-test 3 with real contrast/F-test 1?
+set fmri(conmask3_1) 0
+
+# Mask real contrast/F-test 3 with real contrast/F-test 2?
+set fmri(conmask3_2) 0
+
+# Mask real contrast/F-test 3 with real contrast/F-test 4?
+set fmri(conmask3_4) 1
+
+# Mask real contrast/F-test 4 with real contrast/F-test 1?
+set fmri(conmask4_1) 1
+
+# Mask real contrast/F-test 4 with real contrast/F-test 2?
+set fmri(conmask4_2) 0
+
+# Mask real contrast/F-test 4 with real contrast/F-test 3?
+set fmri(conmask4_3) 0
 
 # Do contrast masking at all?
-set fmri(conmask1_1) 0
+set fmri(conmask1_1) 1
 
 ##########################################################
 # Now options that don't appear in the GUI

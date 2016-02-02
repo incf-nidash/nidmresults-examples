@@ -1,9 +1,9 @@
-FSL contrast mask results of subject one from task001_run001 of the OpenfMRI ds000052 Classification Learning and Baseline experiment, used for exporting uncorrected p=0.001 NIDM-results.
+FSL contrast mask results of subject one from task001_run001 of the OpenfMRI ds000006 living-nonliving decision experiment, used for exporting uncorrected p=0.001 NIDM-results with an F-Test.
 
 Contrasts used:
-positive vs negative
+mr vs plain
+switch vs nonswitch
+switch vs nonswitch mr only
+switch vs nonswitch plain only
 
-On each PCL trial, 1 to 3 (out of 4 potential) cards were presented to the subject for 3 seconds, giving 14 potential combinations in total. Each of the combinations constituted as a stimulus, and each of the stimuli had an assigned probability of being associated with rain. The stimulus was also presented with a cue, either rain or sunshine.
-When the stimulus and cue were presented to the subject they had to respond by either pressing one button for sunshine or another for rain. Once the subject had responded, feedback (either rain or sunshine) was presented with the stimulus for 4 seconds. Feedback was defined as being positive if it matched the cue that was presented with the stimulus, and negative if it differed from the cue. 
-
-In the baseline task, subjects were presented with a set of crosshair stimuli (different from those used in the classification trials) and pressed a single key simply to note the appearance of the stimulus.
+For task001_run001 subjects had to complete 64 trials, where each trial consisted of a word being presented to the subject in either plain or mirror-reversed text for which they had to respond as to whether the word named a living or nonliving entity by pressing the corresponding button. Words were chosen from a list permuted across participants and presented pseudorandomly such that the run included 32 plain and 32 mirror-reversed words for each subject. Subjects were not given feedback on their responses. The response window for each trial was 3.25 seconds, with a variable interstimulus interval of mean 6.28 seconds. 

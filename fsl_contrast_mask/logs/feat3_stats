@@ -1,25 +1,31 @@
 </pre><hr>Stats<br><pre>
 
-mkdir -p custom_timing_files ; /usr/local/packages/fsl-5.0.8/bin/fslFixText /storage/essicd/data/NIDM-Ex/Data/ds000052/sub001/model/model001/onsets/task001_run001/cond001.txt custom_timing_files/ev1.txt
+mkdir -p custom_timing_files ; /usr/local/packages/fsl-5.0.8/bin/fslFixText /storage/essicd/data/NIDM-Ex/Data/ds000006/sub001/model/model001/onsets/task001_run001/cond001.txt custom_timing_files/ev1.txt
 
-mkdir -p custom_timing_files ; /usr/local/packages/fsl-5.0.8/bin/fslFixText /storage/essicd/data/NIDM-Ex/Data/ds000052/sub001/model/model001/onsets/task001_run001/cond002.txt custom_timing_files/ev2.txt
+mkdir -p custom_timing_files ; /usr/local/packages/fsl-5.0.8/bin/fslFixText /storage/essicd/data/NIDM-Ex/Data/ds000006/sub001/model/model001/onsets/task001_run001/cond002.txt custom_timing_files/ev2.txt
+
+mkdir -p custom_timing_files ; /usr/local/packages/fsl-5.0.8/bin/fslFixText /storage/essicd/data/NIDM-Ex/Data/ds000006/sub001/model/model001/onsets/task001_run001/cond003.txt custom_timing_files/ev3.txt
+
+mkdir -p custom_timing_files ; /usr/local/packages/fsl-5.0.8/bin/fslFixText /storage/essicd/data/NIDM-Ex/Data/ds000006/sub001/model/model001/onsets/task001_run001/cond004.txt custom_timing_files/ev4.txt
+
+mkdir -p custom_timing_files ; /usr/local/packages/fsl-5.0.8/bin/fslFixText /storage/essicd/data/NIDM-Ex/Data/ds000006/sub001/model/model001/onsets/task001_run001/cond005.txt custom_timing_files/ev5.txt
 
 /usr/local/packages/fsl-5.0.8/bin/film_gls --in=filtered_func_data --rn=stats --pd=design.mat --thr=1000.0 --sa --ms=5 --con=design.con  
 Log directory is: stats
-paradigm.getDesignMatrix().Nrows()=225
-paradigm.getDesignMatrix().Ncols()=2
-sizeTS=225
-numTS=25241
+paradigm.getDesignMatrix().Nrows()=205
+paradigm.getDesignMatrix().Ncols()=5
+sizeTS=205
+numTS=34839
 Calculating residuals...
 Completed
 Estimating residual autocorrelation...
 Calculating raw AutoCorrs... Completed
-mode = 10233.3
-sig = 884
+mode = 9897.25
+sig = 949
 Spatially smoothing auto corr estimates
-..............
+.............
 Completed
-Tukey M = 15
+Tukey M = 14
 Tukey estimates... Completed
 Completed
 Prewhitening and Computing PEs...
@@ -28,4 +34,4 @@ Percentage done:
 Saving results... 
 Completed
 
-/usr/local/packages/fsl-5.0.8/bin/smoothest -d 223   -m mask -r stats/res4d > stats/smoothness
+/usr/local/packages/fsl-5.0.8/bin/smoothest -d 200   -m mask -r stats/res4d > stats/smoothness
