@@ -1,1 +1,1 @@
-3dclust -1Dformat -nosum -1dindex 2 -1tindex 0 -2thresh -7.276 7.276 -inmask -dxyz=1 -savemask Clust_mask 1.01 2 ./afni_voxelwise_p0001/sub_001.results/stats.sub_001+tlrc.HEAD
+ + 3dclust -1Dformat -nosum -1dindex 2 -1tindex 2 -2thresh -3.365 3.365 -inmask -dxyz=1 -savemask Clust_mask 1.01 2 ./afni_voxelwise_p0001/sub_001.results/stats.sub_001+tlrc.HEAD
