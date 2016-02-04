@@ -1,0 +1,1 @@
+3dclust -1Dformat -nosum -1dindex 2 -1tindex 2 -2thresh -3.365 3.365 -inmask -dxyz=1 -savemask Clust_mask 1.01 2 ./afni_gamma_basis_function/sub_001.results ./stats.sub_001+tlrc.HEAD
