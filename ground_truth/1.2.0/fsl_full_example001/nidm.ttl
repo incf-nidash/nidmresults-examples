@@ -91,6 +91,7 @@
 @prefix nidm_ResidualMeanSquaresMap: <http://purl.org/nidash/nidm#NIDM_0000066> .
 @prefix nidm_StatisticMap: <http://purl.org/nidash/nidm#NIDM_0000076> .
 @prefix nidm_effectDegreesOfFreedom: <http://purl.org/nidash/nidm#NIDM_0000091> .
+@prefix nidm_errorDegreesOfFreedom: <http://purl.org/nidash/nidm#NIDM_0000093> .
 @prefix obo_contrastweightmatrix: <http://purl.obolibrary.org/obo/STATO_0000323> .
 @prefix obo_tstatistic: <http://purl.obolibrary.org/obo/STATO_0000176> .
 @prefix obo_normaldistribution: <http://purl.obolibrary.org/obo/STATO_0000227> .
@@ -646,6 +647,7 @@ niiri:statistic_map_id_1 a prov:Entity , nidm_StatisticMap: ;
 	dct:format "image/nifti"^^xsd:string ;
 	nidm_contrastName: "Generation"^^xsd:string ;
 	nidm_effectDegreesOfFreedom: "1"^^xsd:float ;
+	nidm_errorDegreesOfFreedom: "102"^^xsd:float ;	
 	nidm_inCoordinateSpace: niiri:coordinate_space_id_1 ;
 	crypto:sha512 "b6286d36e678c23622b5b0486f0efb5b274f9a5e2a3ee6aceb6a0338f7745fb8a4d8f72b8af22c4ffb40c860bfb65940c87b03a7336cdf1a665f9cb07a5c2527"^^xsd:string ;
 	prov:wasGeneratedBy niiri:contrast_estimation_id_1.
@@ -658,6 +660,7 @@ niiri:z_statistic_map_id_1 a prov:Entity , nidm_StatisticMap: ;
 	dct:format "image/nifti"^^xsd:string ;
 	nidm_contrastName: "Generation"^^xsd:string ;
 	nidm_effectDegreesOfFreedom: "1"^^xsd:float ;
+	nidm_errorDegreesOfFreedom: "INF"^^xsd:float ;	
 	nidm_inCoordinateSpace: niiri:coordinate_space_id_1 ;
 	crypto:sha512 "3a68a4e5963766af86d22a871a4dbca9568a46441a567855b3a84dbd47ea01acea11ed77b37ce85078a219adaa92264296a4548c1ba39b11ff028e8fefd95d03"^^xsd:string ;
 	prov:wasGeneratedBy niiri:contrast_estimation_id_1.
