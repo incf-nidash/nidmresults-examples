@@ -1,0 +1,24 @@
+verbose = 1
+help = 0
+dof = 102
+maskname = mask
+residname = stats/res4d
+zstatname = zstat
+mask:: Size = (64,64,42)
+mask:: ROI Size = (64,64,42)
+mask:: Dims = (3.5,3.5,3.5)
+mask:: Minimum and maximum intensities are: 0 and 1
+Data (residuals/zstat):: Size = (64,64,42,106)
+Data (residuals/zstat):: ROI Size = (64,64,42,106)
+Data (residuals/zstat):: Dims = (3.5,3.5,3.5,4.2)
+Data (residuals/zstat):: Minimum and maximum intensities are: -3797.63 and 1582.97
+SSminus[X] = 3.40018e+06, SSminus[Y] = 3.43034e+06, SSminus[Z] = 3.14022e+06, S2[X] = 4.33587e+06, S2[Y] = 4.33587e+06, S2[Z] = 4.33587e+06
+DLH 0.383387 voxels^-3 before correcting for temporal DOF
+FWHMx = 2.38803 voxels, FWHMy = 2.43263 voxels, FWHMz = 2.07288 voxels
+FWHMx = 8.35811 mm, FWHMy = 8.5142 mm, FWHMz = 7.2551 mm
+DLH 0.384676 voxels^-3
+VOLUME 45203 voxels
+RESELS 12.0418 voxels per resel
+DLH 0.384676
+VOLUME 45203
+RESELS 12.0418

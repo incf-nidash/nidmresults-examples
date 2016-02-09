@@ -1,0 +1,3 @@
+/usr/local/fsl/bin/film_gls -rn stats -sa -ms 5 filtered_func_data design.mat 1000.0 
+---------------------------------------------
+

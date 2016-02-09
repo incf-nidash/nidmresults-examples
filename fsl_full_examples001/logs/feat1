@@ -1,0 +1,27 @@
+
+/bin/cp /tmp/feat_zNlbso.fsf design.fsf
+
+/usr/local/fsl/bin/feat_model design 
+
+mkdir .files;cp /usr/local/fsl/doc/fsl.css .files;ln -s /usr/local/fsl/doc/images .files/images
+
+/usr/local/fsl/bin/fsl_sub -T 10 -l logs -N feat0_init   /usr/local/fsl/bin/feat /Users/cmaumet/Data/fsl_practicals/fsl_course_data/fmri/fmri_fluency/fmri+.feat/design.fsf -D /Users/cmaumet/Data/fsl_practicals/fsl_course_data/fmri/fmri_fluency/fmri+.feat -I 1 -init
+9785
+
+/usr/local/fsl/bin/fsl_sub -T 30 -l logs -N feat1b_reg -j 9785  /usr/local/fsl/bin/feat /Users/cmaumet/Data/fsl_practicals/fsl_course_data/fmri/fmri_fluency/fmri+.feat/design.fsf -D /Users/cmaumet/Data/fsl_practicals/fsl_course_data/fmri/fmri_fluency/fmri+.feat -I 1 -reg
+9861
+
+/usr/local/fsl/bin/fsl_sub -T 10 -l logs -N feat2_pre -j 9861,9785  /usr/local/fsl/bin/feat /Users/cmaumet/Data/fsl_practicals/fsl_course_data/fmri/fmri_fluency/fmri+.feat/design.fsf -D /Users/cmaumet/Data/fsl_practicals/fsl_course_data/fmri/fmri_fluency/fmri+.feat -I 1 -prestats
+10620
+
+/usr/local/fsl/bin/fsl_sub -T 6 -l logs -N feat3_film -j 10620  /usr/local/fsl/bin/feat /Users/cmaumet/Data/fsl_practicals/fsl_course_data/fmri/fmri_fluency/fmri+.feat/design.fsf -D /Users/cmaumet/Data/fsl_practicals/fsl_course_data/fmri/fmri_fluency/fmri+.feat -I 1 -film
+10953
+
+/usr/local/fsl/bin/fsl_sub -T 1 -l logs -N feat4_post -j 10953  /usr/local/fsl/bin/feat /Users/cmaumet/Data/fsl_practicals/fsl_course_data/fmri/fmri_fluency/fmri+.feat/design.fsf -D /Users/cmaumet/Data/fsl_practicals/fsl_course_data/fmri/fmri_fluency/fmri+.feat -poststats 0 0
+11116
+
+/usr/local/fsl/bin/fsl_sub -T 119 -l logs -N feat4_post -j 11116,9861  /usr/local/fsl/bin/feat /Users/cmaumet/Data/fsl_practicals/fsl_course_data/fmri/fmri_fluency/fmri+.feat/design.fsf -D /Users/cmaumet/Data/fsl_practicals/fsl_course_data/fmri/fmri_fluency/fmri+.feat -poststats 1 0
+11720
+
+/usr/local/fsl/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 10620,10953,11720,9861  /usr/local/fsl/bin/feat /Users/cmaumet/Data/fsl_practicals/fsl_course_data/fmri/fmri_fluency/fmri+.feat/design.fsf -D /Users/cmaumet/Data/fsl_practicals/fsl_course_data/fmri/fmri_fluency/fmri+.feat -stop
+11853
