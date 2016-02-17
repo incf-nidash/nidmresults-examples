@@ -54,9 +54,9 @@ echo ------------------- outliers and motion --------------------
        -censor_RGB green -censor motion_sub_001_censor.1D  \
        -sepscl motion_sub_001_enorm.1D outcount_rall.1D &
 1dplot -one -censor_RGB green -censor motion_sub_001_censor.1D  \
-       outcount_rall.1D "1D: 150@0.1" &
+       outcount_rall.1D "1D: 104@0.1" &
 1dplot -one -censor_RGB green -censor motion_sub_001_censor.1D  \
-       motion_sub_001_enorm.1D "1D: 150@0.3" &
+       motion_sub_001_enorm.1D "1D: 104@0.3" &
 
 prompt_user -pause "                              \
    review plots (colored TRs are censored):       \

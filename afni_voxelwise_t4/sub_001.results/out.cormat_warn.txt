@@ -1,7 +1,1 @@
-
-Warnings regarding Correlation Matrix: X.xmat.1D
-
-  severity   correlation   cosine  regressor pair
-  --------   -----------   ------  ----------------------------------------
-  medium:      -0.615       0.000  ( 4 vs.  5)  vis_timing_file_run1#0  vs.  aud_timing_file_run1#0
-
+-- no warnings for correlation matrix (cut = 0.400) --

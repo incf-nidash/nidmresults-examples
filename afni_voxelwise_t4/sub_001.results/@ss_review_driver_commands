@@ -1,8 +1,8 @@
 tcsh -f @ss_review_basic
 1dplot -wintitle "motion, outliers" -ynames Mot OFrac \
        -sepscl -censor_RGB green -censor motion_sub_001_censor.1D motion_sub_001_enorm.1D outcount_rall.1D &
-1dplot -one -censor_RGB green -censor motion_sub_001_censor.1D outcount_rall.1D "1D: 150@0.1" &
-1dplot -one -censor_RGB green -censor motion_sub_001_censor.1D motion_sub_001_enorm.1D "1D: 150@0.3" &
+1dplot -one -censor_RGB green -censor motion_sub_001_censor.1D outcount_rall.1D "1D: 104@0.1" &
+1dplot -one -censor_RGB green -censor motion_sub_001_censor.1D motion_sub_001_enorm.1D "1D: 104@0.3" &
 afni anat_final.sub_001+tlrc.HEAD pb02.sub_001.r01.volreg+tlrc.HEAD &
 cat 3dDeconvolve.err
 1d_tool.py -show_cormat_warnings -infile X.xmat.1D

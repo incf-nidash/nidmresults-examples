@@ -31,7 +31,7 @@ setenv AFNI_NO_OBLIQUE_WARNING YES
 # ----------------------------------------------------------------------
 # main variables regarding this single subject analysis
 set subj             = sub_001
-set rm_trs           = 2
+set rm_trs           = 0
 set num_stim         = 2
 set mot_limit        = 0.3
 set out_limit        = 0.1
