@@ -10,8 +10,6 @@ afni_t_test/Sub*.nii
 
 smoothness_v
 
-subject_results/
-
 # AFNI pre-processed BRIK images
 *.scale*.BRIK
 *.blur*.BRIK
