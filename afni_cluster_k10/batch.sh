@@ -1,1 +1,1 @@
-3dclust -1Dformat -nosum -1dindex 2 -1tindex 2 -2thresh -3.365 3.365 -inmask -dxyz=1 -savemask Clust_mask 1.01 10 ./afni_cluster_k10/sub_001.results/./stats.sub_001+tlrc.HEAD
+3dclust -1Dformat -nosum -1dindex 5 -1tindex 5 -2thresh -3.415 3.415 -inmask -dxyz=1 -savemask Clust_mask 1.01 10 ./afni_cluster_k10/subject_results/group.DS000011/subj.sub_001/sub_001.results/./stats.sub_001+tlrc.HEAD
