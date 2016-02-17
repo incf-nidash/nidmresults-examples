@@ -16,7 +16,12 @@ smoothness_v
 *.volreg*.BRIK
 *.tshift*.BRIK
 *.tcat*.BRIK
+all_runs*.BRIK
+anat_w_skull_warped*.BRIK
+*_T1w*.BRIK
 
 # AFNI 
 fitts*.BRIK
 errts*.BRIK
+
+# FSL pre-processed NIfTI images
