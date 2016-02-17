@@ -1,0 +1,20 @@
+-- applying orig view as +orig
+-- tcat: reps is now 104
+-- volreg: base/sub indices are 0, 2
+++ volreg: warp and align to isotropic 3 mm tlrc voxels
+-- applying anat warps to 1 dataset(s): sub-01_T1w
+-- masking: group anat = 'TT_N27+tlrc', exists = 1
+++ updating polort to 2, from run len 208.0 s
+-- will add 3dClustSim table to stats dset
+-- using default: will not apply EPI Automask
+   (see 'MASKING NOTE' from the -help for details)
+
+-------------------------------------
+** warning have only 1 run to analyze
+-------------------------------------
+
+--> script is file: proc.sub_001
+    consider the script execution command: 
+
+      tcsh -xef proc.sub_001 |& tee output.proc.sub_001
+
