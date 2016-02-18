@@ -4,7 +4,7 @@
 # creation date: Mon Feb 15 10:59:31 2016
 
 # set data directories
-set top_dir   = /Users/u1591557/Documents/PhD_work/WMG_Lab_Placement_1/nidmresults-examples/afni_voxelwise_t4
+set top_dir   = ./afni_voxelwise_t4
 
 # set subject and group identifiers
 set subj      = sub_001

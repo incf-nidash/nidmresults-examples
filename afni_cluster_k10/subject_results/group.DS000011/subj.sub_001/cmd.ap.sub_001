@@ -5,7 +5,7 @@
 
 # set data directories
 set top_dir   =                                                  \
-    /Users/u1591557/Documents/PhD_work/WMG_Lab_Placement_1/nidmresults-examples/afni_cluster_k10
+    ./afni_cluster_k10
 
 # set subject and group identifiers
 set subj      = sub_001
