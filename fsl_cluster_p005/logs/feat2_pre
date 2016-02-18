@@ -82,3 +82,14 @@ Error in slicer input, exiting... Error in slicer input, exiting...
 /usr/local/packages/fsl-5.0.8/bin/fslmaths filtered_func_data -Tmean mean_func
 
 /bin/rm -rf prefiltered_func_data*
+/usr/local/packages/fsl-5.0.8/bin/mainfeatreg: line 111: /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_cluster_p005.feat/logs/feat2_pre: No such file or directory
+/usr/local/packages/fsl-5.0.8/bin/mainfeatreg: line 126: /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_cluster_p005.feat/logs/feat2_pre: No such file or directory
+/usr/local/packages/fsl-5.0.8/bin/mainfeatreg: line 111: /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_cluster_p005.feat/logs/feat2_pre: No such file or directory
+/usr/local/packages/fsl-5.0.8/bin/mainfeatreg: line 126: /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_cluster_p005.feat/logs/feat2_pre: No such file or directory
+/usr/local/packages/fsl-5.0.8/bin/mainfeatreg: line 111: /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_cluster_p005.feat/logs/feat2_pre: No such file or directory
+/usr/local/packages/fsl-5.0.8/bin/mainfeatreg: line 126: /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_cluster_p005.feat/logs/feat2_pre: No such file or directory
+/usr/local/packages/fsl-5.0.8/bin/mainfeatreg: line 111: /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_cluster_p005.feat/logs/feat2_pre: No such file or directory
+/usr/local/packages/fsl-5.0.8/bin/mainfeatreg: line 126: /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_cluster_p005.feat/report_reg.html: No such file or directory
+/usr/local/packages/fsl-5.0.8/bin/mainfeatreg: line 126: /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_cluster_p005.feat/report_reg.html: No such file or directory
+/usr/local/packages/fsl-5.0.8/bin/mainfeatreg: line 126: /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_cluster_p005.feat/report_reg.html: No such file or directory
+/usr/local/packages/fsl-5.0.8/bin/mainfeatreg: line 126: /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_cluster_p005.feat/report_unwarp.html: No such file or directory
