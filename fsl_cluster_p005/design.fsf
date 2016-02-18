@@ -30,13 +30,13 @@ set fmri(featwatcher_yn) 0
 set fmri(sscleanup_yn) 0
 
 # Output directory
-set fmri(outputdir) "/storage/essicd/data/NIDM-Ex/Testing/ds000052/RESULTS/Sub01Cluster"
+set fmri(outputdir) "/storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_cluster_p005"
 
 # TR(s)
 set fmri(tr) 2.000000
 
 # Total volumes
-set fmri(npts) 225
+set fmri(npts) 104
 
 # Delete volumes
 set fmri(ndelete) 0
@@ -106,7 +106,7 @@ set fmri(st_file) ""
 set fmri(bet_yn) 1
 
 # Spatial smoothing FWHM (mm)
-set fmri(smooth) 5
+set fmri(smooth) 6
 
 # Intensity normalization
 set fmri(norm_yn) 0
@@ -152,8 +152,8 @@ set fmri(evs_real) 2
 set fmri(evs_vox) 0
 
 # Number of contrasts
-set fmri(ncon_orig) 1
-set fmri(ncon_real) 1
+set fmri(ncon_orig) 2
+set fmri(ncon_real) 2
 
 # Number of F-tests
 set fmri(nftests_orig) 0
@@ -239,7 +239,7 @@ set fmri(regstandard_yn) 1
 set fmri(alternateReference_yn) 0
 
 # Standard image
-set fmri(regstandard) "/storage/essicd/fsl-5.0.8/data/standard/MNI152_T1_2mm_brain"
+set fmri(regstandard) "/export/software/packages-x86_64-linux-gnu/packages/fsl-5.0.8/data/standard/MNI152_T1_2mm_brain"
 
 # Search space for registration to standard space
 # 0   : No search
@@ -257,26 +257,26 @@ set fmri(regstandard_nonlinear_yn) 0
 set fmri(regstandard_nonlinear_warpres) 10 
 
 # High pass filter cutoff
-set fmri(paradigm_hp) 100
+set fmri(paradigm_hp) 60
 
 # Total voxels
-set fmri(totalVoxels) 19353600
+set fmri(totalVoxels) 12779520
 
 
 # Number of lower-level copes feeding into higher-level analysis
 set fmri(ncopeinputs) 0
 
 # 4D AVW data or FEAT directory (1)
-set feat_files(1) "/storage/essicd/data/NIDM-Ex/Data/ds000052/sub001/BOLD/task001_run001/bold"
+set feat_files(1) "/storage/essicd/data/NIDM-Ex/BIDS_Data/DATA/BIDS/ds011/sub-01/func/sub-01_task-tonecounting_bold"
 
 # Add confound EVs text file
 set fmri(confoundevs) 0
 
 # Subject's structural image for analysis 1
-set highres_files(1) "/storage/essicd/data/NIDM-Ex/Data/ds000052/sub001/anatomy/highres001_brain"
+set highres_files(1) "/storage/essicd/data/NIDM-Ex/BIDS_Data/DATA/BIDS/ds011/sub-01/anat/sub-01_T1w"
 
 # EV 1 title
-set fmri(evtitle1) "positive feedback"
+set fmri(evtitle1) "tone_counting"
 
 # Basic waveform shape (EV 1)
 # 0 : Square
@@ -307,7 +307,7 @@ set fmri(tempfilt_yn1) 1
 set fmri(deriv_yn1) 0
 
 # Custom EV file (EV 1)
-set fmri(custom1) "/storage/essicd/data/NIDM-Ex/Data/ds000052/sub001/model/model001/onsets/task001_run001/cond001.txt"
+set fmri(custom1) "/storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/ONSETS/fslonsets_tone_counting.txt"
 
 # Gamma sigma (EV 1)
 set fmri(gammasigma1) 3
@@ -325,7 +325,7 @@ set fmri(ortho1.1) 0
 set fmri(ortho1.2) 0
 
 # EV 2 title
-set fmri(evtitle2) "negative feedback"
+set fmri(evtitle2) "tone_counting_probe"
 
 # Basic waveform shape (EV 2)
 # 0 : Square
@@ -356,7 +356,7 @@ set fmri(tempfilt_yn2) 1
 set fmri(deriv_yn2) 0
 
 # Custom EV file (EV 2)
-set fmri(custom2) "/storage/essicd/data/NIDM-Ex/Data/ds000052/sub001/model/model001/onsets/task001_run001/cond002.txt"
+set fmri(custom2) "/storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/ONSETS/fslonsets_tone_counting_probe.txt"
 
 # Gamma sigma (EV 2)
 set fmri(gammasigma2) 3
@@ -383,28 +383,58 @@ set fmri(con_mode) orig
 set fmri(conpic_real.1) 1
 
 # Title for contrast_real 1
-set fmri(conname_real.1) "positive vs negative"
+set fmri(conname_real.1) "tone counting vs baseline"
 
 # Real contrast_real vector 1 element 1
-set fmri(con_real1.1) 1
+set fmri(con_real1.1) 1.0
 
 # Real contrast_real vector 1 element 2
-set fmri(con_real1.2) -1
+set fmri(con_real1.2) 0.0
+
+# Display images for contrast_real 2
+set fmri(conpic_real.2) 1
+
+# Title for contrast_real 2
+set fmri(conname_real.2) "tone counting probe vs baseline"
+
+# Real contrast_real vector 2 element 1
+set fmri(con_real2.1) 0.0
+
+# Real contrast_real vector 2 element 2
+set fmri(con_real2.2) 1.0
 
 # Display images for contrast_orig 1
 set fmri(conpic_orig.1) 1
 
 # Title for contrast_orig 1
-set fmri(conname_orig.1) "positive vs negative"
+set fmri(conname_orig.1) "tone counting vs baseline"
 
 # Real contrast_orig vector 1 element 1
-set fmri(con_orig1.1) 1
+set fmri(con_orig1.1) 1.0
 
 # Real contrast_orig vector 1 element 2
-set fmri(con_orig1.2) -1
+set fmri(con_orig1.2) 0.0
+
+# Display images for contrast_orig 2
+set fmri(conpic_orig.2) 1
+
+# Title for contrast_orig 2
+set fmri(conname_orig.2) "tone counting probe vs baseline"
+
+# Real contrast_orig vector 2 element 1
+set fmri(con_orig2.1) 0.0
+
+# Real contrast_orig vector 2 element 2
+set fmri(con_orig2.2) 1.0
 
 # Contrast masking - use >0 instead of thresholding?
 set fmri(conmask_zerothresh_yn) 0
+
+# Mask real contrast/F-test 1 with real contrast/F-test 2?
+set fmri(conmask1_2) 0
+
+# Mask real contrast/F-test 2 with real contrast/F-test 1?
+set fmri(conmask2_1) 0
 
 # Do contrast masking at all?
 set fmri(conmask1_1) 0

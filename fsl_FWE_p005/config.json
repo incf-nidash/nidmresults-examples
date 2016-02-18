@@ -1,7 +1,0 @@
-
-{
-"software": "fsl",
-"ground_truth": ["voxel_FWE_p_05/nidm.ttl"],
-"inclusive": true,
-"versions": ["1.2.0"]
-}
