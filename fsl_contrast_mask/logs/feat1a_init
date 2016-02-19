@@ -1,6 +1,6 @@
 </pre><hr>Initialisation<br><pre>
 
-/usr/local/packages/fsl-5.0.8/bin/fslmaths /storage/essicd/data/NIDM-Ex/Data/ds000006/sub001/BOLD/task001_run001/bold prefiltered_func_data -odt float
-Total original volumes = 205
+/usr/local/packages/fsl-5.0.8/bin/fslmaths /storage/essicd/data/NIDM-Ex/BIDS_Data/DATA/BIDS/ds011/sub-01/func/sub-01_task-tonecounting_bold prefiltered_func_data -odt float
+Total original volumes = 104
 
-/usr/local/packages/fsl-5.0.8/bin/fslroi prefiltered_func_data example_func 102 1
+/usr/local/packages/fsl-5.0.8/bin/fslroi prefiltered_func_data example_func 52 1
