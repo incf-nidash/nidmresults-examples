@@ -5,146 +5,78 @@
 <link REL=stylesheet TYPE=text/css href=.files/fsl.css>
 <TITLE>FSL</TITLE></HEAD><BODY><OBJECT data=report.html></OBJECT>
 <h2>Progress Report / Log</h2>
-Started at Wed Nov 18 14:04:42 GMT 2015<p>
+Started at Thu Feb 18 15:06:18 GMT 2016<p>
 Feat main script<br><pre>
 
-/bin/cp /storage/essicd/data/NIDM-Ex/Testing/ds000052/RESULTS/Sub01VoxFWE.fsf design.fsf
+/bin/cp /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/SCRIPTS/fsl_FWE_p005.fsf design.fsf
 
 /usr/local/packages/fsl-5.0.8/bin/feat_model design 
 
 mkdir .files;cp /usr/local/packages/fsl-5.0.8/doc/fsl.css .files;cp -r /usr/local/packages/fsl-5.0.8/doc/images .files/images
 
-/usr/local/packages/fsl-5.0.8/bin/fsl_sub -T 10 -l logs -N feat0_init   /usr/local/packages/fsl-5.0.8/bin/feat /storage/essicd/data/NIDM-Ex/Testing/ds000052/RESULTS/Sub01VoxFWE.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/Testing/ds000052/RESULTS/Sub01VoxFWE.feat -I 1 -init
+/usr/local/packages/fsl-5.0.8/bin/fsl_sub -T 10 -l logs -N feat0_init   /usr/local/packages/fsl-5.0.8/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_FWE_p005.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_FWE_p005.feat -I 1 -init
 job
-286706
+288207
 
-/usr/local/packages/fsl-5.0.8/bin/fsl_sub -T 52 -l logs -N feat2_pre -j 286706  /usr/local/packages/fsl-5.0.8/bin/feat /storage/essicd/data/NIDM-Ex/Testing/ds000052/RESULTS/Sub01VoxFWE.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/Testing/ds000052/RESULTS/Sub01VoxFWE.feat -I 1 -prestats
+/usr/local/packages/fsl-5.0.8/bin/fsl_sub -T 40 -l logs -N feat2_pre -j 288207  /usr/local/packages/fsl-5.0.8/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_FWE_p005.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_FWE_p005.feat -I 1 -prestats
 job
-286707
+288208
 
-/usr/local/packages/fsl-5.0.8/bin/fsl_sub -T 1 -l logs -N feat3_film -j 286707  /usr/local/packages/fsl-5.0.8/bin/feat /storage/essicd/data/NIDM-Ex/Testing/ds000052/RESULTS/Sub01VoxFWE.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/Testing/ds000052/RESULTS/Sub01VoxFWE.feat -I 1 -stats
+/usr/local/packages/fsl-5.0.8/bin/fsl_sub -T 1 -l logs -N feat3_film -j 288208  /usr/local/packages/fsl-5.0.8/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_FWE_p005.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_FWE_p005.feat -I 1 -stats
 job
-286708
+288209
 
-/usr/local/packages/fsl-5.0.8/bin/fsl_sub -T 119 -l logs -N feat4_post -j 286708  /usr/local/packages/fsl-5.0.8/bin/feat /storage/essicd/data/NIDM-Ex/Testing/ds000052/RESULTS/Sub01VoxFWE.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/Testing/ds000052/RESULTS/Sub01VoxFWE.feat -poststats 0 
+/usr/local/packages/fsl-5.0.8/bin/fsl_sub -T 119 -l logs -N feat4_post -j 288209  /usr/local/packages/fsl-5.0.8/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_FWE_p005.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_FWE_p005.feat -poststats 0 
 job
-286709
+288210
 
-/usr/local/packages/fsl-5.0.8/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 286707,286708,286709  /usr/local/packages/fsl-5.0.8/bin/feat /storage/essicd/data/NIDM-Ex/Testing/ds000052/RESULTS/Sub01VoxFWE.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/Testing/ds000052/RESULTS/Sub01VoxFWE.feat -stop
+/usr/local/packages/fsl-5.0.8/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 288208,288209,288210  /usr/local/packages/fsl-5.0.8/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_FWE_p005.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_FWE_p005.feat -stop
 job
-286710
+288211
 </pre><hr>Initialisation<br><pre>
 
-/usr/local/packages/fsl-5.0.8/bin/fslmaths /storage/essicd/data/NIDM-Ex/Data/ds000052/sub001/BOLD/task001_run001/bold prefiltered_func_data -odt float
-Total original volumes = 225
+/usr/local/packages/fsl-5.0.8/bin/fslmaths /storage/essicd/data/NIDM-Ex/BIDS_Data/DATA/BIDS/ds011/sub-01/func/sub-01_task-tonecounting_bold prefiltered_func_data -odt float
+Total original volumes = 104
 
-/usr/local/packages/fsl-5.0.8/bin/fslroi prefiltered_func_data example_func 112 1
+/usr/local/packages/fsl-5.0.8/bin/fslroi prefiltered_func_data example_func 52 1
 </pre><hr>Preprocessing:Stage 1<br><pre>
 
-/usr/local/packages/fsl-5.0.8/bin/mainfeatreg -F 6.00 -d /storage/essicd/data/NIDM-Ex/Testing/ds000052/RESULTS/Sub01VoxFWE.feat -l /storage/essicd/data/NIDM-Ex/Testing/ds000052/RESULTS/Sub01VoxFWE.feat/logs/feat2_pre -R /storage/essicd/data/NIDM-Ex/Testing/ds000052/RESULTS/Sub01VoxFWE.feat/report_unwarp.html -r /storage/essicd/data/NIDM-Ex/Testing/ds000052/RESULTS/Sub01VoxFWE.feat/report_reg.html  -i /storage/essicd/data/NIDM-Ex/Testing/ds000052/RESULTS/Sub01VoxFWE.feat/example_func.nii.gz  -h /storage/essicd/data/NIDM-Ex/Data/ds000052/sub001/anatomy/highres001_brain -w  BBR -x 90 -s /storage/essicd/fsl-5.0.8/data/standard/MNI152_T1_2mm_brain -y 12 -z 90 
+/usr/local/packages/fsl-5.0.8/bin/mainfeatreg -F 6.00 -d /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_FWE_p005.feat -l /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_FWE_p005.feat/logs/feat2_pre -R /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_FWE_p005.feat/report_unwarp.html -r /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_FWE_p005.feat/report_reg.html  -i /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_FWE_p005.feat/example_func.nii.gz  -h /storage/essicd/data/NIDM-Ex/BIDS_Data/DATA/BIDS/ds011/sub-01/anat/sub-01_T1w -w  BBR -x 90 -s /export/software/packages-x86_64-linux-gnu/packages/fsl-5.0.8/data/standard/MNI152_T1_2mm_brain -y 12 -z 90 
 Option -F ( FEAT version parameter ) selected with  argument "6.00"
-Option -d ( output directory ) selected with  argument "/storage/essicd/data/NIDM-Ex/Testing/ds000052/RESULTS/Sub01VoxFWE.feat"
-Option -l ( logfile )input with argument "/storage/essicd/data/NIDM-Ex/Testing/ds000052/RESULTS/Sub01VoxFWE.feat/logs/feat2_pre"
-Option -R ( html unwarping report ) selected with  argument "/storage/essicd/data/NIDM-Ex/Testing/ds000052/RESULTS/Sub01VoxFWE.feat/report_unwarp.html"
-Option -r ( html registration report ) selected with  argument "/storage/essicd/data/NIDM-Ex/Testing/ds000052/RESULTS/Sub01VoxFWE.feat/report_reg.html"
-Option -i ( main input ) input with argument "/storage/essicd/data/NIDM-Ex/Testing/ds000052/RESULTS/Sub01VoxFWE.feat/example_func.nii.gz"
-Option -h ( high-res structural image ) selected with  argument "/storage/essicd/data/NIDM-Ex/Data/ds000052/sub001/anatomy/highres001_brain"
+Option -d ( output directory ) selected with  argument "/storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_FWE_p005.feat"
+Option -l ( logfile )input with argument "/storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_FWE_p005.feat/logs/feat2_pre"
+Option -R ( html unwarping report ) selected with  argument "/storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_FWE_p005.feat/report_unwarp.html"
+Option -r ( html registration report ) selected with  argument "/storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_FWE_p005.feat/report_reg.html"
+Option -i ( main input ) input with argument "/storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_FWE_p005.feat/example_func.nii.gz"
+Option -h ( high-res structural image ) selected with  argument "/storage/essicd/data/NIDM-Ex/BIDS_Data/DATA/BIDS/ds011/sub-01/anat/sub-01_T1w"
 Option -w ( highres dof ) selected with  argument "BBR"
 Option -x ( highres search ) selected with  argument "90"
-Option -s ( standard image ) selected with  argument "/storage/essicd/fsl-5.0.8/data/standard/MNI152_T1_2mm_brain"
+Option -s ( standard image ) selected with  argument "/export/software/packages-x86_64-linux-gnu/packages/fsl-5.0.8/data/standard/MNI152_T1_2mm_brain"
 Option -y ( standard dof ) selected with  argument "12"
 Option -z ( standard search ) selected with  argument "90"
 </pre><hr>Registration<br><pre>
 
-/bin/mkdir -p /storage/essicd/data/NIDM-Ex/Testing/ds000052/RESULTS/Sub01VoxFWE.feat/reg
+/bin/mkdir -p /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_FWE_p005.feat/reg
 
 
-/usr/local/packages/fsl-5.0.8/bin/fslmaths /storage/essicd/data/NIDM-Ex/Data/ds000052/sub001/anatomy/highres001_brain highres
+/usr/local/packages/fsl-5.0.8/bin/fslmaths /storage/essicd/data/NIDM-Ex/BIDS_Data/DATA/BIDS/ds011/sub-01/anat/sub-01_T1w highres
 
 
-/usr/local/packages/fsl-5.0.8/bin/fslmaths /storage/essicd/data/NIDM-Ex/Data/ds000052/sub001/anatomy/highres001  highres_head
-
-
-/usr/local/packages/fsl-5.0.8/bin/fslmaths /storage/essicd/fsl-5.0.8/data/standard/MNI152_T1_2mm_brain standard
+/usr/local/packages/fsl-5.0.8/bin/fslmaths /storage/essicd/data/NIDM-Ex/BIDS_Data/DATA/BIDS/ds011/sub-01/anat/sub-01_T1w  highres_head
 
 did not find file: example_func2highres.mat. Generating transform.
 
 /usr/local/packages/fsl-5.0.8/bin/epi_reg --epi=example_func --t1=highres_head --t1brain=highres --out=example_func2highres
-Image Exception : #99 :: Out of memory
-terminate called after throwing an instance of 'RBD_COMMON::BaseException'
-/usr/local/packages/fsl-5.0.8/bin/epi_reg: line 312: 19121 Aborted                 (core dumped) $FSLDIR/bin/fast -o ${vout}_fast ${vrefbrain}
-Cannot open volume example_func2highres_fast_pve_2 for reading!
-Cannot open volume example_func2highres_fast_wmseg for reading!
-** ERROR: nifti_convert_nhdr2nim: bad sizeof_hdr
-** ERROR (nifti_image_read): cannot create nifti image from header 'example_func.nii.gz'
-** ERROR: nifti_image_open(example_func): bad header info
-ERROR: failed to open file example_func
-Image Exception : #22 :: ERROR: Could not open image example_func
-terminate called after throwing an instance of 'RBD_COMMON::BaseException'
-/usr/local/packages/fsl-5.0.8/bin/epi_reg: line 326: 22020 Aborted                 (core dumped) $FSLDIR/bin/flirt -ref ${vrefbrain} -in ${vepi} -dof 6 -omat ${vout}_init.mat
-** ERROR: nifti_convert_nhdr2nim: bad sizeof_hdr
-** ERROR (nifti_image_read): cannot create nifti image from header 'example_func.nii.gz'
-** ERROR: nifti_image_open(example_func): bad header info
-ERROR: failed to open file example_func
-Image Exception : #22 :: ERROR: Could not open image example_func
-terminate called after throwing an instance of 'RBD_COMMON::BaseException'
-/usr/local/packages/fsl-5.0.8/bin/epi_reg: line 378: 22182 Aborted                 (core dumped) $FSLDIR/bin/flirt -ref ${vrefhead} -in ${vepi} -dof 6 -cost bbr -wmseg ${vout}_fast_wmseg -init ${vout}_init.mat -omat ${vout}.mat -out ${vout} -schedule ${FSLDIR}/etc/flirtsch/bbr.sch
-Could not open matrix file example_func2highres.mat
-** ERROR: nifti_convert_nhdr2nim: bad sizeof_hdr
-** ERROR (nifti_image_read): cannot create nifti image from header 'example_func.nii.gz'
-** ERROR: nifti_image_open(example_func): bad header info
-ERROR: failed to open file example_func
-Image Exception : #22 :: ERROR: Could not open image example_func
-terminate called after throwing an instance of 'RBD_COMMON::BaseException'
-/usr/local/packages/fsl-5.0.8/bin/epi_reg: line 378: 22254 Aborted                 (core dumped) $FSLDIR/bin/applywarp -i ${vepi} -r ${vrefhead} -o ${vout} --premat=${vout}.mat --interp=spline
-Running FAST segmentation FLIRT pre-alignment Running BBR
+Running FAST segmentation FLIRT pre-alignment Running BBR 1.042140 0.992729 -0.114322 -0.037686 0.000000 0.107620 0.983179 -0.147572 0.000000 0.053923 0.142443 0.988333 0.000000 -18.053308 7.613341 18.557421 1.000000
+
+/usr/local/packages/fsl-5.0.8/bin/convert_xfm -inverse -omat highres2example_func.mat example_func2highres.mat
+
 
 /usr/local/packages/fsl-5.0.8/bin/slicer example_func2highres highres -s 2 -x 0.35 sla.png -x 0.45 slb.png -x 0.55 slc.png -x 0.65 sld.png -y 0.35 sle.png -y 0.45 slf.png -y 0.55 slg.png -y 0.65 slh.png -z 0.35 sli.png -z 0.45 slj.png -z 0.55 slk.png -z 0.65 sll.png ; /usr/local/packages/fsl-5.0.8/bin/pngappend sla.png + slb.png + slc.png + sld.png + sle.png + slf.png + slg.png + slh.png + sli.png + slj.png + slk.png + sll.png example_func2highres1.png ; /usr/local/packages/fsl-5.0.8/bin/slicer highres example_func2highres -s 2 -x 0.35 sla.png -x 0.45 slb.png -x 0.55 slc.png -x 0.65 sld.png -y 0.35 sle.png -y 0.45 slf.png -y 0.55 slg.png -y 0.65 slh.png -z 0.35 sli.png -z 0.45 slj.png -z 0.55 slk.png -z 0.65 sll.png ; /usr/local/packages/fsl-5.0.8/bin/pngappend sla.png + slb.png + slc.png + sld.png + sle.png + slf.png + slg.png + slh.png + sli.png + slj.png + slk.png + sll.png example_func2highres2.png ; /usr/local/packages/fsl-5.0.8/bin/pngappend example_func2highres1.png - example_func2highres2.png example_func2highres.png; /bin/rm -f sl?.png example_func2highres2.png
-Image Exception : #22 :: ERROR: Could not open image example_func2highres
 
- Cannot open sla.png for reading
-Segmentation fault (core dumped)
-
- Cannot open example_func2highres1.png for reading
-Segmentation fault (core dumped)
-Error in slicer input, exiting...
 
 /bin/rm example_func2highres1.png
-/bin/rm: cannot remove `example_func2highres1.png': No such file or directory
 
-did not find file: highres2standard.mat. Generating transform.
-
-/usr/local/packages/fsl-5.0.8/bin/flirt -in highres -ref standard -out highres2standard -omat highres2standard.mat -cost corratio -dof 12 -searchrx -90 90 -searchry -90 90 -searchrz -90 90 -interp trilinear 
-
-
-/usr/local/packages/fsl-5.0.8/bin/convert_xfm -inverse -omat standard2highres.mat highres2standard.mat
-
-
-/usr/local/packages/fsl-5.0.8/bin/slicer highres2standard standard -s 2 -x 0.35 sla.png -x 0.45 slb.png -x 0.55 slc.png -x 0.65 sld.png -y 0.35 sle.png -y 0.45 slf.png -y 0.55 slg.png -y 0.65 slh.png -z 0.35 sli.png -z 0.45 slj.png -z 0.55 slk.png -z 0.65 sll.png ; /usr/local/packages/fsl-5.0.8/bin/pngappend sla.png + slb.png + slc.png + sld.png + sle.png + slf.png + slg.png + slh.png + sli.png + slj.png + slk.png + sll.png highres2standard1.png ; /usr/local/packages/fsl-5.0.8/bin/slicer standard highres2standard -s 2 -x 0.35 sla.png -x 0.45 slb.png -x 0.55 slc.png -x 0.65 sld.png -y 0.35 sle.png -y 0.45 slf.png -y 0.55 slg.png -y 0.65 slh.png -z 0.35 sli.png -z 0.45 slj.png -z 0.55 slk.png -z 0.65 sll.png ; /usr/local/packages/fsl-5.0.8/bin/pngappend sla.png + slb.png + slc.png + sld.png + sle.png + slf.png + slg.png + slh.png + sli.png + slj.png + slk.png + sll.png highres2standard2.png ; /usr/local/packages/fsl-5.0.8/bin/pngappend highres2standard1.png - highres2standard2.png highres2standard.png; /bin/rm -f sl?.png highres2standard2.png
-
-
-/bin/rm highres2standard1.png
-
-
-/usr/local/packages/fsl-5.0.8/bin/convert_xfm -omat example_func2standard.mat -concat highres2standard.mat example_func2highres.mat
-Could not open matrix file example_func2highres.mat
-Cannot read input-matrix
-
-did not find file: example_func2standard.mat. Generating transform.
-
-/usr/local/packages/fsl-5.0.8/bin/flirt -in example_func -ref standard -out example_func2standard -omat example_func2standard.mat -cost corratio -dof  -searchrx -  -searchry -  -searchrz -  -interp trilinear 
-Unrecognised option -
-
-
-/usr/local/packages/fsl-5.0.8/bin/slicer example_func2standard standard -s 2 -x 0.35 sla.png -x 0.45 slb.png -x 0.55 slc.png -x 0.65 sld.png -y 0.35 sle.png -y 0.45 slf.png -y 0.55 slg.png -y 0.65 slh.png -z 0.35 sli.png -z 0.45 slj.png -z 0.55 slk.png -z 0.65 sll.png ; /usr/local/packages/fsl-5.0.8/bin/pngappend sla.png + slb.png + slc.png + sld.png + sle.png + slf.png + slg.png + slh.png + sli.png + slj.png + slk.png + sll.png example_func2standard1.png ; /usr/local/packages/fsl-5.0.8/bin/slicer standard example_func2standard -s 2 -x 0.35 sla.png -x 0.45 slb.png -x 0.55 slc.png -x 0.65 sld.png -y 0.35 sle.png -y 0.45 slf.png -y 0.55 slg.png -y 0.65 slh.png -z 0.35 sli.png -z 0.45 slj.png -z 0.55 slk.png -z 0.65 sll.png ; /usr/local/packages/fsl-5.0.8/bin/pngappend sla.png + slb.png + slc.png + sld.png + sle.png + slf.png + slg.png + slh.png + sli.png + slj.png + slk.png + sll.png example_func2standard2.png ; /usr/local/packages/fsl-5.0.8/bin/pngappend example_func2standard1.png - example_func2standard2.png example_func2standard.png; /bin/rm -f sl?.png example_func2standard2.png
-Image Exception : #22 :: ERROR: Could not open image example_func2standard
-
- Cannot open sla.png for reading
-Segmentation fault (core dumped)
-
- Cannot open example_func2standard1.png for reading
-Segmentation fault (core dumped)
-Error in slicer input, exiting...
 </pre><hr>Preprocessing:Stage 2<br><pre>
 
 /usr/local/packages/fsl-5.0.8/bin/mcflirt -in prefiltered_func_data -out prefiltered_func_data_mcf -mats -plots -reffile example_func -rmsrel -rmsabs -spline_final
@@ -164,12 +96,12 @@ Error in slicer input, exiting...
 /usr/local/packages/fsl-5.0.8/bin/fslmaths prefiltered_func_data_mcf -mas mask prefiltered_func_data_bet
 
 /usr/local/packages/fsl-5.0.8/bin/fslstats prefiltered_func_data_bet -p 2 -p 98
-0.000000 2064.971191 
+0.000000 744.586670 
 
-/usr/local/packages/fsl-5.0.8/bin/fslmaths prefiltered_func_data_bet -thr 206.4971191 -Tmin -bin mask -odt char
+/usr/local/packages/fsl-5.0.8/bin/fslmaths prefiltered_func_data_bet -thr 74.458667 -Tmin -bin mask -odt char
 
 /usr/local/packages/fsl-5.0.8/bin/fslstats prefiltered_func_data_mcf -k mask -p 50
-1658.747192 
+594.409668 
 
 /usr/local/packages/fsl-5.0.8/bin/fslmaths mask -dilF mask
 
@@ -177,51 +109,45 @@ Error in slicer input, exiting...
 
 /usr/local/packages/fsl-5.0.8/bin/fslmaths prefiltered_func_data_thresh -Tmean mean_func
 
-/usr/local/packages/fsl-5.0.8/bin/susan prefiltered_func_data_thresh 1244.060394 2.12314225053 3 1 1 mean_func 1244.060394 prefiltered_func_data_smooth
+/usr/local/packages/fsl-5.0.8/bin/susan prefiltered_func_data_thresh 445.807251 2.54777070064 3 1 1 mean_func 445.807251 prefiltered_func_data_smooth
 
 /usr/local/packages/fsl-5.0.8/bin/fslmaths prefiltered_func_data_smooth -mas mask prefiltered_func_data_smooth
 
-/usr/local/packages/fsl-5.0.8/bin/fslmaths prefiltered_func_data_smooth -mul 6.02864622664 prefiltered_func_data_intnorm
+/usr/local/packages/fsl-5.0.8/bin/fslmaths prefiltered_func_data_smooth -mul 16.8234141171 prefiltered_func_data_intnorm
 
 /usr/local/packages/fsl-5.0.8/bin/fslmaths prefiltered_func_data_intnorm -Tmean tempMean
 
-/usr/local/packages/fsl-5.0.8/bin/fslmaths prefiltered_func_data_intnorm -bptf 25.0 -1 -add tempMean prefiltered_func_data_tempfilt
+/usr/local/packages/fsl-5.0.8/bin/fslmaths prefiltered_func_data_intnorm -bptf 15.0 -1 -add tempMean prefiltered_func_data_tempfilt
 
 /usr/local/packages/fsl-5.0.8/bin/imrm tempMean
 
 /usr/local/packages/fsl-5.0.8/bin/fslmaths prefiltered_func_data_tempfilt filtered_func_data
-
-/usr/local/packages/fsl-5.0.8/bin/fslhd -x filtered_func_data | sed 's/  dt = .*/  dt = '\''2.000000'\''/g' > tmpHeader
-
-/usr/local/packages/fsl-5.0.8/bin/fslcreatehd tmpHeader filtered_func_data
-
-/bin/rm tmpHeader
 
 /usr/local/packages/fsl-5.0.8/bin/fslmaths filtered_func_data -Tmean mean_func
 
 /bin/rm -rf prefiltered_func_data*
 </pre><hr>Stats<br><pre>
 
-mkdir -p custom_timing_files ; /usr/local/packages/fsl-5.0.8/bin/fslFixText /storage/essicd/data/NIDM-Ex/Data/ds000052/sub001/model/model001/onsets/task001_run001/cond001.txt custom_timing_files/ev1.txt
+mkdir -p custom_timing_files ; /usr/local/packages/fsl-5.0.8/bin/fslFixText /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/ONSETS/fslonsets_tone_counting.txt custom_timing_files/ev1.txt
 
-mkdir -p custom_timing_files ; /usr/local/packages/fsl-5.0.8/bin/fslFixText /storage/essicd/data/NIDM-Ex/Data/ds000052/sub001/model/model001/onsets/task001_run001/cond002.txt custom_timing_files/ev2.txt
+mkdir -p custom_timing_files ; /usr/local/packages/fsl-5.0.8/bin/fslFixText /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/ONSETS/fslonsets_tone_counting_probe.txt custom_timing_files/ev2.txt
 
 /usr/local/packages/fsl-5.0.8/bin/film_gls --in=filtered_func_data --rn=stats --pd=design.mat --thr=1000.0 --sa --ms=5 --con=design.con  
 Log directory is: stats
-paradigm.getDesignMatrix().Nrows()=225
+paradigm.getDesignMatrix().Nrows()=104
 paradigm.getDesignMatrix().Ncols()=2
-sizeTS=225
-numTS=25241
+sizeTS=104
+numTS=38344
 Calculating residuals...
 Completed
 Estimating residual autocorrelation...
 Calculating raw AutoCorrs... Completed
-mode = 10233.3
-sig = 884
+mode = 9980.39
+sig = 963
 Spatially smoothing auto corr estimates
-..............
+.........
 Completed
-Tukey M = 15
+Tukey M = 10
 Tukey estimates... Completed
 Completed
 Prewhitening and Computing PEs...
@@ -230,28 +156,45 @@ Percentage done:
 Saving results... 
 Completed
 
-/usr/local/packages/fsl-5.0.8/bin/smoothest -d 223   -m mask -r stats/res4d > stats/smoothness
+/usr/local/packages/fsl-5.0.8/bin/smoothest -d 102   -m mask -r stats/res4d > stats/smoothness
 </pre><hr>Post-stats<br><pre>
 
 /usr/local/packages/fsl-5.0.8/bin/fslmaths stats/zstat1 -mas mask thresh_zstat1
 
-echo 25241 > thresh_zstat1.vol
-zstat1: DLH=1.74234 VOLUME=25241 RESELS=2.65365
+echo 38344 > thresh_zstat1.vol
+zstat1: DLH=0.700797 VOLUME=38344 RESELS=6.60989
 
-/usr/local/packages/fsl-5.0.8/bin/ptoz 0.05 -g 9511
-5.146988
+/usr/local/packages/fsl-5.0.8/bin/fslmaths stats/zstat2 -mas mask thresh_zstat2
 
-/usr/local/packages/fsl-5.0.8/bin/fslmaths thresh_zstat1 -thr 5.146988 thresh_zstat1
+echo 38344 > thresh_zstat2.vol
+zstat2: DLH=0.700797 VOLUME=38344 RESELS=6.60989
+
+/usr/local/packages/fsl-5.0.8/bin/ptoz 0.05 -g 5801
+5.042313
+
+/usr/local/packages/fsl-5.0.8/bin/fslmaths thresh_zstat1 -thr 5.042313 thresh_zstat1
+
+/usr/local/packages/fsl-5.0.8/bin/ptoz 0.05 -g 5801
+5.042313
+
+/usr/local/packages/fsl-5.0.8/bin/fslmaths thresh_zstat2 -thr 5.042313 thresh_zstat2
 
 /usr/local/packages/fsl-5.0.8/bin/fslstats thresh_zstat1 -l 0.0001 -R 2>/dev/null
-0.000000 0.000000 
-Rendering using zmin=2.3 zmax=8
+5.043573 7.490716 
 
-/usr/local/packages/fsl-5.0.8/bin/overlay 1 0 example_func -a thresh_zstat1 2.3 8 rendered_thresh_zstat1
+/usr/local/packages/fsl-5.0.8/bin/fslstats thresh_zstat2 -l 0.0001 -R 2>/dev/null
+5.055857 6.120578 
+Rendering using zmin=5.043573 zmax=7.490716
+
+/usr/local/packages/fsl-5.0.8/bin/overlay 1 0 example_func -a thresh_zstat1 5.043573 7.490716 rendered_thresh_zstat1
 
 /usr/local/packages/fsl-5.0.8/bin/slicer rendered_thresh_zstat1 -A 750 rendered_thresh_zstat1.png
 
 /bin/cp /usr/local/packages/fsl-5.0.8/etc/luts/ramp.gif .ramp.gif
+
+/usr/local/packages/fsl-5.0.8/bin/overlay 1 0 example_func -a thresh_zstat2 5.043573 7.490716 rendered_thresh_zstat2
+
+/usr/local/packages/fsl-5.0.8/bin/slicer rendered_thresh_zstat2 -A 750 rendered_thresh_zstat2.png
 
 mkdir -p tsplot ; /usr/local/packages/fsl-5.0.8/bin/tsplot . -f filtered_func_data -o tsplot
 </pre><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></BODY></HTML>
