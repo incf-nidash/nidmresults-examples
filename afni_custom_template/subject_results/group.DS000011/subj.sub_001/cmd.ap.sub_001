@@ -1,10 +1,11 @@
 #!/usr/bin/env tcsh
 
 # created by uber_subject.py: version 0.37 (April 14, 2015)
-# creation date: Mon Feb 15 10:59:31 2016
+# creation date: Mon Feb 22 14:49:53 2016
 
 # set data directories
-set top_dir   = ./afni_f_test
+set top_dir   =                                                  \
+    ./afni_custom_template
 
 # set subject and group identifiers
 set subj      = sub_001
@@ -17,6 +18,7 @@ afni_proc.py -subj_id $subj                                      \
         -copy_anat $top_dir/sub-01_T1w.nii.gz                    \
         -tcat_remove_first_trs 0                                 \
         -dsets $top_dir/sub-01_task-tonecounting_bold.nii.gz     \
+        -tlrc_base TT_icbm452+tlrc                               \
         -volreg_align_to third                                   \
         -volreg_align_e2a                                        \
         -volreg_tlrc_warp                                        \
