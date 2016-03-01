@@ -1,5 +1,2 @@
-*+ WARNING: '-stim_times 2' (LOCAL) run#1 has 1 times outside range 0 .. 206 [PSFB syndrome]
-*+ WARNING: Smallest FDR q [2 tone_counting#0_Tstat] = 0.125884 ==> very few (if any) true detections
-*+ WARNING: Smallest FDR q [4 tone_counting#1_Tstat] = 0.591766 ==> very few (if any) true detections
-*+ WARNING: Smallest FDR q [9 tone_counting_probe#0_Tstat] = 0.198253 ==> very few (if any) true detections
-*+ WARNING: Smallest FDR q [11 tone_counting_probe#1_Tstat] = 0.179977 ==> very few (if any) true detections
+*+ WARNING: Smallest FDR q [2 tone_counting_onset_times.txt#0_Tstat] = 0.12363 ==> very few (if any) true detections
+*+ WARNING: Smallest FDR q [4 tone_counting_onset_times.txt#1_Tstat] = 0.207605 ==> very few (if any) true detections
