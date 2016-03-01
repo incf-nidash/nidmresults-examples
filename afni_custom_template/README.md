@@ -2,9 +2,9 @@ AFNI single subject t-test results from subject 01, tone counting task, taken fr
 
 This variant uses the custom template TT_icbm452+tlrc. 
 
-Contrasts used:
+Contrast used:
 tone counting vs. baseline
-tone counting with probe vs. baseline
+
 
 For a description of the task, see:
 
