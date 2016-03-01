@@ -1,1 +1,7 @@
--- no warnings for correlation matrix (cut = 0.400) --
+
+Warnings regarding Correlation Matrix: X.xmat.1D
+
+  severity   correlation   cosine  regressor pair
+  --------   -----------   ------  ----------------------------------------
+  medium:       0.421       0.116  ( 3 vs.  6)  tone_counting_onset_times.txt#0  vs.  yaw#0
+
