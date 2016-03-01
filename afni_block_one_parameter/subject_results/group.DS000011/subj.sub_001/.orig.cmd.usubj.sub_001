@@ -1,17 +1,16 @@
-uber_subject.py                                                                                                                                \
-    -cvar subj_dir subject_results/group.DS000011/subj.sub_001                                                                                 \
-    -svar anat                                                                                                                                 \
-    /Users/u1591557/Documents/PhD_work/WMG_Lab_Placement_1/nidmresults-examples/afni_block_basis_function/sub-01_T1w.nii.gz                    \
-                                                                                                                                               \
-    -svar epi                                                                                                                                  \
-    /Users/u1591557/Documents/PhD_work/WMG_Lab_Placement_1/nidmresults-examples/afni_block_basis_function/sub-01_task-tonecounting_bold.nii.gz \
-                                                                                                                                               \
-    -svar gid DS000011                                                                                                                         \
-    -svar sid sub_001                                                                                                                          \
-    -svar stim                                                                                                                                 \
-    /Users/u1591557/Documents/PhD_work/WMG_Lab_Placement_1/nidmresults-examples/afni_block_basis_function/tone_counting_onset_times.txt        \
-    /Users/u1591557/Documents/PhD_work/WMG_Lab_Placement_1/nidmresults-examples/afni_block_basis_function/tone_counting_probe_onset_times.txt  \
-                                                                                                                                               \
-    -svar stim_basis 'BLOCK(2)' 'BLOCK(2)'                                                                                                     \
-    -svar stim_label tone_counting tone_counting_probe                                                                                         \
-    -svar stim_type times times
+uber_subject.py                                                                                                                               \
+    -cvar subj_dir subject_results/group.DS000011/subj.sub_001                                                                                \
+    -svar anat                                                                                                                                \
+    /Users/u1591557/Documents/PhD_work/WMG_Lab_Placement_1/nidmresults-examples/afni_block_one_parameter/sub-01_T1w.nii.gz                    \
+                                                                                                                                              \
+    -svar epi                                                                                                                                 \
+    /Users/u1591557/Documents/PhD_work/WMG_Lab_Placement_1/nidmresults-examples/afni_block_one_parameter/sub-01_task-tonecounting_bold.nii.gz \
+                                                                                                                                              \
+    -svar gid DS000011                                                                                                                        \
+    -svar sid sub_001                                                                                                                         \
+    -svar stim                                                                                                                                \
+    /Users/u1591557/Documents/PhD_work/WMG_Lab_Placement_1/nidmresults-examples/afni_block_one_parameter/tone_counting_onset_times.txt        \
+                                                                                                                                              \
+    -svar stim_basis 'BLOCK(4)'                                                                                                               \
+    -svar stim_label tone_counting                                                                                                            \
+    -svar stim_type times
