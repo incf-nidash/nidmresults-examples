@@ -1,0 +1,7 @@
+
+{
+"software": "afni",
+"ground_truth": ["cluster_FWE_05/nidm.ttl"],
+"inclusive": true,
+"versions": ["1.2.0"]
+}
