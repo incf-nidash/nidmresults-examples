@@ -30,13 +30,13 @@ set fmri(featwatcher_yn) 0
 set fmri(sscleanup_yn) 0
 
 # Output directory
-set fmri(outputdir) "/storage/essicd/data/NIDM-Ex/Testing/ds000052/RESULTS/Sub01GammaBasis"
+set fmri(outputdir) "/storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_gamma_basis"
 
 # TR(s)
 set fmri(tr) 2.000000
 
 # Total volumes
-set fmri(npts) 225
+set fmri(npts) 104
 
 # Delete volumes
 set fmri(ndelete) 0
@@ -106,7 +106,7 @@ set fmri(st_file) ""
 set fmri(bet_yn) 1
 
 # Spatial smoothing FWHM (mm)
-set fmri(smooth) 5
+set fmri(smooth) 6
 
 # Intensity normalization
 set fmri(norm_yn) 0
@@ -152,12 +152,12 @@ set fmri(evs_real) 6
 set fmri(evs_vox) 0
 
 # Number of contrasts
-set fmri(ncon_orig) 1
-set fmri(ncon_real) 3
+set fmri(ncon_orig) 2
+set fmri(ncon_real) 6
 
 # Number of F-tests
 set fmri(nftests_orig) 0
-set fmri(nftests_real) 1
+set fmri(nftests_real) 2
 
 # Add constant column to design matrix? (obsolete)
 set fmri(constcol) 0
@@ -239,7 +239,7 @@ set fmri(regstandard_yn) 1
 set fmri(alternateReference_yn) 0
 
 # Standard image
-set fmri(regstandard) "/storage/essicd/fsl-5.0.8/data/standard/MNI152_T1_2mm_brain"
+set fmri(regstandard) "/export/software/packages-x86_64-linux-gnu/packages/fsl-5.0.8/data/standard/MNI152_T1_2mm_brain"
 
 # Search space for registration to standard space
 # 0   : No search
@@ -257,26 +257,26 @@ set fmri(regstandard_nonlinear_yn) 0
 set fmri(regstandard_nonlinear_warpres) 10 
 
 # High pass filter cutoff
-set fmri(paradigm_hp) 100
+set fmri(paradigm_hp) 60
 
 # Total voxels
-set fmri(totalVoxels) 19353600
+set fmri(totalVoxels) 12779520
 
 
 # Number of lower-level copes feeding into higher-level analysis
 set fmri(ncopeinputs) 0
 
 # 4D AVW data or FEAT directory (1)
-set feat_files(1) "/storage/essicd/data/NIDM-Ex/Data/ds000052/sub001/BOLD/task001_run001/bold"
+set feat_files(1) "/storage/essicd/data/NIDM-Ex/BIDS_Data/DATA/BIDS/ds011/sub-01/func/sub-01_task-tonecounting_bold"
 
 # Add confound EVs text file
 set fmri(confoundevs) 0
 
 # Subject's structural image for analysis 1
-set highres_files(1) "/storage/essicd/data/NIDM-Ex/Data/ds000052/sub001/anatomy/highres001_brain"
+set highres_files(1) "/storage/essicd/data/NIDM-Ex/BIDS_Data/DATA/BIDS/ds011/sub-01/anat/sub-01_T1w"
 
 # EV 1 title
-set fmri(evtitle1) "positive feedback"
+set fmri(evtitle1) "tone_counting"
 
 # Basic waveform shape (EV 1)
 # 0 : Square
@@ -307,7 +307,7 @@ set fmri(tempfilt_yn1) 1
 set fmri(deriv_yn1) 0
 
 # Custom EV file (EV 1)
-set fmri(custom1) "/storage/essicd/data/NIDM-Ex/Data/ds000052/sub001/model/model001/onsets/task001_run001/cond001.txt"
+set fmri(custom1) "/storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/ONSETS/fslonsets_tone_counting.txt"
 
 # Gamma basis functions number (EV 1)
 set fmri(basisfnum1) 3
@@ -328,7 +328,7 @@ set fmri(ortho1.1) 0
 set fmri(ortho1.2) 0
 
 # EV 2 title
-set fmri(evtitle2) "negative feedback"
+set fmri(evtitle2) "tone_counting_probe"
 
 # Basic waveform shape (EV 2)
 # 0 : Square
@@ -359,7 +359,7 @@ set fmri(tempfilt_yn2) 1
 set fmri(deriv_yn2) 0
 
 # Custom EV file (EV 2)
-set fmri(custom2) "/storage/essicd/data/NIDM-Ex/Data/ds000052/sub001/model/model001/onsets/task001_run001/cond002.txt"
+set fmri(custom2) "/storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/ONSETS/fslonsets_tone_counting_probe.txt"
 
 # Gamma basis functions number (EV 2)
 set fmri(basisfnum2) 3
@@ -389,10 +389,10 @@ set fmri(con_mode) orig
 set fmri(conpic_real.1) 1
 
 # Title for contrast_real 1
-set fmri(conname_real.1) "positive vs negative (1)"
+set fmri(conname_real.1) "tone counting vs baseline (1)"
 
 # Real contrast_real vector 1 element 1
-set fmri(con_real1.1) 1
+set fmri(con_real1.1) 1.0
 
 # Real contrast_real vector 1 element 2
 set fmri(con_real1.2) 0
@@ -401,7 +401,7 @@ set fmri(con_real1.2) 0
 set fmri(con_real1.3) 0
 
 # Real contrast_real vector 1 element 4
-set fmri(con_real1.4) -1
+set fmri(con_real1.4) 0.0
 
 # Real contrast_real vector 1 element 5
 set fmri(con_real1.5) 0
@@ -412,17 +412,20 @@ set fmri(con_real1.6) 0
 # F-test 1 element 1
 set fmri(ftest_real1.1) 1
 
+# F-test 2 element 1
+set fmri(ftest_real2.1) 0
+
 # Display images for contrast_real 2
 set fmri(conpic_real.2) 1
 
 # Title for contrast_real 2
-set fmri(conname_real.2) "positive vs negative (2)"
+set fmri(conname_real.2) "tone counting vs baseline (2)"
 
 # Real contrast_real vector 2 element 1
 set fmri(con_real2.1) 0
 
 # Real contrast_real vector 2 element 2
-set fmri(con_real2.2) 1
+set fmri(con_real2.2) 1.0
 
 # Real contrast_real vector 2 element 3
 set fmri(con_real2.3) 0
@@ -431,7 +434,7 @@ set fmri(con_real2.3) 0
 set fmri(con_real2.4) 0
 
 # Real contrast_real vector 2 element 5
-set fmri(con_real2.5) -1
+set fmri(con_real2.5) 0.0
 
 # Real contrast_real vector 2 element 6
 set fmri(con_real2.6) 0
@@ -439,11 +442,14 @@ set fmri(con_real2.6) 0
 # F-test 1 element 2
 set fmri(ftest_real1.2) 1
 
+# F-test 2 element 2
+set fmri(ftest_real2.2) 0
+
 # Display images for contrast_real 3
 set fmri(conpic_real.3) 1
 
 # Title for contrast_real 3
-set fmri(conname_real.3) "positive vs negative (3)"
+set fmri(conname_real.3) "tone counting vs baseline (3)"
 
 # Real contrast_real vector 3 element 1
 set fmri(con_real3.1) 0
@@ -452,7 +458,7 @@ set fmri(con_real3.1) 0
 set fmri(con_real3.2) 0
 
 # Real contrast_real vector 3 element 3
-set fmri(con_real3.3) 1
+set fmri(con_real3.3) 1.0
 
 # Real contrast_real vector 3 element 4
 set fmri(con_real3.4) 0
@@ -461,22 +467,127 @@ set fmri(con_real3.4) 0
 set fmri(con_real3.5) 0
 
 # Real contrast_real vector 3 element 6
-set fmri(con_real3.6) -1
+set fmri(con_real3.6) 0.0
 
 # F-test 1 element 3
 set fmri(ftest_real1.3) 1
+
+# F-test 2 element 3
+set fmri(ftest_real2.3) 0
+
+# Display images for contrast_real 4
+set fmri(conpic_real.4) 1
+
+# Title for contrast_real 4
+set fmri(conname_real.4) "tone counting probe vs baseline (1)"
+
+# Real contrast_real vector 4 element 1
+set fmri(con_real4.1) 0.0
+
+# Real contrast_real vector 4 element 2
+set fmri(con_real4.2) 0
+
+# Real contrast_real vector 4 element 3
+set fmri(con_real4.3) 0
+
+# Real contrast_real vector 4 element 4
+set fmri(con_real4.4) 1.0
+
+# Real contrast_real vector 4 element 5
+set fmri(con_real4.5) 0
+
+# Real contrast_real vector 4 element 6
+set fmri(con_real4.6) 0
+
+# F-test 1 element 4
+set fmri(ftest_real1.4) 0
+
+# F-test 2 element 4
+set fmri(ftest_real2.4) 1
+
+# Display images for contrast_real 5
+set fmri(conpic_real.5) 1
+
+# Title for contrast_real 5
+set fmri(conname_real.5) "tone counting probe vs baseline (2)"
+
+# Real contrast_real vector 5 element 1
+set fmri(con_real5.1) 0
+
+# Real contrast_real vector 5 element 2
+set fmri(con_real5.2) 0.0
+
+# Real contrast_real vector 5 element 3
+set fmri(con_real5.3) 0
+
+# Real contrast_real vector 5 element 4
+set fmri(con_real5.4) 0
+
+# Real contrast_real vector 5 element 5
+set fmri(con_real5.5) 1.0
+
+# Real contrast_real vector 5 element 6
+set fmri(con_real5.6) 0
+
+# F-test 1 element 5
+set fmri(ftest_real1.5) 0
+
+# F-test 2 element 5
+set fmri(ftest_real2.5) 1
+
+# Display images for contrast_real 6
+set fmri(conpic_real.6) 1
+
+# Title for contrast_real 6
+set fmri(conname_real.6) "tone counting probe vs baseline (3)"
+
+# Real contrast_real vector 6 element 1
+set fmri(con_real6.1) 0
+
+# Real contrast_real vector 6 element 2
+set fmri(con_real6.2) 0
+
+# Real contrast_real vector 6 element 3
+set fmri(con_real6.3) 0.0
+
+# Real contrast_real vector 6 element 4
+set fmri(con_real6.4) 0
+
+# Real contrast_real vector 6 element 5
+set fmri(con_real6.5) 0
+
+# Real contrast_real vector 6 element 6
+set fmri(con_real6.6) 1.0
+
+# F-test 1 element 6
+set fmri(ftest_real1.6) 0
+
+# F-test 2 element 6
+set fmri(ftest_real2.6) 1
 
 # Display images for contrast_orig 1
 set fmri(conpic_orig.1) 1
 
 # Title for contrast_orig 1
-set fmri(conname_orig.1) "positive vs negative"
+set fmri(conname_orig.1) "tone counting vs baseline"
 
 # Real contrast_orig vector 1 element 1
-set fmri(con_orig1.1) 1
+set fmri(con_orig1.1) 1.0
 
 # Real contrast_orig vector 1 element 2
-set fmri(con_orig1.2) -1
+set fmri(con_orig1.2) 0.0
+
+# Display images for contrast_orig 2
+set fmri(conpic_orig.2) 1
+
+# Title for contrast_orig 2
+set fmri(conname_orig.2) "tone counting probe vs baseline"
+
+# Real contrast_orig vector 2 element 1
+set fmri(con_orig2.1) 0.0
+
+# Real contrast_orig vector 2 element 2
+set fmri(con_orig2.2) 1.0
 
 # Contrast masking - use >0 instead of thresholding?
 set fmri(conmask_zerothresh_yn) 0
@@ -490,6 +601,18 @@ set fmri(conmask1_3) 0
 # Mask real contrast/F-test 1 with real contrast/F-test 4?
 set fmri(conmask1_4) 0
 
+# Mask real contrast/F-test 1 with real contrast/F-test 5?
+set fmri(conmask1_5) 0
+
+# Mask real contrast/F-test 1 with real contrast/F-test 6?
+set fmri(conmask1_6) 0
+
+# Mask real contrast/F-test 1 with real contrast/F-test 7?
+set fmri(conmask1_7) 0
+
+# Mask real contrast/F-test 1 with real contrast/F-test 8?
+set fmri(conmask1_8) 0
+
 # Mask real contrast/F-test 2 with real contrast/F-test 1?
 set fmri(conmask2_1) 0
 
@@ -498,6 +621,18 @@ set fmri(conmask2_3) 0
 
 # Mask real contrast/F-test 2 with real contrast/F-test 4?
 set fmri(conmask2_4) 0
+
+# Mask real contrast/F-test 2 with real contrast/F-test 5?
+set fmri(conmask2_5) 0
+
+# Mask real contrast/F-test 2 with real contrast/F-test 6?
+set fmri(conmask2_6) 0
+
+# Mask real contrast/F-test 2 with real contrast/F-test 7?
+set fmri(conmask2_7) 0
+
+# Mask real contrast/F-test 2 with real contrast/F-test 8?
+set fmri(conmask2_8) 0
 
 # Mask real contrast/F-test 3 with real contrast/F-test 1?
 set fmri(conmask3_1) 0
@@ -508,6 +643,18 @@ set fmri(conmask3_2) 0
 # Mask real contrast/F-test 3 with real contrast/F-test 4?
 set fmri(conmask3_4) 0
 
+# Mask real contrast/F-test 3 with real contrast/F-test 5?
+set fmri(conmask3_5) 0
+
+# Mask real contrast/F-test 3 with real contrast/F-test 6?
+set fmri(conmask3_6) 0
+
+# Mask real contrast/F-test 3 with real contrast/F-test 7?
+set fmri(conmask3_7) 0
+
+# Mask real contrast/F-test 3 with real contrast/F-test 8?
+set fmri(conmask3_8) 0
+
 # Mask real contrast/F-test 4 with real contrast/F-test 1?
 set fmri(conmask4_1) 0
 
@@ -516,6 +663,102 @@ set fmri(conmask4_2) 0
 
 # Mask real contrast/F-test 4 with real contrast/F-test 3?
 set fmri(conmask4_3) 0
+
+# Mask real contrast/F-test 4 with real contrast/F-test 5?
+set fmri(conmask4_5) 0
+
+# Mask real contrast/F-test 4 with real contrast/F-test 6?
+set fmri(conmask4_6) 0
+
+# Mask real contrast/F-test 4 with real contrast/F-test 7?
+set fmri(conmask4_7) 0
+
+# Mask real contrast/F-test 4 with real contrast/F-test 8?
+set fmri(conmask4_8) 0
+
+# Mask real contrast/F-test 5 with real contrast/F-test 1?
+set fmri(conmask5_1) 0
+
+# Mask real contrast/F-test 5 with real contrast/F-test 2?
+set fmri(conmask5_2) 0
+
+# Mask real contrast/F-test 5 with real contrast/F-test 3?
+set fmri(conmask5_3) 0
+
+# Mask real contrast/F-test 5 with real contrast/F-test 4?
+set fmri(conmask5_4) 0
+
+# Mask real contrast/F-test 5 with real contrast/F-test 6?
+set fmri(conmask5_6) 0
+
+# Mask real contrast/F-test 5 with real contrast/F-test 7?
+set fmri(conmask5_7) 0
+
+# Mask real contrast/F-test 5 with real contrast/F-test 8?
+set fmri(conmask5_8) 0
+
+# Mask real contrast/F-test 6 with real contrast/F-test 1?
+set fmri(conmask6_1) 0
+
+# Mask real contrast/F-test 6 with real contrast/F-test 2?
+set fmri(conmask6_2) 0
+
+# Mask real contrast/F-test 6 with real contrast/F-test 3?
+set fmri(conmask6_3) 0
+
+# Mask real contrast/F-test 6 with real contrast/F-test 4?
+set fmri(conmask6_4) 0
+
+# Mask real contrast/F-test 6 with real contrast/F-test 5?
+set fmri(conmask6_5) 0
+
+# Mask real contrast/F-test 6 with real contrast/F-test 7?
+set fmri(conmask6_7) 0
+
+# Mask real contrast/F-test 6 with real contrast/F-test 8?
+set fmri(conmask6_8) 0
+
+# Mask real contrast/F-test 7 with real contrast/F-test 1?
+set fmri(conmask7_1) 0
+
+# Mask real contrast/F-test 7 with real contrast/F-test 2?
+set fmri(conmask7_2) 0
+
+# Mask real contrast/F-test 7 with real contrast/F-test 3?
+set fmri(conmask7_3) 0
+
+# Mask real contrast/F-test 7 with real contrast/F-test 4?
+set fmri(conmask7_4) 0
+
+# Mask real contrast/F-test 7 with real contrast/F-test 5?
+set fmri(conmask7_5) 0
+
+# Mask real contrast/F-test 7 with real contrast/F-test 6?
+set fmri(conmask7_6) 0
+
+# Mask real contrast/F-test 7 with real contrast/F-test 8?
+set fmri(conmask7_8) 0
+
+# Mask real contrast/F-test 8 with real contrast/F-test 1?
+set fmri(conmask8_1) 0
+
+# Mask real contrast/F-test 8 with real contrast/F-test 2?
+set fmri(conmask8_2) 0
+
+# Mask real contrast/F-test 8 with real contrast/F-test 3?
+set fmri(conmask8_3) 0
+
+# Mask real contrast/F-test 8 with real contrast/F-test 4?
+set fmri(conmask8_4) 0
+
+# Mask real contrast/F-test 8 with real contrast/F-test 5?
+set fmri(conmask8_5) 0
+
+# Mask real contrast/F-test 8 with real contrast/F-test 6?
+set fmri(conmask8_6) 0
+
+# Mask real contrast/F-test 8 with real contrast/F-test 7?
+set fmri(conmask8_7) 0
 
 # Do contrast masking at all?
 set fmri(conmask1_1) 0
