@@ -1,10 +1,8 @@
 /ContrastName1	tone counting vs baseline 
-/ContrastName2	tone counting probe vs baseline 
-/NumWaves	2
-/NumContrasts	2
-/PPheights		1.015309e+00	4.740451e-01
-/RequiredEffect		1.691	2.065
+/NumWaves	1
+/NumContrasts	1
+/PPheights		8.788620e-01
+/RequiredEffect		1.305
 
 /Matrix
-1.000000e+00 0.000000e+00 
-0.000000e+00 1.000000e+00 
+1.000000e+00 

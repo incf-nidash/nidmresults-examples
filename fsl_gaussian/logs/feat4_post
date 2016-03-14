@@ -3,35 +3,21 @@
 /usr/local/packages/fsl-5.0.8/bin/fslmaths stats/zstat1 -mas mask thresh_zstat1
 
 echo 38344 > thresh_zstat1.vol
-zstat1: DLH=0.702928 VOLUME=38344 RESELS=6.58985
-
-/usr/local/packages/fsl-5.0.8/bin/fslmaths stats/zstat2 -mas mask thresh_zstat2
-
-echo 38344 > thresh_zstat2.vol
-zstat2: DLH=0.702928 VOLUME=38344 RESELS=6.58985
+zstat1: DLH=0.703018 VOLUME=38344 RESELS=6.58876
 
 /usr/local/packages/fsl-5.0.8/bin/ptoz 0.001
 3.090232
 
 /usr/local/packages/fsl-5.0.8/bin/fslmaths thresh_zstat1 -thr 3.090232 thresh_zstat1
 
-/usr/local/packages/fsl-5.0.8/bin/fslmaths thresh_zstat2 -thr 3.090232 thresh_zstat2
-
 /usr/local/packages/fsl-5.0.8/bin/fslstats thresh_zstat1 -l 0.0001 -R 2>/dev/null
-3.091171 7.130674 
+3.091575 6.237526 
+Rendering using zmin=3.091575 zmax=6.237526
 
-/usr/local/packages/fsl-5.0.8/bin/fslstats thresh_zstat2 -l 0.0001 -R 2>/dev/null
-3.090383 6.380572 
-Rendering using zmin=3.090383 zmax=7.130674
-
-/usr/local/packages/fsl-5.0.8/bin/overlay 1 0 example_func -a thresh_zstat1 3.090383 7.130674 rendered_thresh_zstat1
+/usr/local/packages/fsl-5.0.8/bin/overlay 1 0 example_func -a thresh_zstat1 3.091575 6.237526 rendered_thresh_zstat1
 
 /usr/local/packages/fsl-5.0.8/bin/slicer rendered_thresh_zstat1 -A 750 rendered_thresh_zstat1.png
 
 /bin/cp /usr/local/packages/fsl-5.0.8/etc/luts/ramp.gif .ramp.gif
-
-/usr/local/packages/fsl-5.0.8/bin/overlay 1 0 example_func -a thresh_zstat2 3.090383 7.130674 rendered_thresh_zstat2
-
-/usr/local/packages/fsl-5.0.8/bin/slicer rendered_thresh_zstat2 -A 750 rendered_thresh_zstat2.png
 
 mkdir -p tsplot ; /usr/local/packages/fsl-5.0.8/bin/tsplot . -f filtered_func_data -o tsplot
