@@ -147,13 +147,13 @@ set fmri(robust_yn) 0
 set fmri(mixed_yn) 2
 
 # Number of EVs
-set fmri(evs_orig) 2
-set fmri(evs_real) 2
+set fmri(evs_orig) 1
+set fmri(evs_real) 1
 set fmri(evs_vox) 0
 
 # Number of contrasts
-set fmri(ncon_orig) 2
-set fmri(ncon_real) 2
+set fmri(ncon_orig) 1
+set fmri(ncon_real) 1
 
 # Number of F-tests
 set fmri(nftests_orig) 1
@@ -273,7 +273,7 @@ set feat_files(1) "/storage/essicd/data/NIDM-Ex/BIDS_Data/DATA/BIDS/ds011/sub-01
 set fmri(confoundevs) 0
 
 # Subject's structural image for analysis 1
-set highres_files(1) "/storage/essicd/data/NIDM-Ex/BIDS_Data/DATA/BIDS/ds011/sub-01/anat/sub-01_T1w"
+set highres_files(1) "/storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/SPM/PREPROCESSING/ANATOMICAL/sub-01_T1w_brain"
 
 # EV 1 title
 set fmri(evtitle1) "tone_counting"
@@ -307,7 +307,7 @@ set fmri(tempfilt_yn1) 1
 set fmri(deriv_yn1) 0
 
 # Custom EV file (EV 1)
-set fmri(custom1) "/storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/ONSETS/fslonsets_tone_counting.txt"
+set fmri(custom1) "/storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/ONSETS/sub-01_tone_counting.txt"
 
 # Gamma sigma (EV 1)
 set fmri(gammasigma1) 3
@@ -320,58 +320,6 @@ set fmri(ortho1.0) 0
 
 # Orthogonalise EV 1 wrt EV 1
 set fmri(ortho1.1) 0
-
-# Orthogonalise EV 1 wrt EV 2
-set fmri(ortho1.2) 0
-
-# EV 2 title
-set fmri(evtitle2) "tone_counting_probe"
-
-# Basic waveform shape (EV 2)
-# 0 : Square
-# 1 : Sinusoid
-# 2 : Custom (1 entry per volume)
-# 3 : Custom (3 column format)
-# 4 : Interaction
-# 10 : Empty (all zeros)
-set fmri(shape2) 3
-
-# Convolution (EV 2)
-# 0 : None
-# 1 : Gaussian
-# 2 : Gamma
-# 3 : Double-Gamma HRF
-# 4 : Gamma basis functions
-# 5 : Sine basis functions
-# 6 : FIR basis functions
-set fmri(convolve2) 2
-
-# Convolve phase (EV 2)
-set fmri(convolve_phase2) 0
-
-# Apply temporal filtering (EV 2)
-set fmri(tempfilt_yn2) 1
-
-# Add temporal derivative (EV 2)
-set fmri(deriv_yn2) 0
-
-# Custom EV file (EV 2)
-set fmri(custom2) "/storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/ONSETS/fslonsets_tone_counting_probe.txt"
-
-# Gamma sigma (EV 2)
-set fmri(gammasigma2) 3
-
-# Gamma delay (EV 2)
-set fmri(gammadelay2) 6
-
-# Orthogonalise EV 2 wrt EV 0
-set fmri(ortho2.0) 0
-
-# Orthogonalise EV 2 wrt EV 1
-set fmri(ortho2.1) 0
-
-# Orthogonalise EV 2 wrt EV 2
-set fmri(ortho2.2) 0
 
 # Contrast & F-tests mode
 # real : control real EVs
@@ -388,26 +336,8 @@ set fmri(conname_real.1) "tone counting vs baseline"
 # Real contrast_real vector 1 element 1
 set fmri(con_real1.1) 1.0
 
-# Real contrast_real vector 1 element 2
-set fmri(con_real1.2) 0.0
-
 # F-test 1 element 1
 set fmri(ftest_real1.1) 1
-
-# Display images for contrast_real 2
-set fmri(conpic_real.2) 1
-
-# Title for contrast_real 2
-set fmri(conname_real.2) "tone counting probe vs baseline"
-
-# Real contrast_real vector 2 element 1
-set fmri(con_real2.1) 0.0
-
-# Real contrast_real vector 2 element 2
-set fmri(con_real2.2) 1.0
-
-# F-test 1 element 2
-set fmri(ftest_real1.2) 1
 
 # Display images for contrast_orig 1
 set fmri(conpic_orig.1) 1
@@ -418,26 +348,8 @@ set fmri(conname_orig.1) "tone counting vs baseline"
 # Real contrast_orig vector 1 element 1
 set fmri(con_orig1.1) 1.0
 
-# Real contrast_orig vector 1 element 2
-set fmri(con_orig1.2) 0.0
-
 # F-test 1 element 1
 set fmri(ftest_orig1.1) 1
-
-# Display images for contrast_orig 2
-set fmri(conpic_orig.2) 1
-
-# Title for contrast_orig 2
-set fmri(conname_orig.2) "tone counting probe vs baseline"
-
-# Real contrast_orig vector 2 element 1
-set fmri(con_orig2.1) 0.0
-
-# Real contrast_orig vector 2 element 2
-set fmri(con_orig2.2) 1.0
-
-# F-test 1 element 2
-set fmri(ftest_orig1.2) 1
 
 # Contrast masking - use >0 instead of thresholding?
 set fmri(conmask_zerothresh_yn) 0
@@ -445,20 +357,8 @@ set fmri(conmask_zerothresh_yn) 0
 # Mask real contrast/F-test 1 with real contrast/F-test 2?
 set fmri(conmask1_2) 0
 
-# Mask real contrast/F-test 1 with real contrast/F-test 3?
-set fmri(conmask1_3) 0
-
 # Mask real contrast/F-test 2 with real contrast/F-test 1?
 set fmri(conmask2_1) 0
-
-# Mask real contrast/F-test 2 with real contrast/F-test 3?
-set fmri(conmask2_3) 0
-
-# Mask real contrast/F-test 3 with real contrast/F-test 1?
-set fmri(conmask3_1) 0
-
-# Mask real contrast/F-test 3 with real contrast/F-test 2?
-set fmri(conmask3_2) 0
 
 # Do contrast masking at all?
 set fmri(conmask1_1) 0
