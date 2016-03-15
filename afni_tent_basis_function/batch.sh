@@ -1,0 +1,1 @@
+3dclust -1Dformat -nosum -1dindex 2 -1tindex 2 -2thresh -3.416 3.416 -inmask -dxyz=1 -savemask Clust_mask 1.01 2 ./afni_tent_basis_function/subject_results/group.DS000011/subj.sub_001/sub_001.results/stats.sub_001+tlrc.HEAD
