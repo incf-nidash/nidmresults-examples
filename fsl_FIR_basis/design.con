@@ -1,18 +1,12 @@
 /ContrastName1	tone counting vs baseline (1) 
 /ContrastName2	tone counting vs baseline (2) 
 /ContrastName3	tone counting vs baseline (3) 
-/ContrastName4	tone counting probe vs baseline (1) 
-/ContrastName5	tone counting probe vs baseline (2) 
-/ContrastName6	tone counting probe vs baseline (3) 
-/NumWaves	6
-/NumContrasts	6
-/PPheights		8.135336e+01	7.922431e+01	8.952602e+01	4.481124e+01	5.663610e+01	5.452998e+01
-/RequiredEffect		1.899	2.013	1.888	1.718	1.910	1.953
+/NumWaves	3
+/NumContrasts	3
+/PPheights		1.292689e+02	8.435993e+01	1.255620e+02
+/RequiredEffect		2.248	1.799	2.193
 
 /Matrix
-1.000000e+00 0.000000e+00 0.000000e+00 0.000000e+00 0.000000e+00 0.000000e+00 
-0.000000e+00 1.000000e+00 0.000000e+00 0.000000e+00 0.000000e+00 0.000000e+00 
-0.000000e+00 0.000000e+00 1.000000e+00 0.000000e+00 0.000000e+00 0.000000e+00 
-0.000000e+00 0.000000e+00 0.000000e+00 1.000000e+00 0.000000e+00 0.000000e+00 
-0.000000e+00 0.000000e+00 0.000000e+00 0.000000e+00 1.000000e+00 0.000000e+00 
-0.000000e+00 0.000000e+00 0.000000e+00 0.000000e+00 0.000000e+00 1.000000e+00 
+1.000000e+00 0.000000e+00 0.000000e+00 
+0.000000e+00 1.000000e+00 0.000000e+00 
+0.000000e+00 0.000000e+00 1.000000e+00 
