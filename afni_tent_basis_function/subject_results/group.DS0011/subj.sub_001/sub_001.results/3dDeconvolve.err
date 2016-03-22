@@ -1,0 +1,11 @@
+*+ WARNING: '-stim_times 2' (LOCAL) run#1 has 1 times outside range 0 .. 206 [PSFB syndrome]
+*+ WARNING: Smallest FDR q [2 tone_counting#0_Tstat] = 0.392134 ==> very few (if any) true detections
+*+ WARNING: Smallest FDR q [6 tone_counting#2_Tstat] = 0.309202 ==> very few (if any) true detections
+*+ WARNING: Smallest FDR q [10 tone_counting#4_Tstat] = 0.10394 ==> very few (if any) true detections
+*+ WARNING: Smallest FDR q [14 tone_counting#6_Tstat] = 0.229773 ==> very few (if any) true detections
+*+ WARNING: Smallest FDR q [17 probe#0_Tstat] = 0.133966 ==> very few (if any) true detections
+*+ WARNING: Smallest FDR q [19 probe#1_Tstat] = 0.171215 ==> very few (if any) true detections
+*+ WARNING: Smallest FDR q [23 probe#3_Tstat] = 0.210881 ==> very few (if any) true detections
+*+ WARNING: Smallest FDR q [27 probe#5_Tstat] = 0.299326 ==> very few (if any) true detections
+*+ WARNING: Smallest FDR q [29 probe#6_Tstat] = 0.548049 ==> very few (if any) true detections
+*+ WARNING: Smallest FDR q [31 probe#7_Tstat] = 0.532932 ==> very few (if any) true detections
