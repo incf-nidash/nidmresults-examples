@@ -1,0 +1,17 @@
+uber_subject.py                                                                                                                           \
+    -cvar subj_dir subject_results/group.DS0011/subj.sub_001                                                                              \
+    -svar anat                                                                                                                            \
+    /Users/u1591557/Documents/PhD_work/WMG_Lab_Placement_1/nidmresults-examples/afni_voxelwise_p0001/sub-01_T1w.nii.gz                    \
+                                                                                                                                          \
+    -svar epi                                                                                                                             \
+    /Users/u1591557/Documents/PhD_work/WMG_Lab_Placement_1/nidmresults-examples/afni_voxelwise_p0001/sub-01_task-tonecounting_bold.nii.gz \
+                                                                                                                                          \
+    -svar gid DS0011                                                                                                                      \
+    -svar sid sub_001                                                                                                                     \
+    -svar stim                                                                                                                            \
+    /Users/u1591557/Documents/PhD_work/WMG_Lab_Placement_1/nidmresults-examples/afni_voxelwise_p0001/tone_counting_onset_times.txt        \
+    /Users/u1591557/Documents/PhD_work/WMG_Lab_Placement_1/nidmresults-examples/afni_voxelwise_p0001/tone_counting_probe_duration.txt     \
+                                                                                                                                          \
+    -svar stim_basis 'BLOCK(4)' 'dmBLOCK'                                                                                                 \
+    -svar stim_label tone_counting probe                                                                                                  \
+    -svar stim_type times AM1
