@@ -1,0 +1,44 @@
+
+subject ID                : sub_001
+TRs removed (per run)     : 0
+num stim classes provided : 2
+final anatomy dset        : anat_final.sub_001+tlrc.HEAD
+final stats dset          : stats.sub_001+tlrc.HEAD
+final voxel resolution    : 3.000000	3.000000	3.000000
+
+motion limit              : 0.3
+num TRs above mot limit   : 7
+average motion (per TR)   : 0.102228
+average censored motion   : 0.0674361
+max motion displacement   : 1.8772
+max censored displacement : 1.67669
+outlier limit             : 0.1
+average outlier frac (TR) : 0.00361683
+num TRs above out limit   : 0
+
+num runs found            : 1
+num TRs per run           : 104
+num TRs per run (applied) : 92
+num TRs per run (censored): 12
+fraction censored per run : 0.115385
+TRs total (uncensored)    : 104
+TRs total                 : 92
+degrees of freedom used   : 11
+degrees of freedom left   : 81
+
+TRs censored              : 12
+censor fraction           : 0.115385
+num regs of interest      : 2
+num TRs per stim (orig)   : 93 59
+num TRs censored per stim : 12 11
+fraction TRs censored     : 0.129 0.186
+ave mot per sresp (orig)  : 0.106833 0.132941
+ave mot per sresp (cens)  : 0.067166 0.071088
+
+TSNR average              : 135.673
+global correlation (GCOR) : 0.0986013
+anat/EPI mask Dice coef   : 0.878063
+maximum F-stat (masked)   : 39.6514
+blur estimates            : 5.78019 5.88818 6.59155
+
+
