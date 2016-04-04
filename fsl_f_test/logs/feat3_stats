@@ -1,31 +1,23 @@
 </pre><hr>Stats<br><pre>
 
-mkdir -p custom_timing_files ; /usr/local/packages/fsl-5.0.8/bin/fslFixText /storage/essicd/data/NIDM-Ex/Data/ds000006/sub001/model/model001/onsets/task001_run001/cond001.txt custom_timing_files/ev1.txt
-
-mkdir -p custom_timing_files ; /usr/local/packages/fsl-5.0.8/bin/fslFixText /storage/essicd/data/NIDM-Ex/Data/ds000006/sub001/model/model001/onsets/task001_run001/cond002.txt custom_timing_files/ev2.txt
-
-mkdir -p custom_timing_files ; /usr/local/packages/fsl-5.0.8/bin/fslFixText /storage/essicd/data/NIDM-Ex/Data/ds000006/sub001/model/model001/onsets/task001_run001/cond003.txt custom_timing_files/ev3.txt
-
-mkdir -p custom_timing_files ; /usr/local/packages/fsl-5.0.8/bin/fslFixText /storage/essicd/data/NIDM-Ex/Data/ds000006/sub001/model/model001/onsets/task001_run001/cond004.txt custom_timing_files/ev4.txt
-
-mkdir -p custom_timing_files ; /usr/local/packages/fsl-5.0.8/bin/fslFixText /storage/essicd/data/NIDM-Ex/Data/ds000006/sub001/model/model001/onsets/task001_run001/cond005.txt custom_timing_files/ev5.txt
+mkdir -p custom_timing_files ; /usr/local/packages/fsl-5.0.8/bin/fslFixText /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/ONSETS/sub-01_tone_counting.txt custom_timing_files/ev1.txt
 
 /usr/local/packages/fsl-5.0.8/bin/film_gls --in=filtered_func_data --rn=stats --pd=design.mat --thr=1000.0 --sa --ms=5 --con=design.con --fcon=design.fts  
 Log directory is: stats
-paradigm.getDesignMatrix().Nrows()=205
-paradigm.getDesignMatrix().Ncols()=5
-sizeTS=205
-numTS=34839
+paradigm.getDesignMatrix().Nrows()=104
+paradigm.getDesignMatrix().Ncols()=1
+sizeTS=104
+numTS=38344
 Calculating residuals...
 Completed
 Estimating residual autocorrelation...
 Calculating raw AutoCorrs... Completed
-mode = 9897.25
-sig = 949
+mode = 9980.39
+sig = 963
 Spatially smoothing auto corr estimates
-.............
+.........
 Completed
-Tukey M = 14
+Tukey M = 10
 Tukey estimates... Completed
 Completed
 Prewhitening and Computing PEs...
@@ -34,4 +26,4 @@ Percentage done:
 Saving results... 
 Completed
 
-/usr/local/packages/fsl-5.0.8/bin/smoothest -d 200   -m mask -r stats/res4d > stats/smoothness
+/usr/local/packages/fsl-5.0.8/bin/smoothest -d 103   -m mask -r stats/res4d > stats/smoothness

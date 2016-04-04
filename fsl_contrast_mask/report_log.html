@@ -5,69 +5,69 @@
 <link REL=stylesheet TYPE=text/css href=.files/fsl.css>
 <TITLE>FSL</TITLE></HEAD><BODY><OBJECT data=report.html></OBJECT>
 <h2>Progress Report / Log</h2>
-Started at Fri Nov 13 10:46:37 GMT 2015<p>
+Started at Tue Mar 15 10:10:54 GMT 2016<p>
 Feat main script<br><pre>
 
-/bin/cp /storage/essicd/data/NIDM-Ex/Testing/ds000006/RESULTS/Sub01ContrastMask.fsf design.fsf
+/bin/cp /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/SCRIPTS/fsl_contrast_mask.fsf design.fsf
 
 /usr/local/packages/fsl-5.0.8/bin/feat_model design 
 
 mkdir .files;cp /usr/local/packages/fsl-5.0.8/doc/fsl.css .files;cp -r /usr/local/packages/fsl-5.0.8/doc/images .files/images
 
-/usr/local/packages/fsl-5.0.8/bin/fsl_sub -T 10 -l logs -N feat0_init   /usr/local/packages/fsl-5.0.8/bin/feat /storage/essicd/data/NIDM-Ex/Testing/ds000006/RESULTS/Sub01ContrastMask.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/Testing/ds000006/RESULTS/Sub01ContrastMask.feat -I 1 -init
+/usr/local/packages/fsl-5.0.8/bin/fsl_sub -T 10 -l logs -N feat0_init   /usr/local/packages/fsl-5.0.8/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_contrast_mask.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_contrast_mask.feat -I 1 -init
 job
-285876
+288830
 
-/usr/local/packages/fsl-5.0.8/bin/fsl_sub -T 50 -l logs -N feat2_pre -j 285876  /usr/local/packages/fsl-5.0.8/bin/feat /storage/essicd/data/NIDM-Ex/Testing/ds000006/RESULTS/Sub01ContrastMask.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/Testing/ds000006/RESULTS/Sub01ContrastMask.feat -I 1 -prestats
+/usr/local/packages/fsl-5.0.8/bin/fsl_sub -T 40 -l logs -N feat2_pre -j 288830  /usr/local/packages/fsl-5.0.8/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_contrast_mask.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_contrast_mask.feat -I 1 -prestats
 job
-285877
+288831
 
-/usr/local/packages/fsl-5.0.8/bin/fsl_sub -T 1 -l logs -N feat3_film -j 285877  /usr/local/packages/fsl-5.0.8/bin/feat /storage/essicd/data/NIDM-Ex/Testing/ds000006/RESULTS/Sub01ContrastMask.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/Testing/ds000006/RESULTS/Sub01ContrastMask.feat -I 1 -stats
+/usr/local/packages/fsl-5.0.8/bin/fsl_sub -T 1 -l logs -N feat3_film -j 288831  /usr/local/packages/fsl-5.0.8/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_contrast_mask.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_contrast_mask.feat -I 1 -stats
 job
-285878
+288832
 
-/usr/local/packages/fsl-5.0.8/bin/fsl_sub -T 119 -l logs -N feat4_post -j 285878  /usr/local/packages/fsl-5.0.8/bin/feat /storage/essicd/data/NIDM-Ex/Testing/ds000006/RESULTS/Sub01ContrastMask.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/Testing/ds000006/RESULTS/Sub01ContrastMask.feat -poststats 0 
+/usr/local/packages/fsl-5.0.8/bin/fsl_sub -T 119 -l logs -N feat4_post -j 288832  /usr/local/packages/fsl-5.0.8/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_contrast_mask.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_contrast_mask.feat -poststats 0 
 job
-285879
+288833
 
-/usr/local/packages/fsl-5.0.8/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 285877,285878,285879  /usr/local/packages/fsl-5.0.8/bin/feat /storage/essicd/data/NIDM-Ex/Testing/ds000006/RESULTS/Sub01ContrastMask.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/Testing/ds000006/RESULTS/Sub01ContrastMask.feat -stop
+/usr/local/packages/fsl-5.0.8/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 288831,288832,288833  /usr/local/packages/fsl-5.0.8/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_contrast_mask.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_contrast_mask.feat -stop
 job
-285880
+288834
 </pre><hr>Initialisation<br><pre>
 
-/usr/local/packages/fsl-5.0.8/bin/fslmaths /storage/essicd/data/NIDM-Ex/Data/ds000006/sub001/BOLD/task001_run001/bold prefiltered_func_data -odt float
-Total original volumes = 205
+/usr/local/packages/fsl-5.0.8/bin/fslmaths /storage/essicd/data/NIDM-Ex/BIDS_Data/DATA/BIDS/ds011/sub-01/func/sub-01_task-tonecounting_bold prefiltered_func_data -odt float
+Total original volumes = 104
 
-/usr/local/packages/fsl-5.0.8/bin/fslroi prefiltered_func_data example_func 102 1
+/usr/local/packages/fsl-5.0.8/bin/fslroi prefiltered_func_data example_func 52 1
 </pre><hr>Preprocessing:Stage 1<br><pre>
 
-/usr/local/packages/fsl-5.0.8/bin/mainfeatreg -F 6.00 -d /storage/essicd/data/NIDM-Ex/Testing/ds000006/RESULTS/Sub01ContrastMask.feat -l /storage/essicd/data/NIDM-Ex/Testing/ds000006/RESULTS/Sub01ContrastMask.feat/logs/feat2_pre -R /storage/essicd/data/NIDM-Ex/Testing/ds000006/RESULTS/Sub01ContrastMask.feat/report_unwarp.html -r /storage/essicd/data/NIDM-Ex/Testing/ds000006/RESULTS/Sub01ContrastMask.feat/report_reg.html  -i /storage/essicd/data/NIDM-Ex/Testing/ds000006/RESULTS/Sub01ContrastMask.feat/example_func.nii.gz  -h /storage/essicd/data/NIDM-Ex/Data/ds000006/sub001/anatomy/mprage_defaced_brain -w  BBR -x 90 -s /export/software/packages-x86_64-linux-gnu/packages/fsl-4.1.9/data/standard/MNI152_T1_2mm_brain -y 12 -z 90 
+/usr/local/packages/fsl-5.0.8/bin/mainfeatreg -F 6.00 -d /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_contrast_mask.feat -l /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_contrast_mask.feat/logs/feat2_pre -R /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_contrast_mask.feat/report_unwarp.html -r /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_contrast_mask.feat/report_reg.html  -i /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_contrast_mask.feat/example_func.nii.gz  -h /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/SPM/PREPROCESSING/ANATOMICAL/sub-01_T1w_brain -w  BBR -x 90 -s /export/software/packages-x86_64-linux-gnu/packages/fsl-5.0.8/data/standard/MNI152_T1_2mm_brain -y 12 -z 90 
 Option -F ( FEAT version parameter ) selected with  argument "6.00"
-Option -d ( output directory ) selected with  argument "/storage/essicd/data/NIDM-Ex/Testing/ds000006/RESULTS/Sub01ContrastMask.feat"
-Option -l ( logfile )input with argument "/storage/essicd/data/NIDM-Ex/Testing/ds000006/RESULTS/Sub01ContrastMask.feat/logs/feat2_pre"
-Option -R ( html unwarping report ) selected with  argument "/storage/essicd/data/NIDM-Ex/Testing/ds000006/RESULTS/Sub01ContrastMask.feat/report_unwarp.html"
-Option -r ( html registration report ) selected with  argument "/storage/essicd/data/NIDM-Ex/Testing/ds000006/RESULTS/Sub01ContrastMask.feat/report_reg.html"
-Option -i ( main input ) input with argument "/storage/essicd/data/NIDM-Ex/Testing/ds000006/RESULTS/Sub01ContrastMask.feat/example_func.nii.gz"
-Option -h ( high-res structural image ) selected with  argument "/storage/essicd/data/NIDM-Ex/Data/ds000006/sub001/anatomy/mprage_defaced_brain"
+Option -d ( output directory ) selected with  argument "/storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_contrast_mask.feat"
+Option -l ( logfile )input with argument "/storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_contrast_mask.feat/logs/feat2_pre"
+Option -R ( html unwarping report ) selected with  argument "/storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_contrast_mask.feat/report_unwarp.html"
+Option -r ( html registration report ) selected with  argument "/storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_contrast_mask.feat/report_reg.html"
+Option -i ( main input ) input with argument "/storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_contrast_mask.feat/example_func.nii.gz"
+Option -h ( high-res structural image ) selected with  argument "/storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/SPM/PREPROCESSING/ANATOMICAL/sub-01_T1w_brain"
 Option -w ( highres dof ) selected with  argument "BBR"
 Option -x ( highres search ) selected with  argument "90"
-Option -s ( standard image ) selected with  argument "/export/software/packages-x86_64-linux-gnu/packages/fsl-4.1.9/data/standard/MNI152_T1_2mm_brain"
+Option -s ( standard image ) selected with  argument "/export/software/packages-x86_64-linux-gnu/packages/fsl-5.0.8/data/standard/MNI152_T1_2mm_brain"
 Option -y ( standard dof ) selected with  argument "12"
 Option -z ( standard search ) selected with  argument "90"
 </pre><hr>Registration<br><pre>
 
-/bin/mkdir -p /storage/essicd/data/NIDM-Ex/Testing/ds000006/RESULTS/Sub01ContrastMask.feat/reg
+/bin/mkdir -p /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_contrast_mask.feat/reg
 
 
-/usr/local/packages/fsl-5.0.8/bin/fslmaths /storage/essicd/data/NIDM-Ex/Data/ds000006/sub001/anatomy/mprage_defaced_brain highres
+/usr/local/packages/fsl-5.0.8/bin/fslmaths /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/SPM/PREPROCESSING/ANATOMICAL/sub-01_T1w_brain highres
 
 
-/usr/local/packages/fsl-5.0.8/bin/fslmaths /storage/essicd/data/NIDM-Ex/Data/ds000006/sub001/anatomy/mprage_defaced  highres_head
+/usr/local/packages/fsl-5.0.8/bin/fslmaths /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/SPM/PREPROCESSING/ANATOMICAL/sub-01_T1w  highres_head
 
 did not find file: example_func2highres.mat. Generating transform.
 
 /usr/local/packages/fsl-5.0.8/bin/epi_reg --epi=example_func --t1=highres_head --t1brain=highres --out=example_func2highres
-Running FAST segmentation FLIRT pre-alignment Running BBR Applying POWELL correction finit, fend, fextrap = 0.626822 , 0.626591 , 0.626508 fval = 0.626554 0.626336 0.999583 0.027211 0.009649 0.000000 -0.027191 0.999628 -0.002128 0.000000 -0.009703 0.001865 0.999951 0.000000 3.443697 -1.425267 2.659891 1.000000
+Running FAST segmentation FLIRT pre-alignment Running BBR 0.436060 0.999922 -0.001220 0.012437 0.000000 0.001097 0.999951 0.009865 0.000000 -0.012449 -0.009850 0.999874 0.000000 2.087673 0.988981 1.466450 1.000000
 
 /usr/local/packages/fsl-5.0.8/bin/convert_xfm -inverse -omat highres2example_func.mat example_func2highres.mat
 
@@ -96,12 +96,12 @@ Running FAST segmentation FLIRT pre-alignment Running BBR Applying POWELL correc
 /usr/local/packages/fsl-5.0.8/bin/fslmaths prefiltered_func_data_mcf -mas mask prefiltered_func_data_bet
 
 /usr/local/packages/fsl-5.0.8/bin/fslstats prefiltered_func_data_bet -p 2 -p 98
-0.000000 641.260315 
+0.000000 744.586670 
 
-/usr/local/packages/fsl-5.0.8/bin/fslmaths prefiltered_func_data_bet -thr 64.1260315 -Tmin -bin mask -odt char
+/usr/local/packages/fsl-5.0.8/bin/fslmaths prefiltered_func_data_bet -thr 74.458667 -Tmin -bin mask -odt char
 
 /usr/local/packages/fsl-5.0.8/bin/fslstats prefiltered_func_data_mcf -k mask -p 50
-514.880310 
+594.409668 
 
 /usr/local/packages/fsl-5.0.8/bin/fslmaths mask -dilF mask
 
@@ -109,11 +109,11 @@ Running FAST segmentation FLIRT pre-alignment Running BBR Applying POWELL correc
 
 /usr/local/packages/fsl-5.0.8/bin/fslmaths prefiltered_func_data_thresh -Tmean mean_func
 
-/usr/local/packages/fsl-5.0.8/bin/susan prefiltered_func_data_thresh 386.1602325 2.54777070064 3 1 1 mean_func 386.1602325 prefiltered_func_data_smooth
+/usr/local/packages/fsl-5.0.8/bin/susan prefiltered_func_data_thresh 445.807251 2.54777070064 3 1 1 mean_func 445.807251 prefiltered_func_data_smooth
 
 /usr/local/packages/fsl-5.0.8/bin/fslmaths prefiltered_func_data_smooth -mas mask prefiltered_func_data_smooth
 
-/usr/local/packages/fsl-5.0.8/bin/fslmaths prefiltered_func_data_smooth -mul 19.4219895494 prefiltered_func_data_intnorm
+/usr/local/packages/fsl-5.0.8/bin/fslmaths prefiltered_func_data_smooth -mul 16.8234141171 prefiltered_func_data_intnorm
 
 /usr/local/packages/fsl-5.0.8/bin/fslmaths prefiltered_func_data_intnorm -Tmean tempMean
 
@@ -123,43 +123,31 @@ Running FAST segmentation FLIRT pre-alignment Running BBR Applying POWELL correc
 
 /usr/local/packages/fsl-5.0.8/bin/fslmaths prefiltered_func_data_tempfilt filtered_func_data
 
-/usr/local/packages/fsl-5.0.8/bin/fslhd -x filtered_func_data | sed 's/  dt = .*/  dt = '\''2.000000'\''/g' > tmpHeader
-
-/usr/local/packages/fsl-5.0.8/bin/fslcreatehd tmpHeader filtered_func_data
-
-/bin/rm tmpHeader
-
 /usr/local/packages/fsl-5.0.8/bin/fslmaths filtered_func_data -Tmean mean_func
 
 /bin/rm -rf prefiltered_func_data*
 </pre><hr>Stats<br><pre>
 
-mkdir -p custom_timing_files ; /usr/local/packages/fsl-5.0.8/bin/fslFixText /storage/essicd/data/NIDM-Ex/Data/ds000006/sub001/model/model001/onsets/task001_run001/cond001.txt custom_timing_files/ev1.txt
+mkdir -p custom_timing_files ; /usr/local/packages/fsl-5.0.8/bin/fslFixText /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/ONSETS/sub-01_tone_counting.txt custom_timing_files/ev1.txt
 
-mkdir -p custom_timing_files ; /usr/local/packages/fsl-5.0.8/bin/fslFixText /storage/essicd/data/NIDM-Ex/Data/ds000006/sub001/model/model001/onsets/task001_run001/cond002.txt custom_timing_files/ev2.txt
-
-mkdir -p custom_timing_files ; /usr/local/packages/fsl-5.0.8/bin/fslFixText /storage/essicd/data/NIDM-Ex/Data/ds000006/sub001/model/model001/onsets/task001_run001/cond003.txt custom_timing_files/ev3.txt
-
-mkdir -p custom_timing_files ; /usr/local/packages/fsl-5.0.8/bin/fslFixText /storage/essicd/data/NIDM-Ex/Data/ds000006/sub001/model/model001/onsets/task001_run001/cond004.txt custom_timing_files/ev4.txt
-
-mkdir -p custom_timing_files ; /usr/local/packages/fsl-5.0.8/bin/fslFixText /storage/essicd/data/NIDM-Ex/Data/ds000006/sub001/model/model001/onsets/task001_run001/cond005.txt custom_timing_files/ev5.txt
+mkdir -p custom_timing_files ; /usr/local/packages/fsl-5.0.8/bin/fslFixText /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/ONSETS/sub-01_tone_counting_probe.txt custom_timing_files/ev2.txt
 
 /usr/local/packages/fsl-5.0.8/bin/film_gls --in=filtered_func_data --rn=stats --pd=design.mat --thr=1000.0 --sa --ms=5 --con=design.con  
 Log directory is: stats
-paradigm.getDesignMatrix().Nrows()=205
-paradigm.getDesignMatrix().Ncols()=5
-sizeTS=205
-numTS=34839
+paradigm.getDesignMatrix().Nrows()=104
+paradigm.getDesignMatrix().Ncols()=2
+sizeTS=104
+numTS=38344
 Calculating residuals...
 Completed
 Estimating residual autocorrelation...
 Calculating raw AutoCorrs... Completed
-mode = 9897.25
-sig = 949
+mode = 9980.39
+sig = 963
 Spatially smoothing auto corr estimates
-.............
+.........
 Completed
-Tukey M = 14
+Tukey M = 10
 Tukey estimates... Completed
 Completed
 Prewhitening and Computing PEs...
@@ -168,28 +156,18 @@ Percentage done:
 Saving results... 
 Completed
 
-/usr/local/packages/fsl-5.0.8/bin/smoothest -d 200   -m mask -r stats/res4d > stats/smoothness
+/usr/local/packages/fsl-5.0.8/bin/smoothest -d 102   -m mask -r stats/res4d > stats/smoothness
 </pre><hr>Post-stats<br><pre>
 
 /usr/local/packages/fsl-5.0.8/bin/fslmaths stats/zstat1 -mas mask thresh_zstat1
 
-echo 34839 > thresh_zstat1.vol
-zstat1: DLH=0.634292 VOLUME=34839 RESELS=7.29066
+echo 38344 > thresh_zstat1.vol
+zstat1: DLH=0.700797 VOLUME=38344 RESELS=6.60989
 
 /usr/local/packages/fsl-5.0.8/bin/fslmaths stats/zstat2 -mas mask thresh_zstat2
 
-echo 34839 > thresh_zstat2.vol
-zstat2: DLH=0.634292 VOLUME=34839 RESELS=7.29066
-
-/usr/local/packages/fsl-5.0.8/bin/fslmaths stats/zstat3 -mas mask thresh_zstat3
-
-echo 34839 > thresh_zstat3.vol
-zstat3: DLH=0.634292 VOLUME=34839 RESELS=7.29066
-
-/usr/local/packages/fsl-5.0.8/bin/fslmaths stats/zstat4 -mas mask thresh_zstat4
-
-echo 34839 > thresh_zstat4.vol
-zstat4: DLH=0.634292 VOLUME=34839 RESELS=7.29066
+echo 38344 > thresh_zstat2.vol
+zstat2: DLH=0.700797 VOLUME=38344 RESELS=6.60989
 
 /usr/local/packages/fsl-5.0.8/bin/ptoz 0.001
 3.090232
@@ -198,56 +176,29 @@ zstat4: DLH=0.634292 VOLUME=34839 RESELS=7.29066
 
 /usr/local/packages/fsl-5.0.8/bin/fslmaths thresh_zstat2 -thr 3.090232 thresh_zstat2
 
-/usr/local/packages/fsl-5.0.8/bin/fslmaths thresh_zstat3 -thr 3.090232 thresh_zstat3
-
-/usr/local/packages/fsl-5.0.8/bin/fslmaths thresh_zstat4 -thr 3.090232 thresh_zstat4
-
 mkdir -p conmask
 Masking thresh_zstat1 with thresh_zstat2
 
 /usr/local/packages/fsl-5.0.8/bin/fslmaths thresh_zstat1 -mas thresh_zstat2 conmask/thresh_zstat1
-Masking thresh_zstat2 with thresh_zstat3
-
-/usr/local/packages/fsl-5.0.8/bin/fslmaths thresh_zstat2 -mas thresh_zstat3 conmask/thresh_zstat2
-Masking thresh_zstat3 with thresh_zstat4
-
-/usr/local/packages/fsl-5.0.8/bin/fslmaths thresh_zstat3 -mas thresh_zstat4 conmask/thresh_zstat3
-Masking thresh_zstat4 with thresh_zstat1
-
-/usr/local/packages/fsl-5.0.8/bin/fslmaths thresh_zstat4 -mas thresh_zstat1 conmask/thresh_zstat4
 
 /bin/mv -f conmask/* . ; rmdir conmask
 
 /usr/local/packages/fsl-5.0.8/bin/fslstats thresh_zstat1 -l 0.0001 -R 2>/dev/null
-0.000000 0.000000 
+3.090546 7.490716 
 
 /usr/local/packages/fsl-5.0.8/bin/fslstats thresh_zstat2 -l 0.0001 -R 2>/dev/null
-0.000000 0.000000 
+3.090249 6.120578 
+Rendering using zmin=3.090249 zmax=7.490716
 
-/usr/local/packages/fsl-5.0.8/bin/fslstats thresh_zstat3 -l 0.0001 -R 2>/dev/null
-0.000000 0.000000 
-
-/usr/local/packages/fsl-5.0.8/bin/fslstats thresh_zstat4 -l 0.0001 -R 2>/dev/null
-0.000000 0.000000 
-Rendering using zmin=2.3 zmax=8
-
-/usr/local/packages/fsl-5.0.8/bin/overlay 1 0 example_func -a thresh_zstat1 2.3 8 rendered_thresh_zstat1
+/usr/local/packages/fsl-5.0.8/bin/overlay 1 0 example_func -a thresh_zstat1 3.090249 7.490716 rendered_thresh_zstat1
 
 /usr/local/packages/fsl-5.0.8/bin/slicer rendered_thresh_zstat1 -A 750 rendered_thresh_zstat1.png
 
 /bin/cp /usr/local/packages/fsl-5.0.8/etc/luts/ramp.gif .ramp.gif
 
-/usr/local/packages/fsl-5.0.8/bin/overlay 1 0 example_func -a thresh_zstat2 2.3 8 rendered_thresh_zstat2
+/usr/local/packages/fsl-5.0.8/bin/overlay 1 0 example_func -a thresh_zstat2 3.090249 7.490716 rendered_thresh_zstat2
 
 /usr/local/packages/fsl-5.0.8/bin/slicer rendered_thresh_zstat2 -A 750 rendered_thresh_zstat2.png
-
-/usr/local/packages/fsl-5.0.8/bin/overlay 1 0 example_func -a thresh_zstat3 2.3 8 rendered_thresh_zstat3
-
-/usr/local/packages/fsl-5.0.8/bin/slicer rendered_thresh_zstat3 -A 750 rendered_thresh_zstat3.png
-
-/usr/local/packages/fsl-5.0.8/bin/overlay 1 0 example_func -a thresh_zstat4 2.3 8 rendered_thresh_zstat4
-
-/usr/local/packages/fsl-5.0.8/bin/slicer rendered_thresh_zstat4 -A 750 rendered_thresh_zstat4.png
 
 mkdir -p tsplot ; /usr/local/packages/fsl-5.0.8/bin/tsplot . -f filtered_func_data -o tsplot
 </pre><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></BODY></HTML>

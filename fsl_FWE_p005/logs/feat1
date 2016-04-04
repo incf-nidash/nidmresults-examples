@@ -7,20 +7,20 @@ mkdir .files;cp /usr/local/packages/fsl-5.0.8/doc/fsl.css .files;cp -r /usr/loca
 
 /usr/local/packages/fsl-5.0.8/bin/fsl_sub -T 10 -l logs -N feat0_init   /usr/local/packages/fsl-5.0.8/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_FWE_p005.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_FWE_p005.feat -I 1 -init
 job
-288207
+288798
 
-/usr/local/packages/fsl-5.0.8/bin/fsl_sub -T 40 -l logs -N feat2_pre -j 288207  /usr/local/packages/fsl-5.0.8/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_FWE_p005.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_FWE_p005.feat -I 1 -prestats
+/usr/local/packages/fsl-5.0.8/bin/fsl_sub -T 40 -l logs -N feat2_pre -j 288798  /usr/local/packages/fsl-5.0.8/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_FWE_p005.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_FWE_p005.feat -I 1 -prestats
 job
-288208
+288799
 
-/usr/local/packages/fsl-5.0.8/bin/fsl_sub -T 1 -l logs -N feat3_film -j 288208  /usr/local/packages/fsl-5.0.8/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_FWE_p005.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_FWE_p005.feat -I 1 -stats
+/usr/local/packages/fsl-5.0.8/bin/fsl_sub -T 1 -l logs -N feat3_film -j 288799  /usr/local/packages/fsl-5.0.8/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_FWE_p005.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_FWE_p005.feat -I 1 -stats
 job
-288209
+288800
 
-/usr/local/packages/fsl-5.0.8/bin/fsl_sub -T 119 -l logs -N feat4_post -j 288209  /usr/local/packages/fsl-5.0.8/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_FWE_p005.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_FWE_p005.feat -poststats 0 
+/usr/local/packages/fsl-5.0.8/bin/fsl_sub -T 119 -l logs -N feat4_post -j 288800  /usr/local/packages/fsl-5.0.8/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_FWE_p005.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_FWE_p005.feat -poststats 0 
 job
-288210
+288801
 
-/usr/local/packages/fsl-5.0.8/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 288208,288209,288210  /usr/local/packages/fsl-5.0.8/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_FWE_p005.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_FWE_p005.feat -stop
+/usr/local/packages/fsl-5.0.8/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 288799,288800,288801  /usr/local/packages/fsl-5.0.8/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_FWE_p005.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_FWE_p005.feat -stop
 job
-288211
+288802

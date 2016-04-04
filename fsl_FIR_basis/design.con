@@ -1,12 +1,12 @@
-/ContrastName1	positive vs negative (1) 
-/ContrastName2	positive vs negative (2) 
-/ContrastName3	positive vs negative (3) 
-/NumWaves	6
+/ContrastName1	tone counting vs baseline (1) 
+/ContrastName2	tone counting vs baseline (2) 
+/ContrastName3	tone counting vs baseline (3) 
+/NumWaves	3
 /NumContrasts	3
-/PPheights		4.633304e+01	4.729845e+01	4.594233e+01
-/RequiredEffect		1.006	1.026	0.995
+/PPheights		1.292689e+02	8.435993e+01	1.255620e+02
+/RequiredEffect		2.248	1.799	2.193
 
 /Matrix
-1.000000e+00 0.000000e+00 0.000000e+00 -1.000000e+00 0.000000e+00 0.000000e+00 
-0.000000e+00 1.000000e+00 0.000000e+00 0.000000e+00 -1.000000e+00 0.000000e+00 
-0.000000e+00 0.000000e+00 1.000000e+00 0.000000e+00 0.000000e+00 -1.000000e+00 
+1.000000e+00 0.000000e+00 0.000000e+00 
+0.000000e+00 1.000000e+00 0.000000e+00 
+0.000000e+00 0.000000e+00 1.000000e+00 

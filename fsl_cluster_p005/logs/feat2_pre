@@ -1,13 +1,13 @@
 </pre><hr>Preprocessing:Stage 1<br><pre>
 
-/usr/local/packages/fsl-5.0.8/bin/mainfeatreg -F 6.00 -d /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_cluster_p005.feat -l /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_cluster_p005.feat/logs/feat2_pre -R /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_cluster_p005.feat/report_unwarp.html -r /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_cluster_p005.feat/report_reg.html  -i /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_cluster_p005.feat/example_func.nii.gz  -h /storage/essicd/data/NIDM-Ex/BIDS_Data/DATA/BIDS/ds011/sub-01/anat/sub-01_T1w -w  BBR -x 90 -s /export/software/packages-x86_64-linux-gnu/packages/fsl-5.0.8/data/standard/MNI152_T1_2mm_brain -y 12 -z 90 
+/usr/local/packages/fsl-5.0.8/bin/mainfeatreg -F 6.00 -d /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_cluster_p005.feat -l /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_cluster_p005.feat/logs/feat2_pre -R /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_cluster_p005.feat/report_unwarp.html -r /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_cluster_p005.feat/report_reg.html  -i /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_cluster_p005.feat/example_func.nii.gz  -h /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/SPM/PREPROCESSING/ANATOMICAL/sub-01_T1w_brain -w  BBR -x 90 -s /export/software/packages-x86_64-linux-gnu/packages/fsl-5.0.8/data/standard/MNI152_T1_2mm_brain -y 12 -z 90 
 Option -F ( FEAT version parameter ) selected with  argument "6.00"
 Option -d ( output directory ) selected with  argument "/storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_cluster_p005.feat"
 Option -l ( logfile )input with argument "/storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_cluster_p005.feat/logs/feat2_pre"
 Option -R ( html unwarping report ) selected with  argument "/storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_cluster_p005.feat/report_unwarp.html"
 Option -r ( html registration report ) selected with  argument "/storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_cluster_p005.feat/report_reg.html"
 Option -i ( main input ) input with argument "/storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_cluster_p005.feat/example_func.nii.gz"
-Option -h ( high-res structural image ) selected with  argument "/storage/essicd/data/NIDM-Ex/BIDS_Data/DATA/BIDS/ds011/sub-01/anat/sub-01_T1w"
+Option -h ( high-res structural image ) selected with  argument "/storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/SPM/PREPROCESSING/ANATOMICAL/sub-01_T1w_brain"
 Option -w ( highres dof ) selected with  argument "BBR"
 Option -x ( highres search ) selected with  argument "90"
 Option -s ( standard image ) selected with  argument "/export/software/packages-x86_64-linux-gnu/packages/fsl-5.0.8/data/standard/MNI152_T1_2mm_brain"
@@ -18,18 +18,21 @@ Option -z ( standard search ) selected with  argument "90"
 /bin/mkdir -p /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_cluster_p005.feat/reg
 
 
-/usr/local/packages/fsl-5.0.8/bin/fslmaths /storage/essicd/data/NIDM-Ex/BIDS_Data/DATA/BIDS/ds011/sub-01/anat/sub-01_T1w highres
+/usr/local/packages/fsl-5.0.8/bin/fslmaths /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/SPM/PREPROCESSING/ANATOMICAL/sub-01_T1w_brain highres
 
 
-/usr/local/packages/fsl-5.0.8/bin/fslmaths /storage/essicd/data/NIDM-Ex/BIDS_Data/DATA/BIDS/ds011/sub-01/anat/sub-01_T1w  highres_head
+/usr/local/packages/fsl-5.0.8/bin/fslmaths /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/SPM/PREPROCESSING/ANATOMICAL/sub-01_T1w  highres_head
 
 did not find file: example_func2highres.mat. Generating transform.
 
 /usr/local/packages/fsl-5.0.8/bin/epi_reg --epi=example_func --t1=highres_head --t1brain=highres --out=example_func2highres
-Running FAST segmentation FLIRT pre-alignment Running BBR 1.042140 0.992729 -0.114322 -0.037686 0.000000 0.107620 0.983179 -0.147572 0.000000 0.053923 0.142443 0.988333 0.000000 -18.053308 7.613341 18.557421 1.000000
+Running FAST segmentation FLIRT pre-alignment Running BBR 0.436060 0.999922 -0.001220 0.012437 0.000000 0.001097 0.999951 0.009865 0.000000 -0.012449 -0.009850 0.999874 0.000000 2.087673 0.988981 1.466450 1.000000
+
+/usr/local/packages/fsl-5.0.8/bin/convert_xfm -inverse -omat highres2example_func.mat example_func2highres.mat
+
 
 /usr/local/packages/fsl-5.0.8/bin/slicer example_func2highres highres -s 2 -x 0.35 sla.png -x 0.45 slb.png -x 0.55 slc.png -x 0.65 sld.png -y 0.35 sle.png -y 0.45 slf.png -y 0.55 slg.png -y 0.65 slh.png -z 0.35 sli.png -z 0.45 slj.png -z 0.55 slk.png -z 0.65 sll.png ; /usr/local/packages/fsl-5.0.8/bin/pngappend sla.png + slb.png + slc.png + sld.png + sle.png + slf.png + slg.png + slh.png + sli.png + slj.png + slk.png + sll.png example_func2highres1.png ; /usr/local/packages/fsl-5.0.8/bin/slicer highres example_func2highres -s 2 -x 0.35 sla.png -x 0.45 slb.png -x 0.55 slc.png -x 0.65 sld.png -y 0.35 sle.png -y 0.45 slf.png -y 0.55 slg.png -y 0.65 slh.png -z 0.35 sli.png -z 0.45 slj.png -z 0.55 slk.png -z 0.65 sll.png ; /usr/local/packages/fsl-5.0.8/bin/pngappend sla.png + slb.png + slc.png + sld.png + sle.png + slf.png + slg.png + slh.png + sli.png + slj.png + slk.png + sll.png example_func2highres2.png ; /usr/local/packages/fsl-5.0.8/bin/pngappend example_func2highres1.png - example_func2highres2.png example_func2highres.png; /bin/rm -f sl?.png example_func2highres2.png
-Error in slicer input, exiting... Error in slicer input, exiting...
+
 
 /bin/rm example_func2highres1.png
 
@@ -82,14 +85,3 @@ Error in slicer input, exiting... Error in slicer input, exiting...
 /usr/local/packages/fsl-5.0.8/bin/fslmaths filtered_func_data -Tmean mean_func
 
 /bin/rm -rf prefiltered_func_data*
-/usr/local/packages/fsl-5.0.8/bin/mainfeatreg: line 111: /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_cluster_p005.feat/logs/feat2_pre: No such file or directory
-/usr/local/packages/fsl-5.0.8/bin/mainfeatreg: line 126: /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_cluster_p005.feat/logs/feat2_pre: No such file or directory
-/usr/local/packages/fsl-5.0.8/bin/mainfeatreg: line 111: /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_cluster_p005.feat/logs/feat2_pre: No such file or directory
-/usr/local/packages/fsl-5.0.8/bin/mainfeatreg: line 126: /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_cluster_p005.feat/logs/feat2_pre: No such file or directory
-/usr/local/packages/fsl-5.0.8/bin/mainfeatreg: line 111: /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_cluster_p005.feat/logs/feat2_pre: No such file or directory
-/usr/local/packages/fsl-5.0.8/bin/mainfeatreg: line 126: /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_cluster_p005.feat/logs/feat2_pre: No such file or directory
-/usr/local/packages/fsl-5.0.8/bin/mainfeatreg: line 111: /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_cluster_p005.feat/logs/feat2_pre: No such file or directory
-/usr/local/packages/fsl-5.0.8/bin/mainfeatreg: line 126: /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_cluster_p005.feat/report_reg.html: No such file or directory
-/usr/local/packages/fsl-5.0.8/bin/mainfeatreg: line 126: /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_cluster_p005.feat/report_reg.html: No such file or directory
-/usr/local/packages/fsl-5.0.8/bin/mainfeatreg: line 126: /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_cluster_p005.feat/report_reg.html: No such file or directory
-/usr/local/packages/fsl-5.0.8/bin/mainfeatreg: line 126: /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_cluster_p005.feat/report_unwarp.html: No such file or directory

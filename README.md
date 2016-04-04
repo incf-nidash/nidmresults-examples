@@ -1,2 +1,2 @@
 # NIDM-Results-examples
-NIDM-Results examples used for testing the exporters.
+In this repository we share the exported NIDM-results from fMRI analyses carried out in SPM, FSL and AFNI. Each of the directories contains the output from results analysed using a certain variant available in the respective software package, and a full overview of the testing variants we have applied can be found [here.] (https://docs.google.com/spreadsheets/d/1uA5CfDTjUNKM5BwKc6QwdIvUiIGDGlGKksfWwZmEQ1Y/edit#gid=0) 

@@ -1,8 +1,8 @@
-/ContrastName1	positive vs negative 
-/NumWaves	2
+/ContrastName1	tone counting vs baseline 
+/NumWaves	1
 /NumContrasts	1
-/PPheights		4.401763e-01
-/RequiredEffect		1.037
+/PPheights		1.133945e+00
+/RequiredEffect		1.427
 
 /Matrix
-1.000000e+00 -1.000000e+00 
+1.000000e+00 
