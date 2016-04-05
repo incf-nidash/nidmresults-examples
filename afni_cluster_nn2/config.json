@@ -3,5 +3,5 @@
 "software": "afni",
 "ground_truth": ["cluster_nn2/nidm.ttl"],
 "inclusive": true,
-"version": "1.2.0"
+"versions": ["1.2.0"]
 }
