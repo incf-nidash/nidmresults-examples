@@ -1,0 +1,1 @@
+3dclust -1Dformat -nosum -1dindex 1 -1tindex 1 -2thresh -4.318 4.318 -dxyz=1 -savemask Clust_mask 1.01 2 ./afni_one_sample_with_covariate/ttest++_result+tlrc.HEAD
