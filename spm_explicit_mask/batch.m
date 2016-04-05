@@ -1,5 +1,5 @@
 %-----------------------------------------------------------------------
-% Job saved on 16-Feb-2016 15:45:55 by cfg_util (rev $Rev: 6460 $)
+% Job saved on 07-Mar-2016 10:45:37 by cfg_util (rev $Rev: 6460 $)
 % spm SPM - SPM12 (12.1)
 % cfg_basicio BasicIO - Unknown
 %-----------------------------------------------------------------------
@@ -99,7 +99,7 @@ matlabbatch{11}.spm.stats.fmri_spec.bases.hrf.derivs = [0 0];
 matlabbatch{11}.spm.stats.fmri_spec.volt = 1;
 matlabbatch{11}.spm.stats.fmri_spec.global = 'None';
 matlabbatch{11}.spm.stats.fmri_spec.mthresh = 0.8;
-matlabbatch{11}.spm.stats.fmri_spec.mask = {'/storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/spm_contrast_mask/mask.nii,1'};
+matlabbatch{11}.spm.stats.fmri_spec.mask = {'/storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/Explicit_mask/Explicit_mask.nii,1'};
 matlabbatch{11}.spm.stats.fmri_spec.cvi = 'AR(1)';
 matlabbatch{12}.spm.stats.fmri_est.spmmat(1) = cfg_dep('fMRI model specification: SPM.mat File', substruct('.','val', '{}',{11}, '.','val', '{}',{1}, '.','val', '{}',{1}), substruct('.','spmmat'));
 matlabbatch{12}.spm.stats.fmri_est.write_residuals = 0;
