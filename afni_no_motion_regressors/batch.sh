@@ -1,0 +1,1 @@
+3dclust -1Dformat -nosum -1dindex 2 -1tindex 2 -2thresh -3.406 3.406 -inmask -dxyz=1 -savemask Clust_mask 1.01 2 ./afni_no_motion_regressors/sub_001.results/stats.sub_001+tlrc.HEAD

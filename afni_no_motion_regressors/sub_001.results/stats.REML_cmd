@@ -1,0 +1,5 @@
+# 3dDeconvolve -input pb04.sub_001.r01.scale+tlrc.HEAD -censor motion_sub_001_censor.1D -polort 2 -num_stimts 2 -stim_times 1 stimuli/tone_counting_onset_times.txt 'BLOCK(4)' -stim_label 1 tone_counting -stim_times_AM1 2 stimuli/tone_counting_probe_duration.txt dmBLOCK -stim_label 2 probe -fout -tout -x1D X.xmat.1D -xjpeg X.jpg -x1D_uncensored X.nocensor.xmat.1D -fitts fitts.sub_001 -errts errts.sub_001 -bucket stats.sub_001
+
+3dREMLfit -matrix X.xmat.1D -input pb04.sub_001.r01.scale+tlrc.HEAD \
+ -fout -tout -Rbuck stats.sub_001_REML -Rvar stats.sub_001_REMLvar \
+ -Rfitts fitts.sub_001_REML -Rerrts errts.sub_001_REML -verb $*

@@ -1,0 +1,7 @@
+
+Warnings regarding Correlation Matrix: X.xmat.1D
+
+  severity   correlation   cosine  regressor pair
+  --------   -----------   ------  ----------------------------------------
+  medium:      -0.439       0.214  ( 3 vs.  4)  tone_counting#0  vs.  probe#0
+
