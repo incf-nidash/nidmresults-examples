@@ -15,30 +15,10 @@ zstat2: DLH=0.731651 VOLUME=38344 RESELS=6.33984
 echo 38344 > thresh_zstat3.vol
 zstat3: DLH=0.731651 VOLUME=38344 RESELS=6.33984
 
-/usr/local/packages/fsl-5.0.8/bin/fslmaths stats/zstat4 -mas mask thresh_zstat4
-
-echo 38344 > thresh_zstat4.vol
-zstat4: DLH=0.731651 VOLUME=38344 RESELS=6.33984
-
-/usr/local/packages/fsl-5.0.8/bin/fslmaths stats/zstat5 -mas mask thresh_zstat5
-
-echo 38344 > thresh_zstat5.vol
-zstat5: DLH=0.731651 VOLUME=38344 RESELS=6.33984
-
-/usr/local/packages/fsl-5.0.8/bin/fslmaths stats/zstat6 -mas mask thresh_zstat6
-
-echo 38344 > thresh_zstat6.vol
-zstat6: DLH=0.731651 VOLUME=38344 RESELS=6.33984
-
 /usr/local/packages/fsl-5.0.8/bin/fslmaths stats/zfstat1 -mas mask thresh_zfstat1
 
 echo 38344 > thresh_zfstat1.vol
 zfstat1: DLH=0.731651 VOLUME=38344 RESELS=6.33984
-
-/usr/local/packages/fsl-5.0.8/bin/fslmaths stats/zfstat2 -mas mask thresh_zfstat2
-
-echo 38344 > thresh_zfstat2.vol
-zfstat2: DLH=0.731651 VOLUME=38344 RESELS=6.33984
 
 /usr/local/packages/fsl-5.0.8/bin/ptoz 0.001
 3.090232
@@ -49,15 +29,7 @@ zfstat2: DLH=0.731651 VOLUME=38344 RESELS=6.33984
 
 /usr/local/packages/fsl-5.0.8/bin/fslmaths thresh_zstat3 -thr 3.090232 thresh_zstat3
 
-/usr/local/packages/fsl-5.0.8/bin/fslmaths thresh_zstat4 -thr 3.090232 thresh_zstat4
-
-/usr/local/packages/fsl-5.0.8/bin/fslmaths thresh_zstat5 -thr 3.090232 thresh_zstat5
-
-/usr/local/packages/fsl-5.0.8/bin/fslmaths thresh_zstat6 -thr 3.090232 thresh_zstat6
-
 /usr/local/packages/fsl-5.0.8/bin/fslmaths thresh_zfstat1 -thr 3.090232 thresh_zfstat1
-
-/usr/local/packages/fsl-5.0.8/bin/fslmaths thresh_zfstat2 -thr 3.090232 thresh_zfstat2
 
 /usr/local/packages/fsl-5.0.8/bin/fslstats thresh_zstat1 -l 0.0001 -R 2>/dev/null
 3.090367 7.242522 
@@ -68,20 +40,8 @@ zfstat2: DLH=0.731651 VOLUME=38344 RESELS=6.33984
 /usr/local/packages/fsl-5.0.8/bin/fslstats thresh_zstat3 -l 0.0001 -R 2>/dev/null
 3.114484 4.071380 
 
-/usr/local/packages/fsl-5.0.8/bin/fslstats thresh_zstat4 -l 0.0001 -R 2>/dev/null
-3.090667 5.556339 
-
-/usr/local/packages/fsl-5.0.8/bin/fslstats thresh_zstat5 -l 0.0001 -R 2>/dev/null
-3.091088 4.673876 
-
-/usr/local/packages/fsl-5.0.8/bin/fslstats thresh_zstat6 -l 0.0001 -R 2>/dev/null
-3.101747 4.275897 
-
 /usr/local/packages/fsl-5.0.8/bin/fslstats thresh_zfstat1 -l 0.0001 -R 2>/dev/null
 3.090264 7.526070 
-
-/usr/local/packages/fsl-5.0.8/bin/fslstats thresh_zfstat2 -l 0.0001 -R 2>/dev/null
-3.090623 5.428760 
 Rendering using zmin=3.090264 zmax=7.526070
 
 /usr/local/packages/fsl-5.0.8/bin/overlay 1 0 example_func -a thresh_zstat1 3.090264 7.526070 rendered_thresh_zstat1
@@ -98,24 +58,8 @@ Rendering using zmin=3.090264 zmax=7.526070
 
 /usr/local/packages/fsl-5.0.8/bin/slicer rendered_thresh_zstat3 -A 750 rendered_thresh_zstat3.png
 
-/usr/local/packages/fsl-5.0.8/bin/overlay 1 0 example_func -a thresh_zstat4 3.090264 7.526070 rendered_thresh_zstat4
-
-/usr/local/packages/fsl-5.0.8/bin/slicer rendered_thresh_zstat4 -A 750 rendered_thresh_zstat4.png
-
-/usr/local/packages/fsl-5.0.8/bin/overlay 1 0 example_func -a thresh_zstat5 3.090264 7.526070 rendered_thresh_zstat5
-
-/usr/local/packages/fsl-5.0.8/bin/slicer rendered_thresh_zstat5 -A 750 rendered_thresh_zstat5.png
-
-/usr/local/packages/fsl-5.0.8/bin/overlay 1 0 example_func -a thresh_zstat6 3.090264 7.526070 rendered_thresh_zstat6
-
-/usr/local/packages/fsl-5.0.8/bin/slicer rendered_thresh_zstat6 -A 750 rendered_thresh_zstat6.png
-
 /usr/local/packages/fsl-5.0.8/bin/overlay 1 0 example_func -a thresh_zfstat1 3.090264 7.526070 rendered_thresh_zfstat1
 
 /usr/local/packages/fsl-5.0.8/bin/slicer rendered_thresh_zfstat1 -A 750 rendered_thresh_zfstat1.png
-
-/usr/local/packages/fsl-5.0.8/bin/overlay 1 0 example_func -a thresh_zfstat2 3.090264 7.526070 rendered_thresh_zfstat2
-
-/usr/local/packages/fsl-5.0.8/bin/slicer rendered_thresh_zfstat2 -A 750 rendered_thresh_zfstat2.png
 
 mkdir -p tsplot ; /usr/local/packages/fsl-5.0.8/bin/tsplot . -f filtered_func_data -o tsplot
