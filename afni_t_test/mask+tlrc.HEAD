@@ -1,0 +1,121 @@
+
+type = string-attribute
+name = HISTORY_NOTE
+count = 739
+'[u1591557@MACP20109: Fri Mar 18 15:59:47 2016] 3dmask_tool -dilate_input 5 -5 -fill_holes -input rm.resam.group+tlrc -prefix mask_group\n[cmaumet@54-26-96-df-6b-e1.wifi-campus.warwick.ac.uk: Fri Apr  8 16:32:51 2016] 3dMean -mask_inter -prefix mask input/sub_001/mask_group+tlrc.HEAD input/sub_002/mask_group+tlrc.HEAD input/sub_003/mask_group+tlrc.HEAD input/sub_004/mask_group+tlrc.HEAD input/sub_005/mask_group+tlrc.HEAD input/sub_006/mask_group+tlrc.HEAD input/sub_007/mask_group+tlrc.HEAD input/sub_008/mask_group+tlrc.HEAD input/sub_009/mask_group+tlrc.HEAD input/sub_010/mask_group+tlrc.HEAD input/sub_011/mask_group+tlrc.HEAD input/sub_012/mask_group+tlrc.HEAD input/sub_013/mask_group+tlrc.HEAD input/sub_014/mask_group+tlrc.HEAD~
+
+type = string-attribute
+name = TYPESTRING
+count = 15
+'3DIM_HEAD_ANAT~
+
+type = string-attribute
+name = IDCODE_STRING
+count = 27
+'XYZ_S-HYH3JpurH8dMtcgyWGIw~
+
+type = string-attribute
+name = IDCODE_DATE
+count = 25
+'Fri Apr  8 16:32:51 2016~
+
+type = integer-attribute
+name = SCENE_DATA
+count = 8
+ 2 3 0 -999 -999
+ -999 -999 -999
+
+type = string-attribute
+name = LABEL_1
+count = 5
+'zyxt~
+
+type = string-attribute
+name = LABEL_2
+count = 5
+'zyxt~
+
+type = string-attribute
+name = DATASET_NAME
+count = 5
+'zyxt~
+
+type = integer-attribute
+name = ORIENT_SPECIFIC
+count = 3
+ 0 3 4
+
+type  = float-attribute
+name  = ORIGIN
+count = 3
+          -79.5          -79.5          -63.5
+
+type  = float-attribute
+name  = DELTA
+count = 3
+              3              3              3
+
+type  = float-attribute
+name  = IJK_TO_DICOM
+count = 12
+              3              0              0          -79.5              0
+              3              0          -79.5              0              0
+              3          -63.5
+
+type  = float-attribute
+name  = IJK_TO_DICOM_REAL
+count = 12
+              3              0              0          -79.5              0
+              3              0          -79.5              0              0
+              3          -63.5
+
+type  = float-attribute
+name  = BRICK_STATS
+count = 2
+              0              1
+
+type = integer-attribute
+name = DATASET_RANK
+count = 8
+ 3 1 0 0 0
+ 0 0 0
+
+type = integer-attribute
+name = DATASET_DIMENSIONS
+count = 5
+ 54 64 50 0 0
+
+type = integer-attribute
+name = BRICK_TYPES
+count = 1
+ 0
+
+type  = float-attribute
+name  = BRICK_FLOAT_FACS
+count = 1
+              0
+
+type = string-attribute
+name = BRICK_LABS
+count = 14
+'colin27T1_seg~
+
+type = string-attribute
+name = BRICK_KEYWORDS
+count = 1
+'~
+
+type = string-attribute
+name = TEMPLATE_SPACE
+count = 7
+'TT_N27~
+
+type = integer-attribute
+name = INT_CMAP
+count = 1
+ 0
+
+type = string-attribute
+name = BYTEORDER_STRING
+count = 10
+'LSB_FIRST~
