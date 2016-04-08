@@ -1,1 +1,1 @@
-3dclust -1Dformat -nosum -1dindex 1 -1tindex 1 -2thresh -4.221 4.221 -dxyz=1 -savemask Clust_mask 1.01 2 ./afni_t_test/ttest++_result+tlrc.HEAD
+3dclust -1Dformat -nosum -1dindex 1 -1tindex 1 -2thresh -4.221 4.221 -dxyz=1 -savemask Clust_mask 1.01 12 ./afni_t_test/ttest++_result+tlrc.HEAD
