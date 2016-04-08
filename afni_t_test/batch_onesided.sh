@@ -1,0 +1,1 @@
+3dclust -1Dformat -nosum -1dindex 1 -1tindex 1 -2thresh -1e+09 3.852 -dxyz=1 -savemask Clust_mask_onesided 1.01 13 ./afni_t_test/ttest++_result+tlrc.HEAD
