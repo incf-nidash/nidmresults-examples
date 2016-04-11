@@ -1,5 +1,5 @@
 %-----------------------------------------------------------------------
-% Job saved on 16-Feb-2016 12:09:27 by cfg_util (rev $Rev: 6460 $)
+% Job saved on 11-Apr-2016 16:09:35 by cfg_util (rev $Rev: 6460 $)
 % spm SPM - SPM12 (12.1)
 % cfg_basicio BasicIO - Unknown
 %-----------------------------------------------------------------------
@@ -106,8 +106,7 @@ matlabbatch{12}.spm.stats.fmri_est.write_residuals = 0;
 matlabbatch{12}.spm.stats.fmri_est.method.Classical = 1;
 matlabbatch{13}.spm.stats.con.spmmat(1) = cfg_dep('Model estimation: SPM.mat File', substruct('.','val', '{}',{12}, '.','val', '{}',{1}, '.','val', '{}',{1}), substruct('.','spmmat'));
 matlabbatch{13}.spm.stats.con.consess{1}.fcon.name = 'tone counting vs baseline';
-matlabbatch{13}.spm.stats.con.consess{1}.fcon.weights = [1 0
-                                                         0 1];
+matlabbatch{13}.spm.stats.con.consess{1}.fcon.weights = [1 0];
 matlabbatch{13}.spm.stats.con.consess{1}.fcon.sessrep = 'none';
 matlabbatch{13}.spm.stats.con.delete = 0;
 matlabbatch{14}.spm.stats.results.spmmat(1) = cfg_dep('Contrast Manager: SPM.mat File', substruct('.','val', '{}',{13}, '.','val', '{}',{1}, '.','val', '{}',{1}), substruct('.','spmmat'));
