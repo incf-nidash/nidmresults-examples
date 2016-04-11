@@ -27,3 +27,5 @@ errts*.BRIK
 # FSL pre-processed NIfTI images
 
 *.DS_store
+
+*/figure/*
