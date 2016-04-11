@@ -1,3 +1,4 @@
+# t-test analysis
 3dttest++ -prefix ttest++_result       \
           -setA setA                   \
              01 "stats.sub_001+tlrc.HEAD[1]" \
@@ -14,5 +15,11 @@
              12 "stats.sub_012+tlrc.HEAD[1]" \
              13 "stats.sub_013+tlrc.HEAD[1]" \
              14 "stats.sub_014+tlrc.HEAD[1]" 
-        
 
+# Create a group mask
+3dMean -mask_inter -prefix mask `ls input/sub_0*/mask_*.HEAD`             
+        
+# Simulations for FWE corrected cluster-size inference
+# 5.920743571     5.799465714 6.732922143 is the average of second line
+# in blur_est.sub_xxx.1D over the 14 subjects
+3dClustSim -both -mask mask+tlrc -fwhmxyz 5.920743571   5.799465714 6.732922143 -prefix ClustSim 

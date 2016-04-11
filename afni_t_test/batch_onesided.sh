@@ -1,0 +1,1 @@
+3dclust -1Dformat -nosum -1dindex 0 -1tindex 1 -2thresh -1e+09 3.852 -dxyz=1 -savemask Clust_onesided_mask 1.01 14 ttest++_result+tlrc.HEAD
