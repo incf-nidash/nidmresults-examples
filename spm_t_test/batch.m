@@ -1,6 +1,6 @@
 %-----------------------------------------------------------------------
-% Job saved on 04-Apr-2016 10:46:48 by cfg_util (rev $Rev: 6460 $)
-% spm SPM - SPM12 (12.1)
+% Job saved on 11-Apr-2016 08:28:42 by cfg_util (rev $Rev: 6460 $)
+% spm SPM - SPM12 (6685)
 % cfg_basicio BasicIO - Unknown
 %-----------------------------------------------------------------------
 matlabbatch{1}.spm.stats.factorial_design.dir = {'/storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/spm_t_test'};
@@ -43,7 +43,7 @@ matlabbatch{4}.spm.stats.results.conspec.titlestr = '';
 matlabbatch{4}.spm.stats.results.conspec.contrasts = Inf;
 matlabbatch{4}.spm.stats.results.conspec.threshdesc = 'none';
 matlabbatch{4}.spm.stats.results.conspec.thresh = 0.001;
-matlabbatch{4}.spm.stats.results.conspec.extent = 0;
+matlabbatch{4}.spm.stats.results.conspec.extent = 120;
 matlabbatch{4}.spm.stats.results.conspec.conjunction = 1;
 matlabbatch{4}.spm.stats.results.conspec.mask.none = 1;
 matlabbatch{4}.spm.stats.results.units = 1;
