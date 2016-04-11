@@ -1,4 +1,4 @@
-FSL 2nd-level Weight Least Squares results from task001_run001 of the OpenfMRI ds000006 living-nonliving decision experiment, used for exporting uncorrected p=0.001 NIDM-results with a one-sample t-test.
+FSL 2nd-level Ordinary Least Squares results from task001_run001 of the OpenfMRI ds000006 living-nonliving decision experiment, used for exporting uncorrected p=0.001 NIDM-results with a one-sample t-test.
 
 Contrasts used:
 mr vs plain
