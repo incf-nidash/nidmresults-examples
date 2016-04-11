@@ -1,4 +1,4 @@
-SPM 2nd level OLS mixed FX results from the BIDS ds011 Classification Learning and Tone Counting experiment, used for exporting uncorrected p=0.001 NIDM-results.
+SPM 2nd level WLS mixed FX results from the BIDS ds011 Classification Learning and Tone Counting experiment, used for exporting uncorrected p=0.001 NIDM-results.
 
 Contrasts used:
 Tone Counting vs Baseline
