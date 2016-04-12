@@ -1,0 +1,1 @@
+3dclust -1Dformat -nosum -1dindex 1 -1tindex 1 -2thresh -4.221 4.221 -dxyz=1 -savemask Clust_mask 1.01 12 3dMEMA_result+tlrc.HEAD
