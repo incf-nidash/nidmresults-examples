@@ -1,7 +1,7 @@
 #!/usr/bin/env tcsh
 
 # created by uber_subject.py: version 0.39 (March 21, 2016)
-# creation date: Tue Apr 12 11:56:34 2016
+# creation date: Tue Apr 12 12:18:11 2016
 
 # set data directories
 set top_dir   = /Users/cmaumet/Projects/Data_sharing/dev/nidmresults-examples
