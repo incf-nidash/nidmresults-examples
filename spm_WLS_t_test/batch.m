@@ -1,9 +1,9 @@
 %-----------------------------------------------------------------------
-% Job saved on 11-Apr-2016 11:33:12 by cfg_util (rev $Rev: 6460 $)
+% Job saved on 12-Apr-2016 11:42:32 by cfg_util (rev $Rev: 6460 $)
 % spm SPM - SPM12 (12.1)
 % cfg_basicio BasicIO - Unknown
 %-----------------------------------------------------------------------
-matlabbatch{1}.spm.stats.mfx.ffx.dir = {'/storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/spm_OLS_t_test'};
+matlabbatch{1}.spm.stats.mfx.ffx.dir = {'/storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/spm_WLS_t_test'};
 %%
 matlabbatch{1}.spm.stats.mfx.ffx.spmmat = {
                                            '/storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/SPM/LEVEL1/sub-01/SPM.mat'
@@ -38,9 +38,9 @@ matlabbatch{5}.spm.stats.con.delete = 0;
 matlabbatch{6}.spm.stats.results.spmmat(1) = cfg_dep('Contrast Manager: SPM.mat File', substruct('.','val', '{}',{5}, '.','val', '{}',{1}, '.','val', '{}',{1}), substruct('.','spmmat'));
 matlabbatch{6}.spm.stats.results.conspec.titlestr = '';
 matlabbatch{6}.spm.stats.results.conspec.contrasts = Inf;
-matlabbatch{6}.spm.stats.results.conspec.threshdesc = 'FWE';
-matlabbatch{6}.spm.stats.results.conspec.thresh = 0.05;
-matlabbatch{6}.spm.stats.results.conspec.extent = 0;
+matlabbatch{6}.spm.stats.results.conspec.threshdesc = 'none';
+matlabbatch{6}.spm.stats.results.conspec.thresh = 0.001;
+matlabbatch{6}.spm.stats.results.conspec.extent = 2;
 matlabbatch{6}.spm.stats.results.conspec.conjunction = 1;
 matlabbatch{6}.spm.stats.results.conspec.mask.none = 1;
 matlabbatch{6}.spm.stats.results.units = 1;
