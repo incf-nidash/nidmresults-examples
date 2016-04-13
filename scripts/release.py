@@ -7,6 +7,7 @@ import argparse
 import shutil
 import os
 import tarfile
+import fnmatch
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
@@ -53,6 +54,12 @@ if __name__ == "__main__":
         print "Exporting: " + analysis
         out_analysis_dir = os.path.join(out_dir, analysis)
         shutil.copytree(analysis, out_analysis_dir)
+        # Remove MAC_OS .DS_Store files (we want to keep other files even if
+        # they are not tracked on GitHub such as AFNI pre-processed files)
+        for root, dirnames, filenames in os.walk(out_analysis_dir):
+            for filename in fnmatch.filter(filenames, '.DS_Store'):
+                os.remove(os.path.join(root, filename))
+
         with tarfile.open(out_analysis_dir + ".tar.gz", "w:gz") as tar:
             tar.add(out_analysis_dir,
                     arcname=os.path.basename(out_analysis_dir))
