@@ -1,11 +1,5 @@
-AFNI single subject t-test results from subject 01, tone counting task, taken from OpenfMRI DS000011 classification learning and tone counting experiment. 
+**AFNI** single subject t-test results from **subject 01**, taken from OpenfMRI **DS000011** classification learning and tone counting experiment (cf. https://openfmri.org/dataset/ds000011/)
 
-This is the default single-subject t-test, with p<0.001 uncorrected. 
-
-Contrast used:
-tone counting vs. baseline
-
-For a description of the task, see:
-
-https://openfmri.org/dataset/ds000011/
-
+ - *Task*: tone counting task
+ - *Contrast*: Tone Counting vs Baseline
+ - *Variant*: **First-level regression**
