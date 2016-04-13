@@ -31,7 +31,7 @@ afni_proc.py -subj_id $subj                                      \
         -regress_stim_labels                                     \
             tone_counting probe                                  \
         -regress_basis_multi                                     \
-            'SPMG1' 'dmBLOCK'                                    \
+            'SPMG1(4)' 'dmBLOCK'                                    \
         -regress_stim_types                                      \
             times AM1                                            \
         -regress_censor_motion 0.3                               \
