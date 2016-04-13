@@ -1,5 +1,5 @@
 %-----------------------------------------------------------------------
-% Job saved on 12-Apr-2016 16:33:21 by cfg_util (rev $Rev: 6460 $)
+% Job saved on 13-Apr-2016 10:23:07 by cfg_util (rev $Rev: 6460 $)
 % spm SPM - SPM12 (12.1)
 % cfg_basicio BasicIO - Unknown
 %-----------------------------------------------------------------------
@@ -129,4 +129,4 @@ matlabbatch{14}.spm.stats.results.conspec.conjunction = 1;
 matlabbatch{14}.spm.stats.results.conspec.mask.none = 1;
 matlabbatch{14}.spm.stats.results.units = 1;
 matlabbatch{14}.spm.stats.results.print = 'pdf';
-matlabbatch{14}.spm.stats.results.write.none = 1;
+matlabbatch{14}.spm.stats.results.write.tspm.basename = 'thresh';
