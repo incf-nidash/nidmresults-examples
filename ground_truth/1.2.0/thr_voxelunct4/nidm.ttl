@@ -8,5 +8,4 @@
 
 
 niiri:height_threshold_stat_id a prov:Entity, nidm_HeightThreshold:, obo_statistic: ;
-    rdfs:label "Height Threshold: T<4" ;
     prov:value "4"^^xsd:float .

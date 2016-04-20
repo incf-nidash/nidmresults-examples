@@ -14,8 +14,5 @@
 
 
 niiri:first_level_design_matrix_id a prov:Entity , nidm_DesignMatrix: ;
-    prov:atLocation "DesignMatrix.csv"^^xsd:anyURI ;
-    dct:format "text/csv"^^xsd:string ;
-    nfo:fileName "DesignMatrix.csv"^^xsd:string ;
     nidm_hasHRFBasis: spm_SPMsCanonicalHRF: ;
     nidm_hasHRFBasis: spm_SPMsTemporalDerivative: .
