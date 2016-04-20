@@ -1,7 +1,7 @@
 
 {
 "software": "afni",
-"ground_truth": ["voxel_t=4/nidm.ttl"],
+"ground_truth": ["thr_clustunck10/nidm.ttl"],
 "inclusive": true,
 "versions": ["1.2.0"]
 }

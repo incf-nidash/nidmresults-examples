@@ -1,6 +1,6 @@
 
 {
-"software": "fsl",
+"software": "spm",
 "ground_truth": ["thr_clustfwep05/nidm.ttl"],
 "inclusive": true,
 "versions": ["1.2.0"]

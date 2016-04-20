@@ -1,7 +1,7 @@
 
 {
 "software": "afni",
-"ground_truth": ["afni_gamma_basis/nidm.ttl"],
+"ground_truth": ["thr_voxelfdrp05/nidm.ttl"],
 "inclusive": true,
 "versions": ["1.2.0"]
 }

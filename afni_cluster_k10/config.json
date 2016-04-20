@@ -1,7 +1,0 @@
-
-{
-"software": "afni",
-"ground_truth": ["cluster_k=10/nidm.ttl"],
-"inclusive": true,
-"versions": ["1.2.0"]
-}
