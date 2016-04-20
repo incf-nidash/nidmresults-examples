@@ -1,6 +1,5 @@
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix crypto: <http://id.loc.gov/vocabulary/preservation/cryptographicHashFunctions#> .
-@prefix neurolex: <http://neurolex.org/wiki/> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix dctype: <http://purl.org/dc/dcmitype/> .
@@ -12,7 +11,8 @@
 @prefix nfo: <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix obo: <http://purl.obolibrary.org/obo/> .
-@prefix nlx: <http://neurolex.org/wiki/> .
+@prefix nlx: <http://uri.neuinfo.org/nif/nifstd/> .
+@prefix scr: <http://scicrunch.org/resolver/>.
 
 
 @prefix nidm_ClusterDefinitionCriteria: <http://purl.org/nidash/nidm#NIDM_0000007> .
@@ -32,7 +32,6 @@
 @prefix nidm_SubjectCoordinateSystem: <http://purl.org/nidash/nidm#NIDM_0000077> .
 @prefix nidm_numberOfDimensions: <http://purl.org/nidash/nidm#NIDM_0000112> .
 @prefix nidm_dimensionsInVoxels: <http://purl.org/nidash/nidm#NIDM_0000090> .
-@prefix nidm_DataScaling: <http://purl.org/nidash/nidm#NIDM_0000018> .
 @prefix nidm_grandMeanScaling: <http://purl.org/nidash/nidm#NIDM_0000096> .
 @prefix nidm_targetIntensity: <http://purl.org/nidash/nidm#NIDM_0000124> .
 @prefix nidm_ContrastVarianceMap: <http://purl.org/nidash/nidm#NIDM_0000135> .
@@ -104,7 +103,10 @@
 @prefix fsl_GaussianRunningLineDriftModel: <http://purl.org/nidash/fsl#FSL_0000002> .
 @prefix fsl_driftCutoffPeriod: <http://purl.org/nidash/fsl#FSL_0000004> .
 @prefix fsl_featVersion: <http://purl.org/nidash/fsl#FSL_0000005> .
-@prefix nlx_FSL: <http://neurolex.org/wiki/birnlex_2067> .
+@prefix nlx_FunctionalMRIprotocol: <http://uri.neuinfo.org/nif/nifstd/birnlex_2250> .
+@prefix nlx_Imaginginstrument: <http://uri.neuinfo.org/nif/nifstd/birnlex_2094> .
+@prefix nlx_Magneticresonanceimagingscanner: <http://uri.neuinfo.org/nif/nifstd/birnlex_2100> .
+@prefix src_FSL: <http://scicrunch.org/resolver/SCR_002823> .
 
 
 niiri:cluster_definition_criteria_id_1 a prov:Entity , nidm_ClusterDefinitionCriteria: ;
@@ -151,10 +153,13 @@ niiri:coordinate_space_id_1 a prov:Entity , nidm_CoordinateSpace: ;
 	nidm_numberOfDimensions: "3"^^xsd:int ;
 	nidm_dimensionsInVoxels: "[ 64, 64, 42 ]"^^xsd:string .
 
-niiri:data_id a prov:Entity , nidm_DataScaling: , prov:Collection ;
+niiri:data_id a prov:Entity , nidm:Data , prov:Collection ;
     rdfs:label "Data" ;
     nidm_grandMeanScaling: "true"^^xsd:boolean ;
-    nidm_targetIntensity: "10000"^^xsd:float .
+    nidm_targetIntensity: "10000"^^xsd:float ;
+    nidm:hasMRIProtocol nlx_FunctionalMRIprotocol: ;
+    prov:wasAttributedTo niiri:mr_scanner_id ;
+    prov:wasAttributedTo niiri:subject_id .
 
 niiri:d4de4b20b2d408cd8d825ac0edb6030a a prov:Entity , nidm_ContrastVarianceMap: ;
     nfo:fileName "varcope1.nii.gz"^^xsd:string ;
@@ -376,7 +381,7 @@ niiri:search_space_mask_id a prov:Entity , nidm_SearchSpaceMaskMap: ;
 	crypto:sha512 "cc1a96a6111e5107eb08487e38e6d7f8164b9d1d3f1fc10948bdbcfaea642fe9bfae278c7fc372b65cac7232ea58fd8fb5914014e7b9a5d6200592b12b2a728b"^^xsd:string ;
 	prov:wasGeneratedBy niiri:inference_id_1 .
 
-niiri:software_id a prov:Agent , nlx_FSL: , prov:SoftwareAgent ;
+niiri:software_id a prov:Agent , src_FSL: , prov:SoftwareAgent ;
 	rdfs:label "FSL" ;
 	nidm_softwareVersion: "5.0.x"^^xsd:string ;
 	fsl_featVersion: "6.00"^^xsd:string .
@@ -433,6 +438,9 @@ niiri:design_matrix_png_id a prov:Entity , dctype:Image ;
 	nfo:fileName "DesignMatrix.png"^^xsd:string ;
 	dct:format "image/png"^^xsd:string .
 
+niiri:mr_scanner_id a prov:Entity, nlx_Imaginginstrument:, nlx_Magneticresonanceimagingscanner:;
+    rdfs:label "MRI Scanner" .
+
 niiri:inference_id_1 a prov:Activity , nidm_Inference: ;
 	rdfs:label "Inference: Generation" ;
 	nidm_hasAlternativeHypothesis: nidm_OneTailedTest: ;
@@ -461,44 +469,48 @@ niiri:model_parameters_estimation_id prov:used niiri:error_model_id ;
 
 niiri:fsl_results_id a prov:Entity , prov:Bundle, nidm_NIDMResults: ;
 	rdfs:label "NIDM-Results" ;
-	nidm_version: "1.2.0"^^xsd:string .
+	nidm_version: "1.1.0"^^xsd:string .
 
 _:blank1 a prov:Generation ;
     prov:activity niiri:export_id .
 niiri:fsl_results_id prov:qualifiedGeneration _:blank1 .
 _:blank1 prov:atTime "2014-05-19T10:30:00.000+01:00"^^xsd:dateTime .
 
+niiri:beta_map_id_1 prov:wasGeneratedBy niiri:model_parameters_estimation_id .
+
 niiri:beta_map_id_1 a prov:Entity , nidm_ParameterEstimateMap: ;
     rdfs:label "Parameter estimate 1" ;
+    nfo:fileName "pe1.nii.gz"^^xsd:string ;
     nidm_inCoordinateSpace: niiri:coordinate_space_id_1 ;
     crypto:sha512 "4c755c0ae6088f8001e0458f89e51fea0e2719b5dc747fed6f617ae12ad5c6a643e1afcb886bcabaaac7911f5e69086c1bd084af9f75dae75913d44a783151f6"^^xsd:string ;
-    nfo:fileName "pe1.nii.gz"^^xsd:string ;        
-    dct:format "image/nifti"^^xsd:string ;
-    prov:wasGeneratedBy niiri:model_parameters_estimation_id .
+    dct:format "image/nifti"^^xsd:string .
+
+niiri:beta_map_id_2 prov:wasGeneratedBy niiri:model_parameters_estimation_id .
 
 niiri:beta_map_id_2 a prov:Entity , nidm_ParameterEstimateMap: ;
     rdfs:label "Parameter estimate 2" ;
+    nfo:fileName "pe2.nii.gz"^^xsd:string ;
     nidm_inCoordinateSpace: niiri:coordinate_space_id_1 ;
     crypto:sha512 "b6146d013976c471fe43a083a56b8852c39a13e0566b2d04e172275bd2fc7b7ffb0c0ae99fac11337d3c27f131c4a00e92f5df15d32723148639a3cc9ffd7c1f"^^xsd:string ;
-    nfo:fileName "pe2.nii.gz"^^xsd:string ;        
-    dct:format "image/nifti"^^xsd:string ;    
-    prov:wasGeneratedBy niiri:model_parameters_estimation_id .
+    dct:format "image/nifti"^^xsd:string .
+
+niiri:beta_map_id_3 prov:wasGeneratedBy niiri:model_parameters_estimation_id .
 
 niiri:beta_map_id_3 a prov:Entity , nidm_ParameterEstimateMap: ;
     rdfs:label "Parameter estimate 3" ;
+    nfo:fileName "pe3.nii.gz"^^xsd:string ;
     nidm_inCoordinateSpace: niiri:coordinate_space_id_1 ;
     crypto:sha512 "f5dd8123b389fe755086f7ad3becb5b79f39d70cf0095b08ed8c3e5cb717942711264528f08fa99e58aaaf24e03581c64567864110518247d95031ef3fe2e761"^^xsd:string ;
-    nfo:fileName "pe3.nii.gz"^^xsd:string ;        
-    dct:format "image/nifti"^^xsd:string ;
-    prov:wasGeneratedBy niiri:model_parameters_estimation_id .
+    dct:format "image/nifti"^^xsd:string .
+
+niiri:beta_map_id_4 prov:wasGeneratedBy niiri:model_parameters_estimation_id .
 
 niiri:beta_map_id_4 a prov:Entity , nidm_ParameterEstimateMap: ;
     rdfs:label "Parameter estimate 4" ;
+    nfo:fileName "pe4.nii.gz"^^xsd:string ;
     nidm_inCoordinateSpace: niiri:coordinate_space_id_1 ;
     crypto:sha512 "aca2503769bfb6ee3801bc50c2e033755cd9844d13ee78a38aa23140ad558b5c6f0517c4748f84acac27cf6608222553003f418097c18f254312b49b5522b831"^^xsd:string ;
-    nfo:fileName "pe4.nii.gz"^^xsd:string ;        
-    dct:format "image/nifti"^^xsd:string ;    
-    prov:wasGeneratedBy niiri:model_parameters_estimation_id .
+    dct:format "image/nifti"^^xsd:string .
 
 niiri:peak_0001_2 a prov:Entity , nidm_Peak: ;
     rdfs:label "Peak 0001_2" ;
@@ -630,6 +642,9 @@ niiri:peak_definition_criteria_id_1 a prov:Entity , nidm_PeakDefinitionCriteria:
 	rdfs:label "Peak Definition Criteria" ;
 	nidm_minDistanceBetweenPeaks: "0.0"^^xsd:float .
 
+niiri:subject_id a prov:Agent , prov:Person ;
+    rdfs:label "Person" .
+
 niiri:residual_mean_squares_map_id a prov:Entity , nidm_ResidualMeanSquaresMap: ;
 	rdfs:label "Residual Mean Squares Map" ;
 	prov:atLocation "ResidualMeanSquares.nii.gz"^^xsd:anyURI ;
@@ -647,7 +662,7 @@ niiri:statistic_map_id_1 a prov:Entity , nidm_StatisticMap: ;
 	dct:format "image/nifti"^^xsd:string ;
 	nidm_contrastName: "Generation"^^xsd:string ;
 	nidm_effectDegreesOfFreedom: "1"^^xsd:float ;
-	nidm_errorDegreesOfFreedom: "102"^^xsd:float ;	
+	nidm_errorDegreesOfFreedom: "102"^^xsd:float ;
 	nidm_inCoordinateSpace: niiri:coordinate_space_id_1 ;
 	crypto:sha512 "b6286d36e678c23622b5b0486f0efb5b274f9a5e2a3ee6aceb6a0338f7745fb8a4d8f72b8af22c4ffb40c860bfb65940c87b03a7336cdf1a665f9cb07a5c2527"^^xsd:string ;
 	prov:wasGeneratedBy niiri:contrast_estimation_id_1.
@@ -660,7 +675,8 @@ niiri:z_statistic_map_id_1 a prov:Entity , nidm_StatisticMap: ;
 	dct:format "image/nifti"^^xsd:string ;
 	nidm_contrastName: "Generation"^^xsd:string ;
 	nidm_effectDegreesOfFreedom: "1"^^xsd:float ;
-	nidm_errorDegreesOfFreedom: "INF"^^xsd:float ;	
+	nidm_errorDegreesOfFreedom: "INF"^^xsd:float ;
 	nidm_inCoordinateSpace: niiri:coordinate_space_id_1 ;
 	crypto:sha512 "3a68a4e5963766af86d22a871a4dbca9568a46441a567855b3a84dbd47ea01acea11ed77b37ce85078a219adaa92264296a4548c1ba39b11ff028e8fefd95d03"^^xsd:string ;
 	prov:wasGeneratedBy niiri:contrast_estimation_id_1.
+
