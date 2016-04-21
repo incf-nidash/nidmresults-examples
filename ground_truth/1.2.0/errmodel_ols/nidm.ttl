@@ -18,5 +18,4 @@ niiri:error_model_id a prov:Entity , nidm_ErrorModel: ;
     nidm_hasErrorDistribution: obo_normaldistribution: ;
     nidm_errorVarianceHomogeneous: "true"^^xsd:boolean ;
     nidm_varianceMapWiseDependence: nidm_IndependentParameter: ;
-    nidm_hasErrorDependence: nidm_IndependentError: ;
-    nidm_dependenceMapWiseDependence: nidm_IndependentParameter: .
+    nidm_hasErrorDependence: nidm_IndependentError: .
