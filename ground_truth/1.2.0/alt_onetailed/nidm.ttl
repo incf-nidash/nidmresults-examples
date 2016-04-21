@@ -9,4 +9,4 @@
 
 
 niiri:inference_id a prov:Activity , nidm_Inference: ;
-	nidm_hasAlternativeHypothesis: nidm_OneTailedTest: ;
+	nidm_hasAlternativeHypothesis: nidm_OneTailedTest: .
