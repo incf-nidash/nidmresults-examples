@@ -3,5 +3,7 @@
 "software": "fsl",
 "ground_truth": ["errmodel_wls/nidm.ttl"],
 "inclusive": true,
-"versions": ["1.2.0"]
+"versions": ["1.2.0"],
+"num_subjects": [14],
+"group_names": ["Control"]
 }
