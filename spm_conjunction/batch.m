@@ -1,5 +1,5 @@
 %-----------------------------------------------------------------------
-% Job saved on 16-Feb-2016 15:06:13 by cfg_util (rev $Rev: 6460 $)
+% Job saved on 16-Feb-2016 14:49:55 by cfg_util (rev $Rev: 6460 $)
 % spm SPM - SPM12 (12.1)
 % cfg_basicio BasicIO - Unknown
 %-----------------------------------------------------------------------
@@ -83,7 +83,7 @@ matlabbatch{10}.spm.spatial.smooth.fwhm = [6 6 6];
 matlabbatch{10}.spm.spatial.smooth.dtype = 0;
 matlabbatch{10}.spm.spatial.smooth.im = 0;
 matlabbatch{10}.spm.spatial.smooth.prefix = 's';
-matlabbatch{11}.spm.stats.fmri_spec.dir = {'/storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/spm_conjunction'};
+matlabbatch{11}.spm.stats.fmri_spec.dir = {'/storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/spm_partial_conjunction'};
 matlabbatch{11}.spm.stats.fmri_spec.timing.units = 'secs';
 matlabbatch{11}.spm.stats.fmri_spec.timing.RT = 2;
 matlabbatch{11}.spm.stats.fmri_spec.timing.fmri_t = 16;
@@ -118,7 +118,7 @@ matlabbatch{14}.spm.stats.results.conspec.contrasts = [1 2];
 matlabbatch{14}.spm.stats.results.conspec.threshdesc = 'none';
 matlabbatch{14}.spm.stats.results.conspec.thresh = 0.001;
 matlabbatch{14}.spm.stats.results.conspec.extent = 0;
-matlabbatch{14}.spm.stats.results.conspec.conjunction = 2;
+matlabbatch{14}.spm.stats.results.conspec.conjunction = 1;
 matlabbatch{14}.spm.stats.results.conspec.mask.none = 1;
 matlabbatch{14}.spm.stats.results.units = 1;
 matlabbatch{14}.spm.stats.results.print = 'pdf';
