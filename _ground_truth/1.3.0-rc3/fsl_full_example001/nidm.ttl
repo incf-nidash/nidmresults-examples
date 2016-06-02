@@ -79,7 +79,7 @@
 @prefix nidm_OneTailedTest: <http://purl.org/nidash/nidm#NIDM_0000060> .
 @prefix nidm_MaskMap: <http://purl.org/nidash/nidm#NIDM_0000054> .
 @prefix nidm_isUserDefined: <http://purl.org/nidash/nidm#NIDM_0000106> .
-@prefix nidm_ModelParametersEstimation: <http://purl.org/nidash/nidm#NIDM_0000056> .
+@prefix nidm_ModelParameterEstimation: <http://purl.org/nidash/nidm#NIDM_0000056> .
 @prefix nidm_withEstimationMethod: <http://purl.org/nidash/nidm#NIDM_0000134> .
 @prefix nidm_NIDMResults: <http://purl.org/nidash/nidm#NIDM_0000027> .
 @prefix nidm_version: <http://purl.org/nidash/nidm#NIDM_0000127> .
@@ -431,8 +431,8 @@ niiri:height_threshold_id a prov:Entity, nidm_HeightThreshold:, obo_statistic: ;
     prov:value "2.3"^^xsd:float .
 
 niiri:excursion_set_png_id_1 a prov:Entity , dctype:Image ;
-	prov:atLocation "rendered_thresh_zstat1.png"^^xsd:anyURI ;
-	nfo:fileName "rendered_thresh_zstat1.png"^^xsd:string ;
+	prov:atLocation "ExcursionSet.png"^^xsd:anyURI ;
+	nfo:fileName "ExcursionSet.png"^^xsd:string ;
 	dct:format "image/png"^^xsd:string .
 
 niiri:design_matrix_png_id a prov:Entity , dctype:Image ;
@@ -461,7 +461,7 @@ niiri:mask_id_1 a prov:Entity , nidm_MaskMap: ;
     prov:wasGeneratedBy niiri:model_parameters_estimation_id .
 
 niiri:model_parameters_estimation_id prov:used niiri:error_model_id ;
-	a prov:Activity , nidm_ModelParametersEstimation: ;
+	a prov:Activity , nidm_ModelParameterEstimation: ;
 	rdfs:label "Model Parameters Estimation" ;
 	nidm_withEstimationMethod: obo_generalizedleastsquaresestimation: ;
 	prov:used niiri:design_matrix_id ;
@@ -471,7 +471,7 @@ niiri:model_parameters_estimation_id prov:used niiri:error_model_id ;
 
 niiri:fsl_results_id a prov:Entity , prov:Bundle, nidm_NIDMResults: ;
 	rdfs:label "NIDM-Results" ;
-	nidm_version: "1.3.0"^^xsd:string .
+	nidm_version: "1.1.0"^^xsd:string .
 
 _:blank1 a prov:Generation ;
     prov:activity niiri:export_id .
