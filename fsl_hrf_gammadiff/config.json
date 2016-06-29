@@ -1,7 +1,7 @@
 
 {
 "software": "fsl",
-"ground_truth": ["double_gamma/nidm.ttl"],
+"ground_truth": ["hrf_fsldoublegamma/nidm.ttl"],
 "inclusive": true,
-"versions": ["1.2.0"]
+"versions": ["1.2.0", "1.3.0"]
 }

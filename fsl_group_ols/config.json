@@ -1,0 +1,9 @@
+
+{
+"software": "fsl",
+"ground_truth": ["errmodel_ols/nidm.ttl", "group/nidm.ttl"],
+"inclusive": true,
+"versions": ["1.2.0", "1.3.0"],
+"num_subjects": [14],
+"group_names": ["Control"]
+}

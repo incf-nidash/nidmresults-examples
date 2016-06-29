@@ -1,7 +1,7 @@
 
 {
 "software": "spm",
-"ground_truth": ["t_test/nidm.ttl"],
+"ground_truth": ["errmodel_ols/nidm.ttl", "group/nidm.ttl", "space_spm12mni/nidm.ttl"],
 "inclusive": true,
-"version": "1.2.0"
+"versions": ["1.3.0"]
 }
