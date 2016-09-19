@@ -640,7 +640,7 @@ niiri:residual_mean_squares_map_id a prov:Entity , nidm_ResidualMeanSquaresMap: 
     prov:wasGeneratedBy niiri:model_parameters_estimation_id .
 
 niiri:statistic_map_id_1 a prov:Entity , nidm_StatisticMap: ;
-	rdfs:label "Statistic Map: Generation" ;
+	rdfs:label "T-Statistic Map: Generation" ;
 	prov:atLocation "TStatistic.nii.gz"^^xsd:anyURI ;
 	nidm_statisticType: obo_tstatistic: ;
 	nfo:fileName "TStatistic.nii.gz"^^xsd:string ;
