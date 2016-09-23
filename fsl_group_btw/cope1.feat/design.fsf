@@ -144,7 +144,7 @@ set fmri(robust_yn) 0
 # 0 : Mixed Effects: Simple OLS
 # 2 : Mixed Effects: FLAME 1
 # 1 : Mixed Effects: FLAME 1+2
-set fmri(mixed_yn) 0
+set fmri(mixed_yn) 2
 
 # Number of EVs
 set fmri(evs_orig) 2
@@ -176,7 +176,7 @@ set fmri(threshmask) ""
 set fmri(thresh) 1
 
 # P threshold
-set fmri(prob_thresh) 0.01
+set fmri(prob_thresh) 0.1
 
 # Z threshold
 set fmri(z_thresh) 3.1
@@ -378,10 +378,10 @@ set fmri(evg6.1) 1
 set fmri(evg7.1) 1
 
 # Higher-level EV value for EV 1 and input 8
-set fmri(evg8.1) 0
+set fmri(evg8.1) 1
 
 # Higher-level EV value for EV 1 and input 9
-set fmri(evg9.1) 0
+set fmri(evg9.1) 1
 
 # Higher-level EV value for EV 1 and input 10
 set fmri(evg10.1) 0
@@ -463,10 +463,10 @@ set fmri(evg6.2) 0
 set fmri(evg7.2) 0
 
 # Higher-level EV value for EV 2 and input 8
-set fmri(evg8.2) 1
+set fmri(evg8.2) 0
 
 # Higher-level EV value for EV 2 and input 9
-set fmri(evg9.2) 1
+set fmri(evg9.2) 0
 
 # Higher-level EV value for EV 2 and input 10
 set fmri(evg10.2) 1
@@ -508,10 +508,10 @@ set fmri(groupmem.6) 1
 set fmri(groupmem.7) 1
 
 # Group membership for input 8
-set fmri(groupmem.8) 2
+set fmri(groupmem.8) 1
 
 # Group membership for input 9
-set fmri(groupmem.9) 2
+set fmri(groupmem.9) 1
 
 # Group membership for input 10
 set fmri(groupmem.10) 2

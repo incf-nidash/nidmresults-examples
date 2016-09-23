@@ -1,5 +1,5 @@
 
-/bin/cp /storage/wmsmfe/nidmresults-examples/fsl_group_btw/design.fsf design.fsf
+/bin/cp /storage/wmsmfe/nidmresults-examples/todel/design.fsf design.fsf
 
 /usr/local/packages/fsl-5.0.8/bin/feat_model design
 
@@ -7,28 +7,28 @@ mkdir .files;cp /usr/local/packages/fsl-5.0.8/doc/fsl.css .files;cp -r /usr/loca
 
 /usr/local/packages/fsl-5.0.8/bin/fsl_sub -T 60 -l logs -N feat2_pre   /usr/local/packages/fsl-5.0.8/bin/feat /storage/wmsmfe/nidmresults-examples/fsl_group_btw.gfeat/design.fsf -D /storage/wmsmfe/nidmresults-examples/fsl_group_btw.gfeat -gfeatprep
 job
-303372
+303386
 
-/usr/local/packages/fsl-5.0.8/bin/fsl_sub -T 60 -l logs -N feat3a_flame -j 303372  /usr/local/packages/fsl-5.0.8/bin/feat /storage/wmsmfe/nidmresults-examples/fsl_group_btw.gfeat/cope1.feat/design.fsf -D /storage/wmsmfe/nidmresults-examples/fsl_group_btw.gfeat/cope1.feat -I 1 -flame1
+/usr/local/packages/fsl-5.0.8/bin/fsl_sub -T 60 -l logs -N feat3a_flame -j 303386  /usr/local/packages/fsl-5.0.8/bin/feat /storage/wmsmfe/nidmresults-examples/fsl_group_btw.gfeat/cope1.feat/design.fsf -D /storage/wmsmfe/nidmresults-examples/fsl_group_btw.gfeat/cope1.feat -I 1 -flame1
 job
-303373
+303387
 
-/usr/local/packages/fsl-5.0.8/bin/fsl_sub -T 60 -l logs -N feat3b_flame -j 303373 -t ./.flame
+/usr/local/packages/fsl-5.0.8/bin/fsl_sub -T 60 -l logs -N feat3b_flame -j 303387 -t ./.flame
 job
-303374
+303388
 
-/usr/local/packages/fsl-5.0.8/bin/fsl_sub -T 60 -l logs -N feat3c_flame -j 303374  /usr/local/packages/fsl-5.0.8/bin/feat /storage/wmsmfe/nidmresults-examples/fsl_group_btw.gfeat/cope1.feat/design.fsf -D /storage/wmsmfe/nidmresults-examples/fsl_group_btw.gfeat/cope1.feat -flame3
+/usr/local/packages/fsl-5.0.8/bin/fsl_sub -T 60 -l logs -N feat3c_flame -j 303388  /usr/local/packages/fsl-5.0.8/bin/feat /storage/wmsmfe/nidmresults-examples/fsl_group_btw.gfeat/cope1.feat/design.fsf -D /storage/wmsmfe/nidmresults-examples/fsl_group_btw.gfeat/cope1.feat -flame3
 job
-303375
+303389
 
-/usr/local/packages/fsl-5.0.8/bin/fsl_sub -T 60 -l logs -N feat4_post -j 303375  /usr/local/packages/fsl-5.0.8/bin/feat /storage/wmsmfe/nidmresults-examples/fsl_group_btw.gfeat/cope1.feat/design.fsf -D /storage/wmsmfe/nidmresults-examples/fsl_group_btw.gfeat/cope1.feat -poststats 1
+/usr/local/packages/fsl-5.0.8/bin/fsl_sub -T 60 -l logs -N feat4_post -j 303389  /usr/local/packages/fsl-5.0.8/bin/feat /storage/wmsmfe/nidmresults-examples/fsl_group_btw.gfeat/cope1.feat/design.fsf -D /storage/wmsmfe/nidmresults-examples/fsl_group_btw.gfeat/cope1.feat -poststats 1
 job
-303376
+303390
 
-/usr/local/packages/fsl-5.0.8/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 303376  /usr/local/packages/fsl-5.0.8/bin/feat /storage/wmsmfe/nidmresults-examples/fsl_group_btw.gfeat/cope1.feat/design.fsf -D /storage/wmsmfe/nidmresults-examples/fsl_group_btw.gfeat/cope1.feat -stop
+/usr/local/packages/fsl-5.0.8/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 303390  /usr/local/packages/fsl-5.0.8/bin/feat /storage/wmsmfe/nidmresults-examples/fsl_group_btw.gfeat/cope1.feat/design.fsf -D /storage/wmsmfe/nidmresults-examples/fsl_group_btw.gfeat/cope1.feat -stop
 job
-303377
+303391
 
-/usr/local/packages/fsl-5.0.8/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 303377  /usr/local/packages/fsl-5.0.8/bin/feat /storage/wmsmfe/nidmresults-examples/fsl_group_btw.gfeat/cope1.feat/design.fsf -D /storage/wmsmfe/nidmresults-examples/fsl_group_btw.gfeat -stop
+/usr/local/packages/fsl-5.0.8/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 303391  /usr/local/packages/fsl-5.0.8/bin/feat /storage/wmsmfe/nidmresults-examples/fsl_group_btw.gfeat/cope1.feat/design.fsf -D /storage/wmsmfe/nidmresults-examples/fsl_group_btw.gfeat -stop
 job
-303378
+303392
