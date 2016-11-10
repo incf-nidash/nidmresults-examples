@@ -1,27 +1,28 @@
-import os
-from subprocess import check_call
+from subprocess import call
 import time
-import stat
 import shutil
 
 # os.path.getmtime(path)
 
 #! /bin/bash
 
-check_call(['feat ./fsl_default/design.fsf'], shell=True)
+call(['feat ./fsl_default/design.fsf'], shell=True)
 
 # Because feat returns before the analysis is actually finished (and run in the
-# background), we check how long ago the report_log.html file was modified to
+# background), we check if report.html contains "STILL RUNNING" to
 # determine when the analysis is completed.
-x_sec_ago = 0
-# If the report was modified more than 3 minutes ago then we consider the
-# analysis to be completed
-while x_sec_ago/60 < 3:
+report_file = './fsl_voxelwise_p0001.feat/report.html'
+
+running = True
+while running:
     time.sleep(10)
-    log_file = './fsl_voxelwise_p0001.feat/report_log.html'
-    # Check how long ago the log file was modified
-    x_sec_ago = (time.time() - os.stat(log_file)[stat.ST_MTIME])
-    print(x_sec_ago)
+
+    with open(report_file, "r") as fp:
+        report_head = fp.read()
+        if "STILL RUNNING" not in report_head:
+            running = False
+        else:
+            print("STILL RUNNING")
 
 shutil.rmtree('fsl_default')
 shutil.move('fsl_voxelwise_p0001.feat', 'fsl_default')
