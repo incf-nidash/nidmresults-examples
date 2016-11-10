@@ -14,7 +14,9 @@ check_call(['feat ./fsl_default/design.fsf'], shell=True)
 # background), we check how long ago the report_log.html file was modified to
 # determine when the analysis is completed.
 x_sec_ago = 0
-while x_sec_ago < 30:
+# If the report was modified more than 3 minutes ago then we consider the
+# analysis to be completed
+while x_sec_ago/60 < 3:
     time.sleep(10)
     log_file = './fsl_voxelwise_p0001.feat/report_log.html'
     # Check how long ago the log file was modified
@@ -22,7 +24,7 @@ while x_sec_ago < 30:
     print(x_sec_ago)
 
 shutil.rmtree('fsl_default')
-shutil.copy('fsl_voxelwise_p0001.feat', 'fsl_default')
+shutil.move('fsl_voxelwise_p0001.feat', 'fsl_default')
 
 
 
