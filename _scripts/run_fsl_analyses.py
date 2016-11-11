@@ -1,12 +1,8 @@
-from subprocess import call
+from subprocess import check_call
 import time
 import shutil
 
-# os.path.getmtime(path)
-
-#! /bin/bash
-
-call(['feat ./fsl_default/design.fsf'], shell=True)
+check_call(['feat ./fsl_default/design.fsf'], shell=True)
 
 # Because feat returns before the analysis is actually finished (and run in the
 # background), we check if report.html contains "STILL RUNNING" to
