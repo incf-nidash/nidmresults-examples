@@ -356,7 +356,7 @@ set fmri(tempfilt_yn2) 1
 set fmri(deriv_yn2) 0
 
 # Custom EV file (EV 2)
-set fmri(custom2) "/storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/ONSETS/fslonsets_tone_counting_probe.txt"
+set fmri(custom2) "/storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/ONSETS/sub-01_tone_counting_probe.txt"
 
 # Gauss sigma (EV 2)
 set fmri(gausssigma2) 2.8
