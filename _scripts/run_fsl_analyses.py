@@ -34,6 +34,7 @@ def run_feat(dataset_name, out_featdir):
     tmp_cfg = os.path.join('.', 'tmp_config.json')
     shutil.copyfile(cfg, tmp_cfg)
 
+    # Move the feat directory to a folder named after the dataset under study
     shutil.rmtree(dataset_name)
     shutil.move(out_featdir, dataset_name)
 
@@ -43,23 +44,23 @@ def run_feat(dataset_name, out_featdir):
 
 
 if __name__ == "__main__":
-    run_feat('fsl_default', 'fsl_voxelwise_p0001.feat')
 
+    studies = (
+        # ('fsl_con_f', 'fsl_f_test.feat'),
+        # ('fsl_contrast_mask', 'fsl_contrast_mask.feat'),
+        ('fsl_default', 'fsl_voxelwise_p0001.feat'),
+        # outputdir is empty for this study, not sure what happens
+        # ('fsl_full_examples001', 'fsl_full_examples001.feat'),
+        # ('fsl_gamma_basis', 'fsl_gamma_basis.feat'),
+        # ('fsl_gaussian', 'fsl_gaussian.feat'),
+        # ('fsl_group_btw', 'fsl_group_btw.gfeat'),
+        # ('fsl_group_ols', 'fsl_OLS_t_test.gfeat'),
+        # ('fsl_group_wls', 'fsl_t_test.gfeat'),
+        # ('fsl_hrf_fir', 'fsl_FIR_basis.feat'),
+        # ('fsl_hrf_gammadiff', 'fsl_double_gamma.feat'),
+        # ('fsl_thr_clustfwep05', 'fsl_cluster_p005.feat'),
+        # ('fsl_thr_voxelfwep05', 'fsl_FWE_p005.feat'),
+    )
 
-    # rm -r `pwd`/fsl_default
-    # mv `pwd`/fsl_voxelwise_p0001.feat `pwd`/fsl_default
-    # git checkout fsl_default/README.md
-    # git checkout fsl_default/config.json
-    # feat `pwd`/fsl_con_f/design.fsf
-    # feat `pwd`/fsl_contrast_mask/design.fsf
-    # feat `pwd`/fsl_default/design.fsf
-    # feat `pwd`/fsl_full_examples001/design.fsf
-    # feat `pwd`/fsl_gamma_basis/design.fsf
-    # feat `pwd`/fsl_gaussian/design.fsf
-    # feat `pwd`/fsl_group_btw/design.fsf
-    # feat `pwd`/fsl_group_ols/design.fsf
-    # feat `pwd`/fsl_group_wls/design.fsf
-    # feat `pwd`/fsl_hrf_fir/design.fsf
-    # feat `pwd`/fsl_hrf_gammadiff/design.fsf
-    # feat `pwd`/fsl_thr_clustfwep05/design.fsf
-    # feat `pwd`/fsl_thr_voxelfwep05/design.fsf
+    for name, feat_dir in studies:
+        run_feat(name, feat_dir)
