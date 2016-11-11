@@ -14,7 +14,7 @@ def wait_for_feat(report_file):
             if "STILL RUNNING" not in report_head:
                 running = False
             else:
-                print("STILL RUNNING")
+                print("."),
 
 
 def run_feat(dataset_name, out_featdir):
