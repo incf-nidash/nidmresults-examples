@@ -30,7 +30,7 @@ set fmri(featwatcher_yn) 0
 set fmri(sscleanup_yn) 0
 
 # Output directory
-set fmri(outputdir) "/storage/wmsmfe/nidmresults-examples/fsl_group_btw"
+set fmri(outputdir) "/storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_group_btw"
 
 # TR(s)
 set fmri(tr) 3
