@@ -250,7 +250,7 @@ set fmri(regstandard_yn) 1
 set fmri(alternateReference_yn) 0
 
 # Standard image
-set fmri(regstandard) "/usr/local/fsl/data/standard/MNI152_T1_2mm_brain"
+set fmri(regstandard) "/usr/local/packages/fsl-5.0.8/data/standard/MNI152_T1_2mm_brain"
 
 # Search space for registration to standard space
 # 0   : No search
@@ -278,13 +278,13 @@ set fmri(totalVoxels) 18235392
 set fmri(ncopeinputs) 0
 
 # 4D AVW data or FEAT directory (1)
-set feat_files(1) "/Users/cmaumet/Data/fsl_practicals/fsl_course_data/fmri/fmri_fluency/fmri"
+set feat_files(1) "/storage/wmsmfe/fsl_course_data/fmri_fluency/fmri"
 
 # Add confound EVs text file
 set fmri(confoundevs) 0
 
 # Subject's structural image for analysis 1
-set highres_files(1) "/Users/cmaumet/Data/fsl_practicals/fsl_course_data/fmri/fmri_fluency/structural_brain"
+set highres_files(1) "/storage/wmsmfe/fsl_course_data/fmri_fluency/structural_brain"
 
 # EV 1 title
 set fmri(evtitle1) "Gen"
