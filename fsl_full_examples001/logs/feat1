@@ -1,26 +1,27 @@
 
-/bin/cp /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/./fsl_full_examples001/design.fsf design.fsf
+/bin/cp /tmp/feat_zNlbso.fsf design.fsf
 
-/usr/local/packages/fsl-5.0.8/bin/feat_model design 
+/usr/local/fsl/bin/feat_model design 
 
-mkdir .files;cp /usr/local/packages/fsl-5.0.8/doc/fsl.css .files;cp -r /usr/local/packages/fsl-5.0.8/doc/images .files/images
+mkdir .files;cp /usr/local/fsl/doc/fsl.css .files;ln -s /usr/local/fsl/doc/images .files/images
 
-/usr/local/packages/fsl-5.0.8/bin/fsl_sub -T 10 -l logs -N feat0_init   /usr/local/packages/fsl-5.0.8/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_full_examples001.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_full_examples001.feat -I 1 -init
-job
-305852
+/usr/local/fsl/bin/fsl_sub -T 10 -l logs -N feat0_init   /usr/local/fsl/bin/feat /Users/cmaumet/Data/fsl_practicals/fsl_course_data/fmri/fmri_fluency/fmri+.feat/design.fsf -D /Users/cmaumet/Data/fsl_practicals/fsl_course_data/fmri/fmri_fluency/fmri+.feat -I 1 -init
+9785
 
-/usr/local/packages/fsl-5.0.8/bin/fsl_sub -T 40 -l logs -N feat2_pre -j 305852  /usr/local/packages/fsl-5.0.8/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_full_examples001.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_full_examples001.feat -I 1 -prestats
-job
-305853
+/usr/local/fsl/bin/fsl_sub -T 30 -l logs -N feat1b_reg -j 9785  /usr/local/fsl/bin/feat /Users/cmaumet/Data/fsl_practicals/fsl_course_data/fmri/fmri_fluency/fmri+.feat/design.fsf -D /Users/cmaumet/Data/fsl_practicals/fsl_course_data/fmri/fmri_fluency/fmri+.feat -I 1 -reg
+9861
 
-/usr/local/packages/fsl-5.0.8/bin/fsl_sub -T 1 -l logs -N feat3_film -j 305853  /usr/local/packages/fsl-5.0.8/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_full_examples001.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_full_examples001.feat -I 1 -stats
-job
-305854
+/usr/local/fsl/bin/fsl_sub -T 10 -l logs -N feat2_pre -j 9861,9785  /usr/local/fsl/bin/feat /Users/cmaumet/Data/fsl_practicals/fsl_course_data/fmri/fmri_fluency/fmri+.feat/design.fsf -D /Users/cmaumet/Data/fsl_practicals/fsl_course_data/fmri/fmri_fluency/fmri+.feat -I 1 -prestats
+10620
 
-/usr/local/packages/fsl-5.0.8/bin/fsl_sub -T 119 -l logs -N feat4_post -j 305854  /usr/local/packages/fsl-5.0.8/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_full_examples001.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_full_examples001.feat -poststats 0 
-job
-305855
+/usr/local/fsl/bin/fsl_sub -T 6 -l logs -N feat3_film -j 10620  /usr/local/fsl/bin/feat /Users/cmaumet/Data/fsl_practicals/fsl_course_data/fmri/fmri_fluency/fmri+.feat/design.fsf -D /Users/cmaumet/Data/fsl_practicals/fsl_course_data/fmri/fmri_fluency/fmri+.feat -I 1 -film
+10953
 
-/usr/local/packages/fsl-5.0.8/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 305853,305854,305855  /usr/local/packages/fsl-5.0.8/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_full_examples001.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_full_examples001.feat -stop
-job
-305856
+/usr/local/fsl/bin/fsl_sub -T 1 -l logs -N feat4_post -j 10953  /usr/local/fsl/bin/feat /Users/cmaumet/Data/fsl_practicals/fsl_course_data/fmri/fmri_fluency/fmri+.feat/design.fsf -D /Users/cmaumet/Data/fsl_practicals/fsl_course_data/fmri/fmri_fluency/fmri+.feat -poststats 0 0
+11116
+
+/usr/local/fsl/bin/fsl_sub -T 119 -l logs -N feat4_post -j 11116,9861  /usr/local/fsl/bin/feat /Users/cmaumet/Data/fsl_practicals/fsl_course_data/fmri/fmri_fluency/fmri+.feat/design.fsf -D /Users/cmaumet/Data/fsl_practicals/fsl_course_data/fmri/fmri_fluency/fmri+.feat -poststats 1 0
+11720
+
+/usr/local/fsl/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 10620,10953,11720,9861  /usr/local/fsl/bin/feat /Users/cmaumet/Data/fsl_practicals/fsl_course_data/fmri/fmri_fluency/fmri+.feat/design.fsf -D /Users/cmaumet/Data/fsl_practicals/fsl_course_data/fmri/fmri_fluency/fmri+.feat -stop
+11853

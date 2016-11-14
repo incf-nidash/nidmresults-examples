@@ -1,3 +1,3 @@
-/usr/local/packages/fsl-5.0.8/bin/film_gls --in=filtered_func_data --rn=stats --pd=design.mat --thr=1000.0 --sa --ms=5 --con=design.con 
+/usr/local/fsl/bin/film_gls -rn stats -sa -ms 5 filtered_func_data design.mat 1000.0 
 ---------------------------------------------
 

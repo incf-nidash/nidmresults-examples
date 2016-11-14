@@ -1,0 +1,18 @@
+/usr/local/fsl/bin/contrast_mgr stats design.con 
+---------------------------------------------
+
+p = 0.05: Positive only, ratio =  2.59186
+p = 0.05: Negative only, ratio =  0.753047
+p = 0.05: ratio = 1.67246
+p = 0.0158114: Positive only, ratio =  4.4241
+p = 0.0158114: Negative only, ratio =  0.811504
+p = 0.0158114: ratio = 2.6178
+p = 0.005: Positive only, ratio =  7.99504
+p = 0.005: Negative only, ratio =  0.955689
+p = 0.005: ratio = 4.47537
+p = 0.00158114: Positive only, ratio =  15.2927
+p = 0.00158114: Negative only, ratio =  1.25923
+p = 0.00158114: ratio = 8.27594
+p = 0.0005: Positive only, ratio =  31.5023
+p = 0.0005: Negative only, ratio =  1.46008
+p = 0.0005: ratio = 16.4812
