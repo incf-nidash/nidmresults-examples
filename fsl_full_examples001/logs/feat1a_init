@@ -1,6 +1,6 @@
 </pre><hr>Initialisation<br><pre>
 
-/usr/local/fsl/bin/fslmaths /Users/cmaumet/Data/fsl_practicals/fsl_course_data/fmri/fmri_fluency/fmri prefiltered_func_data -odt float
+/usr/local/packages/fsl-5.0.8/bin/fslmaths /storage/wmsmfe/fsl_course_data/fmri_fluency/fmri prefiltered_func_data -odt float
 Total original volumes = 106
 
-/usr/local/fsl/bin/fslroi prefiltered_func_data example_func 53 1
+/usr/local/packages/fsl-5.0.8/bin/fslroi prefiltered_func_data example_func 53 1

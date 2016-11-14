@@ -1,21 +1,21 @@
 </pre><hr>Stats<br><pre>
 
-mkdir -p custom_timing_files ; /bin/cp /Users/cmaumet/Data/fsl_practicals/fsl_course_data/fmri/fmri_fluency/word_generation.txt custom_timing_files/ev1.txt
+mkdir -p custom_timing_files ; /usr/local/packages/fsl-5.0.8/bin/fslFixText /storage/wmsmfe/fsl_course_data/fmri_fluency/word_generation.txt custom_timing_files/ev1.txt
 
-mkdir -p custom_timing_files ; /bin/cp /Users/cmaumet/Data/fsl_practicals/fsl_course_data/fmri/fmri_fluency/word_shadowing.txt custom_timing_files/ev2.txt
+mkdir -p custom_timing_files ; /usr/local/packages/fsl-5.0.8/bin/fslFixText /storage/wmsmfe/fsl_course_data/fmri_fluency/word_shadowing.txt custom_timing_files/ev2.txt
 
-/usr/local/fsl/bin/film_gls -rn stats -sa -ms 5   filtered_func_data design.mat 1000.0
+/usr/local/packages/fsl-5.0.8/bin/film_gls --in=filtered_func_data --rn=stats --pd=design.mat --thr=1000.0 --sa --ms=5 --con=design.con  
 Log directory is: stats
 paradigm.getDesignMatrix().Nrows()=106
 paradigm.getDesignMatrix().Ncols()=4
 sizeTS=106
-numTS=45203
+numTS=45081
 Calculating residuals...
 Completed
 Estimating residual autocorrelation...
 Calculating raw AutoCorrs... Completed
-mode = 9861.32
-sig = 1329
+mode = 9652.52
+sig = 1426
 Spatially smoothing auto corr estimates
 .........
 Completed
@@ -28,4 +28,4 @@ Percentage done:
 Saving results... 
 Completed
 
-/usr/local/fsl/bin/smoothest -d 102   -m mask -r stats/res4d > stats/smoothness
+/usr/local/packages/fsl-5.0.8/bin/smoothest -d 102   -m mask -r stats/res4d > stats/smoothness
