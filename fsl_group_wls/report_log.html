@@ -5,10 +5,10 @@
 <link REL=stylesheet TYPE=text/css href=.files/fsl.css>
 <TITLE>FSL</TITLE></HEAD><BODY><OBJECT data=report.html></OBJECT>
 <h2>Progress Report / Log</h2>
-Started at Fri Apr  8 16:54:48 BST 2016<p>
+Started at Fri Nov 11 15:39:28 GMT 2016<p>
 Feat main script<br><pre>
 
-/bin/cp /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/SCRIPTS/fsl_t_test.fsf design.fsf
+/bin/cp /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/./fsl_group_wls/design.fsf design.fsf
 
 /usr/local/packages/fsl-5.0.8/bin/feat_model design
 
@@ -16,66 +16,66 @@ mkdir .files;cp /usr/local/packages/fsl-5.0.8/doc/fsl.css .files;cp -r /usr/loca
 
 /usr/local/packages/fsl-5.0.8/bin/fsl_sub -T 60 -l logs -N feat2_pre   /usr/local/packages/fsl-5.0.8/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_t_test.gfeat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_t_test.gfeat -gfeatprep
 job
-289703
+305792
 
-/usr/local/packages/fsl-5.0.8/bin/fsl_sub -T 60 -l logs -N feat3a_flame -j 289703  /usr/local/packages/fsl-5.0.8/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_t_test.gfeat/cope1.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_t_test.gfeat/cope1.feat -I 1 -flame1
+/usr/local/packages/fsl-5.0.8/bin/fsl_sub -T 60 -l logs -N feat3a_flame -j 305792  /usr/local/packages/fsl-5.0.8/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_t_test.gfeat/cope1.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_t_test.gfeat/cope1.feat -I 1 -flame1
 job
-289704
+305793
 
-/usr/local/packages/fsl-5.0.8/bin/fsl_sub -T 60 -l logs -N feat3b_flame -j 289704 -t ./.flame
+/usr/local/packages/fsl-5.0.8/bin/fsl_sub -T 60 -l logs -N feat3b_flame -j 305793 -t ./.flame
 job
-289705
+305794
 
-/usr/local/packages/fsl-5.0.8/bin/fsl_sub -T 60 -l logs -N feat3c_flame -j 289705  /usr/local/packages/fsl-5.0.8/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_t_test.gfeat/cope1.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_t_test.gfeat/cope1.feat -flame3
+/usr/local/packages/fsl-5.0.8/bin/fsl_sub -T 60 -l logs -N feat3c_flame -j 305794  /usr/local/packages/fsl-5.0.8/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_t_test.gfeat/cope1.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_t_test.gfeat/cope1.feat -flame3
 job
-289706
+305795
 
-/usr/local/packages/fsl-5.0.8/bin/fsl_sub -T 60 -l logs -N feat4_post -j 289706  /usr/local/packages/fsl-5.0.8/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_t_test.gfeat/cope1.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_t_test.gfeat/cope1.feat -poststats 1
+/usr/local/packages/fsl-5.0.8/bin/fsl_sub -T 60 -l logs -N feat4_post -j 305795  /usr/local/packages/fsl-5.0.8/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_t_test.gfeat/cope1.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_t_test.gfeat/cope1.feat -poststats 1
 job
-289707
+305796
 
-/usr/local/packages/fsl-5.0.8/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 289707  /usr/local/packages/fsl-5.0.8/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_t_test.gfeat/cope1.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_t_test.gfeat/cope1.feat -stop
+/usr/local/packages/fsl-5.0.8/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 305796  /usr/local/packages/fsl-5.0.8/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_t_test.gfeat/cope1.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_t_test.gfeat/cope1.feat -stop
 job
-289708
+305797
 
-/usr/local/packages/fsl-5.0.8/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 289708  /usr/local/packages/fsl-5.0.8/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_t_test.gfeat/cope1.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_t_test.gfeat -stop
+/usr/local/packages/fsl-5.0.8/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 305797  /usr/local/packages/fsl-5.0.8/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_t_test.gfeat/cope1.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_t_test.gfeat -stop
 job
-289709
+305798
 </pre><hr>Higher-level input files preparation<br><pre>
 
-/usr/local/packages/fsl-5.0.8/bin/featregapply /home/maullz/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-01.feat
+/usr/local/packages/fsl-5.0.8/bin/featregapply /home/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-01.feat
 
-/usr/local/packages/fsl-5.0.8/bin/featregapply /home/maullz/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-02.feat
+/usr/local/packages/fsl-5.0.8/bin/featregapply /home/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-02.feat
 
-/usr/local/packages/fsl-5.0.8/bin/featregapply /home/maullz/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-03.feat
+/usr/local/packages/fsl-5.0.8/bin/featregapply /home/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-03.feat
 
-/usr/local/packages/fsl-5.0.8/bin/featregapply /home/maullz/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-04.feat
+/usr/local/packages/fsl-5.0.8/bin/featregapply /home/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-04.feat
 
-/usr/local/packages/fsl-5.0.8/bin/featregapply /home/maullz/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-05.feat
+/usr/local/packages/fsl-5.0.8/bin/featregapply /home/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-05.feat
 
-/usr/local/packages/fsl-5.0.8/bin/featregapply /home/maullz/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-06.feat
+/usr/local/packages/fsl-5.0.8/bin/featregapply /home/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-06.feat
 
-/usr/local/packages/fsl-5.0.8/bin/featregapply /home/maullz/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-07.feat
+/usr/local/packages/fsl-5.0.8/bin/featregapply /home/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-07.feat
 
-/usr/local/packages/fsl-5.0.8/bin/featregapply /home/maullz/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-08.feat
+/usr/local/packages/fsl-5.0.8/bin/featregapply /home/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-08.feat
 
-/usr/local/packages/fsl-5.0.8/bin/featregapply /home/maullz/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-09.feat
+/usr/local/packages/fsl-5.0.8/bin/featregapply /home/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-09.feat
 
-/usr/local/packages/fsl-5.0.8/bin/featregapply /home/maullz/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-10.feat
+/usr/local/packages/fsl-5.0.8/bin/featregapply /home/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-10.feat
 
-/usr/local/packages/fsl-5.0.8/bin/featregapply /home/maullz/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-11.feat
+/usr/local/packages/fsl-5.0.8/bin/featregapply /home/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-11.feat
 
-/usr/local/packages/fsl-5.0.8/bin/featregapply /home/maullz/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-12.feat
+/usr/local/packages/fsl-5.0.8/bin/featregapply /home/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-12.feat
 
-/usr/local/packages/fsl-5.0.8/bin/featregapply /home/maullz/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-13.feat
+/usr/local/packages/fsl-5.0.8/bin/featregapply /home/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-13.feat
 
-/usr/local/packages/fsl-5.0.8/bin/featregapply /home/maullz/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-14.feat
+/usr/local/packages/fsl-5.0.8/bin/featregapply /home/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-14.feat
 
-/usr/local/packages/fsl-5.0.8/bin/fslmerge -t bg_image  /home/maullz/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-01.feat/reg_standard/reg/highres /home/maullz/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-02.feat/reg_standard/reg/highres /home/maullz/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-03.feat/reg_standard/reg/highres /home/maullz/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-04.feat/reg_standard/reg/highres /home/maullz/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-05.feat/reg_standard/reg/highres /home/maullz/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-06.feat/reg_standard/reg/highres /home/maullz/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-07.feat/reg_standard/reg/highres /home/maullz/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-08.feat/reg_standard/reg/highres /home/maullz/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-09.feat/reg_standard/reg/highres /home/maullz/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-10.feat/reg_standard/reg/highres /home/maullz/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-11.feat/reg_standard/reg/highres /home/maullz/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-12.feat/reg_standard/reg/highres /home/maullz/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-13.feat/reg_standard/reg/highres /home/maullz/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-14.feat/reg_standard/reg/highres
+/usr/local/packages/fsl-5.0.8/bin/fslmerge -t bg_image  /home/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-01.feat/reg_standard/reg/highres /home/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-02.feat/reg_standard/reg/highres /home/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-03.feat/reg_standard/reg/highres /home/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-04.feat/reg_standard/reg/highres /home/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-05.feat/reg_standard/reg/highres /home/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-06.feat/reg_standard/reg/highres /home/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-07.feat/reg_standard/reg/highres /home/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-08.feat/reg_standard/reg/highres /home/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-09.feat/reg_standard/reg/highres /home/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-10.feat/reg_standard/reg/highres /home/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-11.feat/reg_standard/reg/highres /home/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-12.feat/reg_standard/reg/highres /home/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-13.feat/reg_standard/reg/highres /home/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-14.feat/reg_standard/reg/highres
 
 /usr/local/packages/fsl-5.0.8/bin/fslmaths bg_image -inm 1000 -Tmean bg_image -odt float
 
-/usr/local/packages/fsl-5.0.8/bin/fslmerge -t mask  /home/maullz/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-01.feat/reg_standard/mask /home/maullz/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-02.feat/reg_standard/mask /home/maullz/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-03.feat/reg_standard/mask /home/maullz/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-04.feat/reg_standard/mask /home/maullz/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-05.feat/reg_standard/mask /home/maullz/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-06.feat/reg_standard/mask /home/maullz/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-07.feat/reg_standard/mask /home/maullz/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-08.feat/reg_standard/mask /home/maullz/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-09.feat/reg_standard/mask /home/maullz/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-10.feat/reg_standard/mask /home/maullz/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-11.feat/reg_standard/mask /home/maullz/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-12.feat/reg_standard/mask /home/maullz/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-13.feat/reg_standard/mask /home/maullz/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-14.feat/reg_standard/mask
+/usr/local/packages/fsl-5.0.8/bin/fslmerge -t mask  /home/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-01.feat/reg_standard/mask /home/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-02.feat/reg_standard/mask /home/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-03.feat/reg_standard/mask /home/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-04.feat/reg_standard/mask /home/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-05.feat/reg_standard/mask /home/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-06.feat/reg_standard/mask /home/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-07.feat/reg_standard/mask /home/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-08.feat/reg_standard/mask /home/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-09.feat/reg_standard/mask /home/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-10.feat/reg_standard/mask /home/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-11.feat/reg_standard/mask /home/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-12.feat/reg_standard/mask /home/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-13.feat/reg_standard/mask /home/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-14.feat/reg_standard/mask
 
 mkdir -p inputreg
 
@@ -89,33 +89,33 @@ mkdir -p inputreg
 
 /usr/local/packages/fsl-5.0.8/bin/fslmaths masksum -mul 0 maskunique
 
-/usr/local/packages/fsl-5.0.8/bin/fslmaths /home/maullz/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-01.feat/reg_standard/mask -mul -1 -add 1 -mul 1 -add maskunique maskunique
+/usr/local/packages/fsl-5.0.8/bin/fslmaths /home/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-01.feat/reg_standard/mask -mul -1 -add 1 -mul 1 -add maskunique maskunique
 
-/usr/local/packages/fsl-5.0.8/bin/fslmaths /home/maullz/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-02.feat/reg_standard/mask -mul -1 -add 1 -mul 2 -add maskunique maskunique
+/usr/local/packages/fsl-5.0.8/bin/fslmaths /home/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-02.feat/reg_standard/mask -mul -1 -add 1 -mul 2 -add maskunique maskunique
 
-/usr/local/packages/fsl-5.0.8/bin/fslmaths /home/maullz/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-03.feat/reg_standard/mask -mul -1 -add 1 -mul 3 -add maskunique maskunique
+/usr/local/packages/fsl-5.0.8/bin/fslmaths /home/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-03.feat/reg_standard/mask -mul -1 -add 1 -mul 3 -add maskunique maskunique
 
-/usr/local/packages/fsl-5.0.8/bin/fslmaths /home/maullz/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-04.feat/reg_standard/mask -mul -1 -add 1 -mul 4 -add maskunique maskunique
+/usr/local/packages/fsl-5.0.8/bin/fslmaths /home/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-04.feat/reg_standard/mask -mul -1 -add 1 -mul 4 -add maskunique maskunique
 
-/usr/local/packages/fsl-5.0.8/bin/fslmaths /home/maullz/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-05.feat/reg_standard/mask -mul -1 -add 1 -mul 5 -add maskunique maskunique
+/usr/local/packages/fsl-5.0.8/bin/fslmaths /home/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-05.feat/reg_standard/mask -mul -1 -add 1 -mul 5 -add maskunique maskunique
 
-/usr/local/packages/fsl-5.0.8/bin/fslmaths /home/maullz/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-06.feat/reg_standard/mask -mul -1 -add 1 -mul 6 -add maskunique maskunique
+/usr/local/packages/fsl-5.0.8/bin/fslmaths /home/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-06.feat/reg_standard/mask -mul -1 -add 1 -mul 6 -add maskunique maskunique
 
-/usr/local/packages/fsl-5.0.8/bin/fslmaths /home/maullz/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-07.feat/reg_standard/mask -mul -1 -add 1 -mul 7 -add maskunique maskunique
+/usr/local/packages/fsl-5.0.8/bin/fslmaths /home/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-07.feat/reg_standard/mask -mul -1 -add 1 -mul 7 -add maskunique maskunique
 
-/usr/local/packages/fsl-5.0.8/bin/fslmaths /home/maullz/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-08.feat/reg_standard/mask -mul -1 -add 1 -mul 8 -add maskunique maskunique
+/usr/local/packages/fsl-5.0.8/bin/fslmaths /home/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-08.feat/reg_standard/mask -mul -1 -add 1 -mul 8 -add maskunique maskunique
 
-/usr/local/packages/fsl-5.0.8/bin/fslmaths /home/maullz/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-09.feat/reg_standard/mask -mul -1 -add 1 -mul 9 -add maskunique maskunique
+/usr/local/packages/fsl-5.0.8/bin/fslmaths /home/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-09.feat/reg_standard/mask -mul -1 -add 1 -mul 9 -add maskunique maskunique
 
-/usr/local/packages/fsl-5.0.8/bin/fslmaths /home/maullz/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-10.feat/reg_standard/mask -mul -1 -add 1 -mul 10 -add maskunique maskunique
+/usr/local/packages/fsl-5.0.8/bin/fslmaths /home/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-10.feat/reg_standard/mask -mul -1 -add 1 -mul 10 -add maskunique maskunique
 
-/usr/local/packages/fsl-5.0.8/bin/fslmaths /home/maullz/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-11.feat/reg_standard/mask -mul -1 -add 1 -mul 11 -add maskunique maskunique
+/usr/local/packages/fsl-5.0.8/bin/fslmaths /home/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-11.feat/reg_standard/mask -mul -1 -add 1 -mul 11 -add maskunique maskunique
 
-/usr/local/packages/fsl-5.0.8/bin/fslmaths /home/maullz/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-12.feat/reg_standard/mask -mul -1 -add 1 -mul 12 -add maskunique maskunique
+/usr/local/packages/fsl-5.0.8/bin/fslmaths /home/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-12.feat/reg_standard/mask -mul -1 -add 1 -mul 12 -add maskunique maskunique
 
-/usr/local/packages/fsl-5.0.8/bin/fslmaths /home/maullz/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-13.feat/reg_standard/mask -mul -1 -add 1 -mul 13 -add maskunique maskunique
+/usr/local/packages/fsl-5.0.8/bin/fslmaths /home/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-13.feat/reg_standard/mask -mul -1 -add 1 -mul 13 -add maskunique maskunique
 
-/usr/local/packages/fsl-5.0.8/bin/fslmaths /home/maullz/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-14.feat/reg_standard/mask -mul -1 -add 1 -mul 14 -add maskunique maskunique
+/usr/local/packages/fsl-5.0.8/bin/fslmaths /home/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-14.feat/reg_standard/mask -mul -1 -add 1 -mul 14 -add maskunique maskunique
 
 /usr/local/packages/fsl-5.0.8/bin/fslmaths masksum -thr 13 -uthr 13 -bin -mul maskunique maskunique
 
@@ -127,17 +127,17 @@ mkdir -p inputreg
 
 /usr/local/packages/fsl-5.0.8/bin/fslmaths mask -Tmin mask
 
-/usr/local/packages/fsl-5.0.8/bin/fslmerge -t mean_func  /home/maullz/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-01.feat/reg_standard/mean_func /home/maullz/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-02.feat/reg_standard/mean_func /home/maullz/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-03.feat/reg_standard/mean_func /home/maullz/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-04.feat/reg_standard/mean_func /home/maullz/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-05.feat/reg_standard/mean_func /home/maullz/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-06.feat/reg_standard/mean_func /home/maullz/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-07.feat/reg_standard/mean_func /home/maullz/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-08.feat/reg_standard/mean_func /home/maullz/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-09.feat/reg_standard/mean_func /home/maullz/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-10.feat/reg_standard/mean_func /home/maullz/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-11.feat/reg_standard/mean_func /home/maullz/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-12.feat/reg_standard/mean_func /home/maullz/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-13.feat/reg_standard/mean_func /home/maullz/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-14.feat/reg_standard/mean_func
+/usr/local/packages/fsl-5.0.8/bin/fslmerge -t mean_func  /home/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-01.feat/reg_standard/mean_func /home/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-02.feat/reg_standard/mean_func /home/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-03.feat/reg_standard/mean_func /home/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-04.feat/reg_standard/mean_func /home/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-05.feat/reg_standard/mean_func /home/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-06.feat/reg_standard/mean_func /home/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-07.feat/reg_standard/mean_func /home/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-08.feat/reg_standard/mean_func /home/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-09.feat/reg_standard/mean_func /home/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-10.feat/reg_standard/mean_func /home/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-11.feat/reg_standard/mean_func /home/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-12.feat/reg_standard/mean_func /home/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-13.feat/reg_standard/mean_func /home/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-14.feat/reg_standard/mean_func
 
 /usr/local/packages/fsl-5.0.8/bin/fslmaths mean_func -Tmean mean_func
 
-/usr/local/packages/fsl-5.0.8/bin/fslmerge -t cope1  /home/maullz/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-01.feat/reg_standard/stats/cope1 /home/maullz/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-02.feat/reg_standard/stats/cope1 /home/maullz/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-03.feat/reg_standard/stats/cope1 /home/maullz/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-04.feat/reg_standard/stats/cope1 /home/maullz/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-05.feat/reg_standard/stats/cope1 /home/maullz/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-06.feat/reg_standard/stats/cope1 /home/maullz/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-07.feat/reg_standard/stats/cope1 /home/maullz/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-08.feat/reg_standard/stats/cope1 /home/maullz/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-09.feat/reg_standard/stats/cope1 /home/maullz/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-10.feat/reg_standard/stats/cope1 /home/maullz/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-11.feat/reg_standard/stats/cope1 /home/maullz/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-12.feat/reg_standard/stats/cope1 /home/maullz/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-13.feat/reg_standard/stats/cope1 /home/maullz/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-14.feat/reg_standard/stats/cope1
+/usr/local/packages/fsl-5.0.8/bin/fslmerge -t cope1  /home/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-01.feat/reg_standard/stats/cope1 /home/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-02.feat/reg_standard/stats/cope1 /home/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-03.feat/reg_standard/stats/cope1 /home/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-04.feat/reg_standard/stats/cope1 /home/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-05.feat/reg_standard/stats/cope1 /home/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-06.feat/reg_standard/stats/cope1 /home/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-07.feat/reg_standard/stats/cope1 /home/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-08.feat/reg_standard/stats/cope1 /home/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-09.feat/reg_standard/stats/cope1 /home/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-10.feat/reg_standard/stats/cope1 /home/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-11.feat/reg_standard/stats/cope1 /home/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-12.feat/reg_standard/stats/cope1 /home/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-13.feat/reg_standard/stats/cope1 /home/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-14.feat/reg_standard/stats/cope1
 
 /usr/local/packages/fsl-5.0.8/bin/fslmaths cope1 -mas mask cope1
 
 printf '1.01544485714 ' >> design.lcon
 
-/usr/local/packages/fsl-5.0.8/bin/fslmerge -t varcope1  /home/maullz/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-01.feat/reg_standard/stats/varcope1 /home/maullz/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-02.feat/reg_standard/stats/varcope1 /home/maullz/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-03.feat/reg_standard/stats/varcope1 /home/maullz/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-04.feat/reg_standard/stats/varcope1 /home/maullz/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-05.feat/reg_standard/stats/varcope1 /home/maullz/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-06.feat/reg_standard/stats/varcope1 /home/maullz/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-07.feat/reg_standard/stats/varcope1 /home/maullz/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-08.feat/reg_standard/stats/varcope1 /home/maullz/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-09.feat/reg_standard/stats/varcope1 /home/maullz/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-10.feat/reg_standard/stats/varcope1 /home/maullz/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-11.feat/reg_standard/stats/varcope1 /home/maullz/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-12.feat/reg_standard/stats/varcope1 /home/maullz/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-13.feat/reg_standard/stats/varcope1 /home/maullz/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-14.feat/reg_standard/stats/varcope1
+/usr/local/packages/fsl-5.0.8/bin/fslmerge -t varcope1  /home/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-01.feat/reg_standard/stats/varcope1 /home/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-02.feat/reg_standard/stats/varcope1 /home/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-03.feat/reg_standard/stats/varcope1 /home/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-04.feat/reg_standard/stats/varcope1 /home/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-05.feat/reg_standard/stats/varcope1 /home/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-06.feat/reg_standard/stats/varcope1 /home/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-07.feat/reg_standard/stats/varcope1 /home/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-08.feat/reg_standard/stats/varcope1 /home/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-09.feat/reg_standard/stats/varcope1 /home/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-10.feat/reg_standard/stats/varcope1 /home/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-11.feat/reg_standard/stats/varcope1 /home/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-12.feat/reg_standard/stats/varcope1 /home/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-13.feat/reg_standard/stats/varcope1 /home/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-14.feat/reg_standard/stats/varcope1
 
 /usr/local/packages/fsl-5.0.8/bin/fslmaths varcope1 -mas mask varcope1
 
