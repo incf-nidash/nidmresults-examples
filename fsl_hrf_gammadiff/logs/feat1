@@ -1,5 +1,5 @@
 
-/bin/cp /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/SCRIPTS/fsl_double_gamma.fsf design.fsf
+/bin/cp /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/./fsl_hrf_gammadiff/design.fsf design.fsf
 
 /usr/local/packages/fsl-5.0.8/bin/feat_model design 
 
@@ -7,20 +7,20 @@ mkdir .files;cp /usr/local/packages/fsl-5.0.8/doc/fsl.css .files;cp -r /usr/loca
 
 /usr/local/packages/fsl-5.0.8/bin/fsl_sub -T 10 -l logs -N feat0_init   /usr/local/packages/fsl-5.0.8/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_double_gamma.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_double_gamma.feat -I 1 -init
 job
-288909
+305804
 
-/usr/local/packages/fsl-5.0.8/bin/fsl_sub -T 40 -l logs -N feat2_pre -j 288909  /usr/local/packages/fsl-5.0.8/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_double_gamma.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_double_gamma.feat -I 1 -prestats
+/usr/local/packages/fsl-5.0.8/bin/fsl_sub -T 40 -l logs -N feat2_pre -j 305804  /usr/local/packages/fsl-5.0.8/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_double_gamma.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_double_gamma.feat -I 1 -prestats
 job
-288910
+305805
 
-/usr/local/packages/fsl-5.0.8/bin/fsl_sub -T 1 -l logs -N feat3_film -j 288910  /usr/local/packages/fsl-5.0.8/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_double_gamma.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_double_gamma.feat -I 1 -stats
+/usr/local/packages/fsl-5.0.8/bin/fsl_sub -T 1 -l logs -N feat3_film -j 305805  /usr/local/packages/fsl-5.0.8/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_double_gamma.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_double_gamma.feat -I 1 -stats
 job
-288911
+305806
 
-/usr/local/packages/fsl-5.0.8/bin/fsl_sub -T 119 -l logs -N feat4_post -j 288911  /usr/local/packages/fsl-5.0.8/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_double_gamma.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_double_gamma.feat -poststats 0 
+/usr/local/packages/fsl-5.0.8/bin/fsl_sub -T 119 -l logs -N feat4_post -j 305806  /usr/local/packages/fsl-5.0.8/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_double_gamma.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_double_gamma.feat -poststats 0 
 job
-288912
+305807
 
-/usr/local/packages/fsl-5.0.8/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 288910,288911,288912  /usr/local/packages/fsl-5.0.8/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_double_gamma.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_double_gamma.feat -stop
+/usr/local/packages/fsl-5.0.8/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 305805,305806,305807  /usr/local/packages/fsl-5.0.8/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_double_gamma.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_double_gamma.feat -stop
 job
-288913
+305808

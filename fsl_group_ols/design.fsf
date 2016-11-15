@@ -269,46 +269,46 @@ set fmri(copeinput.1) 1
 set fmri(copeinput.2) 0
 
 # 4D AVW data or FEAT directory (1)
-set feat_files(1) "/home/maullz/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-01.feat"
+set feat_files(1) "/home/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-01.feat"
 
 # 4D AVW data or FEAT directory (2)
-set feat_files(2) "/home/maullz/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-02.feat"
+set feat_files(2) "/home/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-02.feat"
 
 # 4D AVW data or FEAT directory (3)
-set feat_files(3) "/home/maullz/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-03.feat"
+set feat_files(3) "/home/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-03.feat"
 
 # 4D AVW data or FEAT directory (4)
-set feat_files(4) "/home/maullz/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-04.feat"
+set feat_files(4) "/home/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-04.feat"
 
 # 4D AVW data or FEAT directory (5)
-set feat_files(5) "/home/maullz/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-05.feat"
+set feat_files(5) "/home/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-05.feat"
 
 # 4D AVW data or FEAT directory (6)
-set feat_files(6) "/home/maullz/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-06.feat"
+set feat_files(6) "/home/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-06.feat"
 
 # 4D AVW data or FEAT directory (7)
-set feat_files(7) "/home/maullz/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-07.feat"
+set feat_files(7) "/home/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-07.feat"
 
 # 4D AVW data or FEAT directory (8)
-set feat_files(8) "/home/maullz/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-08.feat"
+set feat_files(8) "/home/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-08.feat"
 
 # 4D AVW data or FEAT directory (9)
-set feat_files(9) "/home/maullz/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-09.feat"
+set feat_files(9) "/home/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-09.feat"
 
 # 4D AVW data or FEAT directory (10)
-set feat_files(10) "/home/maullz/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-10.feat"
+set feat_files(10) "/home/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-10.feat"
 
 # 4D AVW data or FEAT directory (11)
-set feat_files(11) "/home/maullz/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-11.feat"
+set feat_files(11) "/home/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-11.feat"
 
 # 4D AVW data or FEAT directory (12)
-set feat_files(12) "/home/maullz/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-12.feat"
+set feat_files(12) "/home/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-12.feat"
 
 # 4D AVW data or FEAT directory (13)
-set feat_files(13) "/home/maullz/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-13.feat"
+set feat_files(13) "/home/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-13.feat"
 
 # 4D AVW data or FEAT directory (14)
-set feat_files(14) "/home/maullz/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-14.feat"
+set feat_files(14) "/home/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/LEVEL1/sub-14.feat"
 
 # Add confound EVs text file
 set fmri(confoundevs) 0

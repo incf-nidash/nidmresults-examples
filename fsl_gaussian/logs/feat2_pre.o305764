@@ -1,0 +1,2 @@
+Error encountered while running in main feat script, halting.
+tail: cannot open `/storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_gaussian.feat/logs/feat2_pre' for reading: No such file or directory

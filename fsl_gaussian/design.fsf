@@ -239,7 +239,7 @@ set fmri(regstandard_yn) 1
 set fmri(alternateReference_yn) 0
 
 # Standard image
-set fmri(regstandard) "/export/software/packages-x86_64-linux-gnu/packages/fsl-5.0.8/data/standard/MNI152_T1_2mm_brain"
+set fmri(regstandard) "/usr/local/packages/fsl-5.0.8/data/standard/MNI152_T1_2mm_brain"
 
 # Search space for registration to standard space
 # 0   : No search
@@ -307,7 +307,7 @@ set fmri(tempfilt_yn1) 1
 set fmri(deriv_yn1) 0
 
 # Custom EV file (EV 1)
-set fmri(custom1) "/storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/ONSETS/fslonsets_tone_counting.txt"
+set fmri(custom1) "/storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/ONSETS/sub-01_tone_counting.txt"
 
 # Gauss sigma (EV 1)
 set fmri(gausssigma1) 2.8
@@ -356,7 +356,7 @@ set fmri(tempfilt_yn2) 1
 set fmri(deriv_yn2) 0
 
 # Custom EV file (EV 2)
-set fmri(custom2) "/storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/ONSETS/fslonsets_tone_counting_probe.txt"
+set fmri(custom2) "/storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/FSL/ONSETS/sub-01_tone_counting_probe.txt"
 
 # Gauss sigma (EV 2)
 set fmri(gausssigma2) 2.8

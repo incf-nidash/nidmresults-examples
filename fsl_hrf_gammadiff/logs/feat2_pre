@@ -1,6 +1,6 @@
 </pre><hr>Preprocessing:Stage 1<br><pre>
 
-/usr/local/packages/fsl-5.0.8/bin/mainfeatreg -F 6.00 -d /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_double_gamma.feat -l /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_double_gamma.feat/logs/feat2_pre -R /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_double_gamma.feat/report_unwarp.html -r /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_double_gamma.feat/report_reg.html  -i /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_double_gamma.feat/example_func.nii.gz  -h /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/SPM/PREPROCESSING/ANATOMICAL/sub-01_T1w_brain -w  BBR -x 90 -s /export/software/packages-x86_64-linux-gnu/packages/fsl-5.0.8/data/standard/MNI152_T1_2mm_brain -y 12 -z 90 
+/usr/local/packages/fsl-5.0.8/bin/mainfeatreg -F 6.00 -d /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_double_gamma.feat -l /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_double_gamma.feat/logs/feat2_pre -R /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_double_gamma.feat/report_unwarp.html -r /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_double_gamma.feat/report_reg.html  -i /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_double_gamma.feat/example_func.nii.gz  -h /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/SPM/PREPROCESSING/ANATOMICAL/sub-01_T1w_brain -w  BBR -x 90 -s /usr/local/packages/fsl-5.0.8/data/standard/MNI152_T1_2mm_brain -y 12 -z 90 
 Option -F ( FEAT version parameter ) selected with  argument "6.00"
 Option -d ( output directory ) selected with  argument "/storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_double_gamma.feat"
 Option -l ( logfile )input with argument "/storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_double_gamma.feat/logs/feat2_pre"
@@ -10,7 +10,7 @@ Option -i ( main input ) input with argument "/storage/essicd/data/NIDM-Ex/BIDS_
 Option -h ( high-res structural image ) selected with  argument "/storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/SPM/PREPROCESSING/ANATOMICAL/sub-01_T1w_brain"
 Option -w ( highres dof ) selected with  argument "BBR"
 Option -x ( highres search ) selected with  argument "90"
-Option -s ( standard image ) selected with  argument "/export/software/packages-x86_64-linux-gnu/packages/fsl-5.0.8/data/standard/MNI152_T1_2mm_brain"
+Option -s ( standard image ) selected with  argument "/usr/local/packages/fsl-5.0.8/data/standard/MNI152_T1_2mm_brain"
 Option -y ( standard dof ) selected with  argument "12"
 Option -z ( standard search ) selected with  argument "90"
 </pre><hr>Registration<br><pre>
@@ -22,6 +22,9 @@ Option -z ( standard search ) selected with  argument "90"
 
 
 /usr/local/packages/fsl-5.0.8/bin/fslmaths /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/SPM/PREPROCESSING/ANATOMICAL/sub-01_T1w  highres_head
+
+
+/usr/local/packages/fsl-5.0.8/bin/fslmaths /usr/local/packages/fsl-5.0.8/data/standard/MNI152_T1_2mm_brain standard
 
 did not find file: example_func2highres.mat. Generating transform.
 
@@ -35,6 +38,32 @@ Running FAST segmentation FLIRT pre-alignment Running BBR 0.436060 0.999922 -0.0
 
 
 /bin/rm example_func2highres1.png
+
+did not find file: highres2standard.mat. Generating transform.
+
+/usr/local/packages/fsl-5.0.8/bin/flirt -in highres -ref standard -out highres2standard -omat highres2standard.mat -cost corratio -dof 12 -searchrx -90 90 -searchry -90 90 -searchrz -90 90 -interp trilinear 
+
+
+/usr/local/packages/fsl-5.0.8/bin/convert_xfm -inverse -omat standard2highres.mat highres2standard.mat
+
+
+/usr/local/packages/fsl-5.0.8/bin/slicer highres2standard standard -s 2 -x 0.35 sla.png -x 0.45 slb.png -x 0.55 slc.png -x 0.65 sld.png -y 0.35 sle.png -y 0.45 slf.png -y 0.55 slg.png -y 0.65 slh.png -z 0.35 sli.png -z 0.45 slj.png -z 0.55 slk.png -z 0.65 sll.png ; /usr/local/packages/fsl-5.0.8/bin/pngappend sla.png + slb.png + slc.png + sld.png + sle.png + slf.png + slg.png + slh.png + sli.png + slj.png + slk.png + sll.png highres2standard1.png ; /usr/local/packages/fsl-5.0.8/bin/slicer standard highres2standard -s 2 -x 0.35 sla.png -x 0.45 slb.png -x 0.55 slc.png -x 0.65 sld.png -y 0.35 sle.png -y 0.45 slf.png -y 0.55 slg.png -y 0.65 slh.png -z 0.35 sli.png -z 0.45 slj.png -z 0.55 slk.png -z 0.65 sll.png ; /usr/local/packages/fsl-5.0.8/bin/pngappend sla.png + slb.png + slc.png + sld.png + sle.png + slf.png + slg.png + slh.png + sli.png + slj.png + slk.png + sll.png highres2standard2.png ; /usr/local/packages/fsl-5.0.8/bin/pngappend highres2standard1.png - highres2standard2.png highres2standard.png; /bin/rm -f sl?.png highres2standard2.png
+
+
+/bin/rm highres2standard1.png
+
+
+/usr/local/packages/fsl-5.0.8/bin/convert_xfm -omat example_func2standard.mat -concat highres2standard.mat example_func2highres.mat
+
+
+/usr/local/packages/fsl-5.0.8/bin/flirt -ref standard -in example_func -out example_func2standard -applyxfm -init example_func2standard.mat -interp trilinear
+
+Found file: example_func2standard.mat.
+
+/usr/local/packages/fsl-5.0.8/bin/convert_xfm -inverse -omat standard2example_func.mat example_func2standard.mat
+
+
+/usr/local/packages/fsl-5.0.8/bin/slicer example_func2standard standard -s 2 -x 0.35 sla.png -x 0.45 slb.png -x 0.55 slc.png -x 0.65 sld.png -y 0.35 sle.png -y 0.45 slf.png -y 0.55 slg.png -y 0.65 slh.png -z 0.35 sli.png -z 0.45 slj.png -z 0.55 slk.png -z 0.65 sll.png ; /usr/local/packages/fsl-5.0.8/bin/pngappend sla.png + slb.png + slc.png + sld.png + sle.png + slf.png + slg.png + slh.png + sli.png + slj.png + slk.png + sll.png example_func2standard1.png ; /usr/local/packages/fsl-5.0.8/bin/slicer standard example_func2standard -s 2 -x 0.35 sla.png -x 0.45 slb.png -x 0.55 slc.png -x 0.65 sld.png -y 0.35 sle.png -y 0.45 slf.png -y 0.55 slg.png -y 0.65 slh.png -z 0.35 sli.png -z 0.45 slj.png -z 0.55 slk.png -z 0.65 sll.png ; /usr/local/packages/fsl-5.0.8/bin/pngappend sla.png + slb.png + slc.png + sld.png + sle.png + slf.png + slg.png + slh.png + sli.png + slj.png + slk.png + sll.png example_func2standard2.png ; /usr/local/packages/fsl-5.0.8/bin/pngappend example_func2standard1.png - example_func2standard2.png example_func2standard.png; /bin/rm -f sl?.png example_func2standard2.png
 
 </pre><hr>Preprocessing:Stage 2<br><pre>
 
