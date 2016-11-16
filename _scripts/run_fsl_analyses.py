@@ -42,17 +42,7 @@ def wait_for_feat_and_move(dataset_name, feat_dir):
 
 
 def run_feat(dataset_name, out_featdir):
-    design_file = os.path.join('.', dataset_name, 'design.fsf')
-
-    # Find anatomical file in design.fsf
-    # highres_files(1) "/storage/essicd/data/NIDM-Ex/BIDS_Data/DATA/BIDS/ds011/sub-01/anat/sub-01_T1w"
-    anat_re = r'.*set highres_files\(1\) "(.*)"'
-    with open(design_file, "r") as fp:
-        anat = re.search(anat_re, fp.read())
-        anat = anat.group(1)
-
-    check_call(['bet ' + anat.replace('_brain' + ' ' + anat], shell=True)
-    
+    design_file = os.path.join('.', dataset_name, 'design.fsf')   
     cmd = 'feat ' + design_file
     print(cmd)
     check_call([cmd], shell=True)
