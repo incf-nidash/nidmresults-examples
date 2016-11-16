@@ -6,6 +6,9 @@ import sys
 
 
 def wait_for_feat_and_move(dataset_name, feat_dir):
+    # Because feat returns before the analysis is actually finished (and
+    # run in the background), we check if report.html contains "STILL
+    # RUNNING" to determine when the analysis is completed.
     report_file = './' + feat_dir + '/report.html'
 
     running = True
@@ -38,7 +41,10 @@ def wait_for_feat_and_move(dataset_name, feat_dir):
 
 
 def run_feat(dataset_name, out_featdir):
-    check_call(['bet ./' + dataset_name + '/design.fsf'], shell=True)
+    # Find anatomical file in design.fsf
+    # highres_files(1) "/storage/essicd/data/NIDM-Ex/BIDS_Data/DATA/BIDS/ds011/sub-01/anat/sub-01_T1w"
+
+    # check_call(['bet ./' + dataset_name + '/design.fsf'], shell=True)
     check_call(['feat ./' + dataset_name + '/design.fsf'], shell=True)
 
 if __name__ == "__main__":
@@ -65,8 +71,4 @@ if __name__ == "__main__":
         run_feat(name, feat_dir)
 
     for name, feat_dir in studies:
-        # Because feat returns before the analysis is actually finished (and
-        # run in the background), we check if report.html contains "STILL
-        # RUNNING" to determine when the analysis is completed.
-        report_file = './' + feat_dir + '/report.html'
-        wait_for_feat_and_move(report_file, name)
+        wait_for_feat_and_move(name, feat_dir)
