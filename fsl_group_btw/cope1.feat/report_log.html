@@ -5,14 +5,14 @@
 <link REL=stylesheet TYPE=text/css href=.files/fsl.css>
 <TITLE>FSL</TITLE></HEAD><BODY><OBJECT data=report.html></OBJECT>
 <h2>Progress Report / Log</h2>
-Started at Wed Nov 16 10:30:50 GMT 2016<p>
+Started at Wed Nov 16 11:06:15 GMT 2016<p>
 <pre>
 
 cp -r ../.files .files
 </pre><hr>Higher-level stats<br><pre>
 
 cat ../design.lcon | awk '{ print  }' > design.lcon
-/usr/local/packages/fsl-5.0.8/bin/flameo --cope=filtered_func_data --vc=var_filtered_func_data  --mask=mask --ld=stats --dm=design.mat --cs=design.grp --tc=design.con  --runmode=flame1
+/storage/wmsmfe/fsl-dev/bin/flameo --cope=filtered_func_data --vc=var_filtered_func_data  --mask=mask --ld=stats --dm=design.mat --cs=design.grp --tc=design.con  --runmode=flame1
 Log directory is: stats
 Setting up:
 ntptsing=9.000000 
@@ -38,28 +38,30 @@ Log directory was: stats
 
 /bin/rm -f stats/zem* stats/zols* stats/mask* ; /bin/mv dof stats
 
-/usr/local/packages/fsl-5.0.8/bin/smoothest -d 12 -m mask -r stats/res4d > stats/smoothness
+/storage/wmsmfe/fsl-dev/bin/smoothest -d 12 -m mask -r stats/res4d > stats/smoothness
 </pre><hr>Post-stats<br><pre>
 
-/usr/local/packages/fsl-5.0.8/bin/fslmaths stats/zstat1 -mas mask thresh_zstat1
+/storage/wmsmfe/fsl-dev/bin/fslmaths stats/zstat1 -mas mask thresh_zstat1
 
 echo 262770 > thresh_zstat1.vol
 zstat1: DLH=0.0406489 VOLUME=262770 RESELS=119.514
 
-/usr/local/packages/fsl-5.0.8/bin/ptoz 0.1
+/storage/wmsmfe/fsl-dev/bin/ptoz 0.1
 1.281552
 
-/usr/local/packages/fsl-5.0.8/bin/fslmaths thresh_zstat1 -thr 1.281552 thresh_zstat1
+/storage/wmsmfe/fsl-dev/bin/cluster -i thresh_zstat1 -c stats/cope1 -t 1.281552 -p 0.1 -d 0.0406489 --volume=262770 --othresh=thresh_zstat1 -o cluster_mask_zstat1 --connectivity=26 --mm --olmax=lmax_zstat1_std.txt --scalarname=Z  --voxuncthresh > cluster_zstat1_std.txt
 
-/usr/local/packages/fsl-5.0.8/bin/fslstats thresh_zstat1 -l 0.0001 -R 2>/dev/null
+/storage/wmsmfe/fsl-dev/bin/cluster2html . cluster_zstat1 -std
+
+/storage/wmsmfe/fsl-dev/bin/fslstats thresh_zstat1 -l 0.0001 -R 2>/dev/null
 1.281705 2.484155 
 Rendering using zmin=1.281705 zmax=2.484155
 
-/usr/local/packages/fsl-5.0.8/bin/overlay 1 0 example_func -a thresh_zstat1 1.281705 2.484155 rendered_thresh_zstat1
+/storage/wmsmfe/fsl-dev/bin/overlay 1 0 example_func -a thresh_zstat1 1.281705 2.484155 rendered_thresh_zstat1
 
-/usr/local/packages/fsl-5.0.8/bin/slicer rendered_thresh_zstat1 -S 2 750 rendered_thresh_zstat1.png
+/storage/wmsmfe/fsl-dev/bin/slicer rendered_thresh_zstat1 -S 2 750 rendered_thresh_zstat1.png
 
-/bin/cp /usr/local/packages/fsl-5.0.8/etc/luts/ramp.gif .ramp.gif
+/bin/cp /storage/wmsmfe/fsl-dev/etc/luts/ramp.gif .ramp.gif
 
-mkdir -p tsplot ; /usr/local/packages/fsl-5.0.8/bin/tsplot . -f filtered_func_data -o tsplot
+mkdir -p tsplot ; /storage/wmsmfe/fsl-dev/bin/tsplot . -f filtered_func_data -o tsplot
 </pre><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></BODY></HTML>
