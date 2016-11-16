@@ -5,7 +5,9 @@ import os
 import sys
 
 
-def wait_for_feat(report_file):
+def wait_for_feat_and_move(dataset_name, feat_dir):
+    report_file = './' + feat_dir + '/report.html'
+
     running = True
     while running:
         time.sleep(10)
@@ -18,16 +20,6 @@ def wait_for_feat(report_file):
                 print("."),
                 sys.stdout.flush()
 
-
-def run_feat(dataset_name, out_featdir):
-    check_call(['feat ./' + dataset_name + '/design.fsf'], shell=True)
-
-    # Because feat returns before the analysis is actually finished (and run in
-    # the background), we check if report.html contains "STILL RUNNING" to
-    # determine when the analysis is completed.
-    report_file = './' + out_featdir + '/report.html'
-    wait_for_feat(report_file)
-
     # Keep a copy of README.md and config.json files
     readme = os.path.join('.', dataset_name, 'README.md')
     tmp_readme = os.path.join('.', 'tmp_README.md')
@@ -38,12 +30,16 @@ def run_feat(dataset_name, out_featdir):
 
     # Move the feat directory to a folder named after the dataset under study
     shutil.rmtree(dataset_name)
-    shutil.move(out_featdir, dataset_name)
+    shutil.move(feat_dir, dataset_name)
 
     # Move back README.md and config.json files
     shutil.move(tmp_readme, readme)
     shutil.move(tmp_cfg, cfg)
 
+
+def run_feat(dataset_name, out_featdir):
+    check_call(['bet ./' + dataset_name + '/design.fsf'], shell=True)
+    check_call(['feat ./' + dataset_name + '/design.fsf'], shell=True)
 
 if __name__ == "__main__":
 
@@ -51,8 +47,8 @@ if __name__ == "__main__":
         ('fsl_con_f', 'fsl_f_test.feat'),
         ('fsl_contrast_mask', 'fsl_contrast_mask.feat'),
         ('fsl_default', 'fsl_voxelwise_p0001.feat'),
-        # Do not recompute fsl_full_examples001 as we want to keep 
-        # peaks and clusters as defined manually 
+        # Do not recompute fsl_full_examples001 as we want to keep
+        # peaks and clusters as defined manually
         # ('fsl_full_examples001', 'fsl_full_examples001.feat'),
         ('fsl_gamma_basis', 'fsl_gamma_basis.feat'),
         ('fsl_gaussian', 'fsl_gaussian.feat'),
@@ -67,3 +63,10 @@ if __name__ == "__main__":
 
     for name, feat_dir in studies:
         run_feat(name, feat_dir)
+
+    for name, feat_dir in studies:
+        # Because feat returns before the analysis is actually finished (and
+        # run in the background), we check if report.html contains "STILL
+        # RUNNING" to determine when the analysis is completed.
+        report_file = './' + feat_dir + '/report.html'
+        wait_for_feat_and_move(report_file, name)
