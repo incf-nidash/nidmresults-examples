@@ -7,28 +7,28 @@ mkdir .files;cp /storage/wmsmfe/fsl-dev/doc/fsl.css .files;cp -r /storage/wmsmfe
 
 /storage/wmsmfe/fsl-dev/bin/fsl_sub -T 60 -l logs -N feat2_pre   /storage/wmsmfe/fsl-dev/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_group_btw.gfeat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_group_btw.gfeat -gfeatprep
 job
-307634
+308013
 
-/storage/wmsmfe/fsl-dev/bin/fsl_sub -T 60 -l logs -N feat3a_flame -j 307634  /storage/wmsmfe/fsl-dev/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_group_btw.gfeat/cope1.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_group_btw.gfeat/cope1.feat -I 1 -flame1
+/storage/wmsmfe/fsl-dev/bin/fsl_sub -T 60 -l logs -N feat3a_flame -j 308013  /storage/wmsmfe/fsl-dev/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_group_btw.gfeat/cope1.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_group_btw.gfeat/cope1.feat -I 1 -flame1
 job
-307635
+308014
 
-/storage/wmsmfe/fsl-dev/bin/fsl_sub -T 60 -l logs -N feat3b_flame -j 307635 -t ./.flame
+/storage/wmsmfe/fsl-dev/bin/fsl_sub -T 60 -l logs -N feat3b_flame -j 308014 -t ./.flame
 job
-307636
+308015
 
-/storage/wmsmfe/fsl-dev/bin/fsl_sub -T 60 -l logs -N feat3c_flame -j 307636  /storage/wmsmfe/fsl-dev/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_group_btw.gfeat/cope1.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_group_btw.gfeat/cope1.feat -flame3
+/storage/wmsmfe/fsl-dev/bin/fsl_sub -T 60 -l logs -N feat3c_flame -j 308015  /storage/wmsmfe/fsl-dev/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_group_btw.gfeat/cope1.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_group_btw.gfeat/cope1.feat -flame3
 job
-307637
+308016
 
-/storage/wmsmfe/fsl-dev/bin/fsl_sub -T 60 -l logs -N feat4_post -j 307637  /storage/wmsmfe/fsl-dev/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_group_btw.gfeat/cope1.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_group_btw.gfeat/cope1.feat -poststats 1
+/storage/wmsmfe/fsl-dev/bin/fsl_sub -T 60 -l logs -N feat4_post -j 308016  /storage/wmsmfe/fsl-dev/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_group_btw.gfeat/cope1.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_group_btw.gfeat/cope1.feat -poststats 1
 job
-307638
+308017
 
-/storage/wmsmfe/fsl-dev/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 307638  /storage/wmsmfe/fsl-dev/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_group_btw.gfeat/cope1.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_group_btw.gfeat/cope1.feat -stop
+/storage/wmsmfe/fsl-dev/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 308017  /storage/wmsmfe/fsl-dev/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_group_btw.gfeat/cope1.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_group_btw.gfeat/cope1.feat -stop
 job
-307639
+308018
 
-/storage/wmsmfe/fsl-dev/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 307639  /storage/wmsmfe/fsl-dev/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_group_btw.gfeat/cope1.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_group_btw.gfeat -stop
+/storage/wmsmfe/fsl-dev/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 308018  /storage/wmsmfe/fsl-dev/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_group_btw.gfeat/cope1.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_group_btw.gfeat -stop
 job
-307640
+308019

@@ -8,9 +8,16 @@ zstat1: DLH=0.700797 VOLUME=38344 RESELS=6.60989
 /storage/wmsmfe/fsl-dev/bin/ptoz 0.05 -g 5801
 5.042313
 
-/storage/wmsmfe/fsl-dev/bin/cluster -i thresh_zstat1 -c stats/cope1 -t 5.042313 -p 0.05 -d 0.700797 --volume=38344 --othresh=thresh_zstat1 -o cluster_mask_zstat1 --connectivity=26  --olmax=lmax_zstat1.txt --scalarname=Z  --voxthresh > cluster_zstat1.txt
+/storage/wmsmfe/fsl-dev/bin/cluster -i thresh_zstat1 -c stats/cope1 -t 5.042313 -d 0.700797 --volume=38344 --othresh=thresh_zstat1 -o cluster_mask_zstat1 --connectivity=26  --olmax=lmax_zstat1.txt --scalarname=Z  --voxthresh > cluster_zstat1.txt
 
 /storage/wmsmfe/fsl-dev/bin/cluster2html . cluster_zstat1 
+
+/storage/wmsmfe/fsl-dev/bin/ptoz 0.05 -g 5801
+5.042313
+
+/storage/wmsmfe/fsl-dev/bin/cluster -i thresh_zstat1 -c stats/cope1 -t 5.042313   -d 0.700797 --volume=38344 -x reg/example_func2standard.mat --stdvol=reg/standard --mm --connectivity=26 --olmax=lmax_zstat1_std.txt --scalarname=Z  --voxthresh > cluster_zstat1_std.txt
+
+/storage/wmsmfe/fsl-dev/bin/cluster2html . cluster_zstat1 -std
 
 /storage/wmsmfe/fsl-dev/bin/fslstats thresh_zstat1 -l 0.0001 -R 2>/dev/null
 5.043573 7.490716 

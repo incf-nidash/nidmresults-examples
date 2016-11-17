@@ -7,28 +7,28 @@ mkdir .files;cp /storage/wmsmfe/fsl-dev/doc/fsl.css .files;cp -r /storage/wmsmfe
 
 /storage/wmsmfe/fsl-dev/bin/fsl_sub -T 60 -l logs -N feat2_pre   /storage/wmsmfe/fsl-dev/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_t_test.gfeat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_t_test.gfeat -gfeatprep
 job
-307648
+308027
 
-/storage/wmsmfe/fsl-dev/bin/fsl_sub -T 60 -l logs -N feat3a_flame -j 307648  /storage/wmsmfe/fsl-dev/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_t_test.gfeat/cope1.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_t_test.gfeat/cope1.feat -I 1 -flame1
+/storage/wmsmfe/fsl-dev/bin/fsl_sub -T 60 -l logs -N feat3a_flame -j 308027  /storage/wmsmfe/fsl-dev/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_t_test.gfeat/cope1.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_t_test.gfeat/cope1.feat -I 1 -flame1
 job
-307649
+308028
 
-/storage/wmsmfe/fsl-dev/bin/fsl_sub -T 60 -l logs -N feat3b_flame -j 307649 -t ./.flame
+/storage/wmsmfe/fsl-dev/bin/fsl_sub -T 60 -l logs -N feat3b_flame -j 308028 -t ./.flame
 job
-307650
+308029
 
-/storage/wmsmfe/fsl-dev/bin/fsl_sub -T 60 -l logs -N feat3c_flame -j 307650  /storage/wmsmfe/fsl-dev/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_t_test.gfeat/cope1.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_t_test.gfeat/cope1.feat -flame3
+/storage/wmsmfe/fsl-dev/bin/fsl_sub -T 60 -l logs -N feat3c_flame -j 308029  /storage/wmsmfe/fsl-dev/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_t_test.gfeat/cope1.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_t_test.gfeat/cope1.feat -flame3
 job
-307651
+308030
 
-/storage/wmsmfe/fsl-dev/bin/fsl_sub -T 60 -l logs -N feat4_post -j 307651  /storage/wmsmfe/fsl-dev/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_t_test.gfeat/cope1.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_t_test.gfeat/cope1.feat -poststats 1
+/storage/wmsmfe/fsl-dev/bin/fsl_sub -T 60 -l logs -N feat4_post -j 308030  /storage/wmsmfe/fsl-dev/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_t_test.gfeat/cope1.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_t_test.gfeat/cope1.feat -poststats 1
 job
-307652
+308031
 
-/storage/wmsmfe/fsl-dev/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 307652  /storage/wmsmfe/fsl-dev/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_t_test.gfeat/cope1.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_t_test.gfeat/cope1.feat -stop
+/storage/wmsmfe/fsl-dev/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 308031  /storage/wmsmfe/fsl-dev/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_t_test.gfeat/cope1.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_t_test.gfeat/cope1.feat -stop
 job
-307653
+308032
 
-/storage/wmsmfe/fsl-dev/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 307653  /storage/wmsmfe/fsl-dev/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_t_test.gfeat/cope1.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_t_test.gfeat -stop
+/storage/wmsmfe/fsl-dev/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 308032  /storage/wmsmfe/fsl-dev/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_t_test.gfeat/cope1.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_t_test.gfeat -stop
 job
-307654
+308033

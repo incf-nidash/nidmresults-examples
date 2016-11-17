@@ -5,7 +5,7 @@
 <link REL=stylesheet TYPE=text/css href=.files/fsl.css>
 <TITLE>FSL</TITLE></HEAD><BODY><OBJECT data=report.html></OBJECT>
 <h2>Progress Report / Log</h2>
-Started at Wed Nov 16 11:06:47 GMT 2016<p>
+Started at Thu Nov 17 12:53:29 GMT 2016<p>
 Feat main script<br><pre>
 
 /bin/cp /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/./fsl_hrf_gammadiff/design.fsf design.fsf
@@ -16,23 +16,23 @@ mkdir .files;cp /storage/wmsmfe/fsl-dev/doc/fsl.css .files;cp -r /storage/wmsmfe
 
 /storage/wmsmfe/fsl-dev/bin/fsl_sub -T 10 -l logs -N feat0_init   /storage/wmsmfe/fsl-dev/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_double_gamma.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_double_gamma.feat -I 1 -init
 job
-307660
+308039
 
-/storage/wmsmfe/fsl-dev/bin/fsl_sub -T 40 -l logs -N feat2_pre -j 307660  /storage/wmsmfe/fsl-dev/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_double_gamma.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_double_gamma.feat -I 1 -prestats
+/storage/wmsmfe/fsl-dev/bin/fsl_sub -T 40 -l logs -N feat2_pre -j 308039  /storage/wmsmfe/fsl-dev/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_double_gamma.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_double_gamma.feat -I 1 -prestats
 job
-307661
+308040
 
-/storage/wmsmfe/fsl-dev/bin/fsl_sub -T 1 -l logs -N feat3_film -j 307661  /storage/wmsmfe/fsl-dev/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_double_gamma.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_double_gamma.feat -I 1 -stats
+/storage/wmsmfe/fsl-dev/bin/fsl_sub -T 1 -l logs -N feat3_film -j 308040  /storage/wmsmfe/fsl-dev/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_double_gamma.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_double_gamma.feat -I 1 -stats
 job
-307662
+308041
 
-/storage/wmsmfe/fsl-dev/bin/fsl_sub -T 119 -l logs -N feat4_post -j 307662  /storage/wmsmfe/fsl-dev/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_double_gamma.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_double_gamma.feat -poststats 0 
+/storage/wmsmfe/fsl-dev/bin/fsl_sub -T 119 -l logs -N feat4_post -j 308041  /storage/wmsmfe/fsl-dev/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_double_gamma.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_double_gamma.feat -poststats 0 
 job
-307663
+308042
 
-/storage/wmsmfe/fsl-dev/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 307661,307662,307663  /storage/wmsmfe/fsl-dev/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_double_gamma.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_double_gamma.feat -stop
+/storage/wmsmfe/fsl-dev/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 308040,308041,308042  /storage/wmsmfe/fsl-dev/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_double_gamma.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_double_gamma.feat -stop
 job
-307664
+308043
 </pre><hr>Initialisation<br><pre>
 
 /storage/wmsmfe/fsl-dev/bin/fslmaths /storage/essicd/data/NIDM-Ex/BIDS_Data/DATA/BIDS/ds011/sub-01/func/sub-01_task-tonecounting_bold prefiltered_func_data -odt float
@@ -196,9 +196,16 @@ zstat1: DLH=0.707064 VOLUME=38344 RESELS=6.5513
 /storage/wmsmfe/fsl-dev/bin/ptoz 0.001
 3.090232
 
-/storage/wmsmfe/fsl-dev/bin/cluster -i thresh_zstat1 -c stats/cope1 -t 3.090232 -p 0.001 -d 0.707064 --volume=38344 --othresh=thresh_zstat1 -o cluster_mask_zstat1 --connectivity=26  --olmax=lmax_zstat1.txt --scalarname=Z  --voxuncthresh > cluster_zstat1.txt
+/storage/wmsmfe/fsl-dev/bin/cluster -i thresh_zstat1 -c stats/cope1 -t 3.090232 -d 0.707064 --volume=38344 --othresh=thresh_zstat1 -o cluster_mask_zstat1 --connectivity=26  --olmax=lmax_zstat1.txt --scalarname=Z  --voxuncthresh > cluster_zstat1.txt
 
 /storage/wmsmfe/fsl-dev/bin/cluster2html . cluster_zstat1 
+
+/storage/wmsmfe/fsl-dev/bin/ptoz 0.001
+3.090232
+
+/storage/wmsmfe/fsl-dev/bin/cluster -i thresh_zstat1 -c stats/cope1 -t 3.090232   -d 0.707064 --volume=38344 -x reg/example_func2standard.mat --stdvol=reg/standard --mm --connectivity=26 --olmax=lmax_zstat1_std.txt --scalarname=Z  --voxuncthresh > cluster_zstat1_std.txt
+
+/storage/wmsmfe/fsl-dev/bin/cluster2html . cluster_zstat1 -std
 
 /storage/wmsmfe/fsl-dev/bin/fslstats thresh_zstat1 -l 0.0001 -R 2>/dev/null
 3.091308 7.041920 
