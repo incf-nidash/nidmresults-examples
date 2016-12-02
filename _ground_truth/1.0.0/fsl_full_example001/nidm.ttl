@@ -376,29 +376,29 @@ niiri:grand_mean_map_id a prov:Entity , nidm_GrandMeanMap: ;
 niiri:beta_map_id_1 a prov:Entity , nidm_ParameterEstimateMap: ;
     rdfs:label "Parameter estimate 1"^^xsd:string ;
     nidm_inCoordinateSpace: niiri:coordinate_space_id_1 ;
-    prov:atLocation "file://./ParameterEstimate_0001.nii.gz"^^xsd:anyURI ;
-    nfo:fileName "ParameterEstimate_0001.nii.gz"^^xsd:string ;
+    prov:atLocation "file://./ParameterEstimate_001.nii.gz"^^xsd:anyURI ;
+    nfo:fileName "ParameterEstimate_001.nii.gz"^^xsd:string ;
     prov:wasGeneratedBy niiri:model_parameters_estimation_id .
 
 niiri:beta_map_id_2 a prov:Entity , nidm_ParameterEstimateMap: ;
     rdfs:label "Parameter estimate 2"^^xsd:string ;
     nidm_inCoordinateSpace: niiri:coordinate_space_id_1 ;
-    prov:atLocation "file://./ParameterEstimate_0002.nii.gz"^^xsd:anyURI ;
-    nfo:fileName "ParameterEstimate_0002.nii.gz"^^xsd:string ;
+    prov:atLocation "file://./ParameterEstimate_002.nii.gz"^^xsd:anyURI ;
+    nfo:fileName "ParameterEstimate_002.nii.gz"^^xsd:string ;
     prov:wasGeneratedBy niiri:model_parameters_estimation_id .
 
 niiri:beta_map_id_3 a prov:Entity , nidm_ParameterEstimateMap: ;
     rdfs:label "Parameter estimate 3"^^xsd:string ;
     nidm_inCoordinateSpace: niiri:coordinate_space_id_1 ;
-    prov:atLocation "file://./ParameterEstimate_0003.nii.gz"^^xsd:anyURI ;
-    nfo:fileName "ParameterEstimate_0003.nii.gz"^^xsd:string ;
+    prov:atLocation "file://./ParameterEstimate_003.nii.gz"^^xsd:anyURI ;
+    nfo:fileName "ParameterEstimate_003.nii.gz"^^xsd:string ;
     prov:wasGeneratedBy niiri:model_parameters_estimation_id .
 
 niiri:beta_map_id_4 a prov:Entity , nidm_ParameterEstimateMap: ;
     rdfs:label "Parameter estimate 4"^^xsd:string ;
     nidm_inCoordinateSpace: niiri:coordinate_space_id_1 ;
-    prov:atLocation "file://./ParameterEstimate_0004.nii.gz"^^xsd:anyURI ;
-    nfo:fileName "ParameterEstimate_0004.nii.gz"^^xsd:string ;
+    prov:atLocation "file://./ParameterEstimate_004.nii.gz"^^xsd:anyURI ;
+    nfo:fileName "ParameterEstimate_004.nii.gz"^^xsd:string ;
     prov:wasGeneratedBy niiri:model_parameters_estimation_id .
 
 niiri:residual_mean_squares_map_id a prov:Entity , nidm_ResidualMeanSquaresMap: ;
