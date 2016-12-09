@@ -314,7 +314,7 @@ set feat_files(14) "/home/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/EXAMPLES/ds011/F
 set fmri(confoundevs) 0
 
 # EV 1 title
-set fmri(evtitle1) ""
+set fmri(evtitle1) "ev1"
 
 # Basic waveform shape (EV 1)
 # 0 : Square
