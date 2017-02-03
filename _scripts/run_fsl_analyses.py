@@ -3,7 +3,6 @@ import time
 import shutil
 import os
 import sys
-import re
 
 
 def wait_for_feat_and_move(dataset_name, feat_dir):
@@ -42,7 +41,7 @@ def wait_for_feat_and_move(dataset_name, feat_dir):
 
 
 def run_feat(dataset_name, out_featdir):
-    design_file = os.path.join('.', dataset_name, 'design.fsf')   
+    design_file = os.path.join('.', dataset_name, 'design.fsf')
     cmd = 'feat ' + design_file
     print(cmd)
     check_call([cmd], shell=True)
@@ -50,6 +49,8 @@ def run_feat(dataset_name, out_featdir):
 if __name__ == "__main__":
 
     studies = (
+        ('fsl_motion_reg_der', 'fsl_motion_reg_der.feat'),
+        ('fsl_motion_reg', 'fsl_motion_reg.feat'),
         ('fsl_con_f', 'fsl_f_test.feat'),
         ('fsl_contrast_mask', 'fsl_contrast_mask.feat'),
         ('fsl_default', 'fsl_voxelwise_p0001.feat'),
