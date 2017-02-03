@@ -3,7 +3,6 @@ import time
 import shutil
 import os
 import sys
-import re
 
 
 def wait_for_feat_and_move(dataset_name, feat_dir):
@@ -42,7 +41,7 @@ def wait_for_feat_and_move(dataset_name, feat_dir):
 
 
 def run_feat(dataset_name, out_featdir):
-    design_file = os.path.join('.', dataset_name, 'design.fsf')   
+    design_file = os.path.join('.', dataset_name, 'design.fsf')
     cmd = 'feat ' + design_file
     print(cmd)
     check_call([cmd], shell=True)
@@ -51,22 +50,22 @@ if __name__ == "__main__":
 
     studies = (
         ('fsl_motion_reg_der', 'fsl_motion_reg_der.feat'),
-        # ('fsl_motion_reg', 'fsl_motion_reg.feat'),
-        # ('fsl_con_f', 'fsl_f_test.feat'),
-        # ('fsl_contrast_mask', 'fsl_contrast_mask.feat'),
-        # ('fsl_default', 'fsl_voxelwise_p0001.feat'),
+        ('fsl_motion_reg', 'fsl_motion_reg.feat'),
+        ('fsl_con_f', 'fsl_f_test.feat'),
+        ('fsl_contrast_mask', 'fsl_contrast_mask.feat'),
+        ('fsl_default', 'fsl_voxelwise_p0001.feat'),
         # Do not recompute fsl_full_examples001 as we want to keep
         # peaks and clusters as defined manually
         # ('fsl_full_examples001', 'fsl_full_examples001.feat'),
-        # ('fsl_gamma_basis', 'fsl_gamma_basis.feat'),
-        # ('fsl_gaussian', 'fsl_gaussian.feat'),
-        # ('fsl_group_btw', 'fsl_group_btw.gfeat'),
-        # ('fsl_group_ols', 'fsl_OLS_t_test.gfeat'),
-        # ('fsl_group_wls', 'fsl_t_test.gfeat'),
-        # ('fsl_hrf_fir', 'fsl_FIR_basis.feat'),
-        # ('fsl_hrf_gammadiff', 'fsl_double_gamma.feat'),
-        # ('fsl_thr_clustfwep05', 'fsl_cluster_p005.feat'),
-        # ('fsl_thr_voxelfwep05', 'fsl_FWE_p005.feat'),
+        ('fsl_gamma_basis', 'fsl_gamma_basis.feat'),
+        ('fsl_gaussian', 'fsl_gaussian.feat'),
+        ('fsl_group_btw', 'fsl_group_btw.gfeat'),
+        ('fsl_group_ols', 'fsl_OLS_t_test.gfeat'),
+        ('fsl_group_wls', 'fsl_t_test.gfeat'),
+        ('fsl_hrf_fir', 'fsl_FIR_basis.feat'),
+        ('fsl_hrf_gammadiff', 'fsl_double_gamma.feat'),
+        ('fsl_thr_clustfwep05', 'fsl_cluster_p005.feat'),
+        ('fsl_thr_voxelfwep05', 'fsl_FWE_p005.feat'),
     )
 
     for name, feat_dir in studies:
