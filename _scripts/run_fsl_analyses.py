@@ -50,7 +50,8 @@ def run_feat(dataset_name, out_featdir):
 if __name__ == "__main__":
 
     studies = (
-        ('fsl_motion_reg', 'fsl_motion_reg.feat'),
+        ('fsl_motion_reg_der', 'fsl_motion_reg_der.feat'),
+        # ('fsl_motion_reg', 'fsl_motion_reg.feat'),
         # ('fsl_con_f', 'fsl_f_test.feat'),
         # ('fsl_contrast_mask', 'fsl_contrast_mask.feat'),
         # ('fsl_default', 'fsl_voxelwise_p0001.feat'),
