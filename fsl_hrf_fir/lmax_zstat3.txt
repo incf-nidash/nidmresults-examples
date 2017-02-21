@@ -1,4 +1,4 @@
-Cluster Index	Z	P	-log10(P)		x	y	z	
+Cluster Index	Z	P	-log10(P)	x	y	z	
 161	4.85	6.02e-07	6.22	28	11	7
 161	4.72	1.21e-06	5.92	38	12	7
 161	4.67	1.49e-06	5.83	23	26	7

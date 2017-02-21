@@ -7,28 +7,28 @@ mkdir .files;cp /storage/wmsmfe/fsl-dev/doc/fsl.css .files;cp -r /storage/wmsmfe
 
 /storage/wmsmfe/fsl-dev/bin/fsl_sub -T 60 -l logs -N feat2_pre   /storage/wmsmfe/fsl-dev/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_OLS_t_test.gfeat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_OLS_t_test.gfeat -gfeatprep
 job
-311913
+311979
 
-/storage/wmsmfe/fsl-dev/bin/fsl_sub -T 60 -l logs -N feat3a_flame -j 311913  /storage/wmsmfe/fsl-dev/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_OLS_t_test.gfeat/cope1.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_OLS_t_test.gfeat/cope1.feat -I 1 -flame1
+/storage/wmsmfe/fsl-dev/bin/fsl_sub -T 60 -l logs -N feat3a_flame -j 311979  /storage/wmsmfe/fsl-dev/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_OLS_t_test.gfeat/cope1.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_OLS_t_test.gfeat/cope1.feat -I 1 -flame1
 job
-311914
+311980
 
-/storage/wmsmfe/fsl-dev/bin/fsl_sub -T 60 -l logs -N feat3b_flame -j 311914 -t ./.flame
+/storage/wmsmfe/fsl-dev/bin/fsl_sub -T 60 -l logs -N feat3b_flame -j 311980 -t ./.flame
 job
-311915
+311981
 
-/storage/wmsmfe/fsl-dev/bin/fsl_sub -T 60 -l logs -N feat3c_flame -j 311915  /storage/wmsmfe/fsl-dev/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_OLS_t_test.gfeat/cope1.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_OLS_t_test.gfeat/cope1.feat -flame3
+/storage/wmsmfe/fsl-dev/bin/fsl_sub -T 60 -l logs -N feat3c_flame -j 311981  /storage/wmsmfe/fsl-dev/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_OLS_t_test.gfeat/cope1.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_OLS_t_test.gfeat/cope1.feat -flame3
 job
-311916
+311982
 
-/storage/wmsmfe/fsl-dev/bin/fsl_sub -T 60 -l logs -N feat4_post -j 311916  /storage/wmsmfe/fsl-dev/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_OLS_t_test.gfeat/cope1.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_OLS_t_test.gfeat/cope1.feat -poststats 1
+/storage/wmsmfe/fsl-dev/bin/fsl_sub -T 60 -l logs -N feat4_post -j 311982  /storage/wmsmfe/fsl-dev/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_OLS_t_test.gfeat/cope1.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_OLS_t_test.gfeat/cope1.feat -poststats 1
 job
-311917
+311983
 
-/storage/wmsmfe/fsl-dev/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 311917  /storage/wmsmfe/fsl-dev/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_OLS_t_test.gfeat/cope1.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_OLS_t_test.gfeat/cope1.feat -stop
+/storage/wmsmfe/fsl-dev/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 311983  /storage/wmsmfe/fsl-dev/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_OLS_t_test.gfeat/cope1.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_OLS_t_test.gfeat/cope1.feat -stop
 job
-311918
+311984
 
-/storage/wmsmfe/fsl-dev/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 311918  /storage/wmsmfe/fsl-dev/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_OLS_t_test.gfeat/cope1.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_OLS_t_test.gfeat -stop
+/storage/wmsmfe/fsl-dev/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 311984  /storage/wmsmfe/fsl-dev/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_OLS_t_test.gfeat/cope1.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_OLS_t_test.gfeat -stop
 job
-311919
+311985
