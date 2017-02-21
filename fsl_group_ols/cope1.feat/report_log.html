@@ -5,7 +5,7 @@
 <link REL=stylesheet TYPE=text/css href=.files/fsl.css>
 <TITLE>FSL</TITLE></HEAD><BODY><OBJECT data=report.html></OBJECT>
 <h2>Progress Report / Log</h2>
-Started at Tue Feb 21 14:54:41 GMT 2017<p>
+Started at Tue Feb 21 16:14:35 GMT 2017<p>
 <pre>
 
 cp -r ../.files .files
@@ -42,7 +42,7 @@ Log directory was: stats
 echo 262770 > thresh_zstat1.vol
 zstat1: DLH=0.0364566 VOLUME=262770 RESELS=132.675
 
-/storage/wmsmfe/fsl-dev/bin/cluster -i thresh_zstat1 -c stats/cope1 -t 3.1 -p 0.05 -d 0.0364566 --volume=262770 --othresh=thresh_zstat1 -o cluster_mask_zstat1 --connectivity=26 --mm --olmax=lmax_zstat1_std.txt --scalarname=Z > cluster_zstat1_std.txt
+/storage/wmsmfe/fsl-dev/bin/cluster -i thresh_zstat1 -c stats/cope1 -t 3.1 -p 0.05 -r 132.675 -d 0.0364566 --volume=262770 --othresh=thresh_zstat1 -o cluster_mask_zstat1 --connectivity=26 --mm --olmax=lmax_zstat1_std.txt --scalarname=Z > cluster_zstat1_std.txt
 
 /storage/wmsmfe/fsl-dev/bin/cluster2html . cluster_zstat1 -std
 

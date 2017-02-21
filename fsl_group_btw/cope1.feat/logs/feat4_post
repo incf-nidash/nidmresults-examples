@@ -8,7 +8,7 @@ zstat1: DLH=0.0406489 VOLUME=262770 RESELS=119.514
 /storage/wmsmfe/fsl-dev/bin/ptoz 0.1
 1.281552
 
-/storage/wmsmfe/fsl-dev/bin/cluster -i thresh_zstat1 -c stats/cope1 -t 1.281552 -d 0.0406489 --volume=262770 --othresh=thresh_zstat1 -o cluster_mask_zstat1 --connectivity=26 --mm --olmax=lmax_zstat1_std.txt --scalarname=Z  --voxuncthresh > cluster_zstat1_std.txt
+/storage/wmsmfe/fsl-dev/bin/cluster -i thresh_zstat1 -c stats/cope1 -t 1.281552 -d 0.0406489 -r 119.514 --volume=262770 --othresh=thresh_zstat1 -o cluster_mask_zstat1 --connectivity=26 --mm --olmax=lmax_zstat1_std.txt --scalarname=Z  --voxuncthresh > cluster_zstat1_std.txt
 
 /storage/wmsmfe/fsl-dev/bin/cluster2html . cluster_zstat1 -std
 

@@ -5,7 +5,7 @@
 <link REL=stylesheet TYPE=text/css href=.files/fsl.css>
 <TITLE>FSL</TITLE></HEAD><BODY><OBJECT data=report.html></OBJECT>
 <h2>Progress Report / Log</h2>
-Started at Tue Feb 21 14:54:18 GMT 2017<p>
+Started at Tue Feb 21 16:14:13 GMT 2017<p>
 Feat main script<br><pre>
 
 /bin/cp /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/./fsl_gamma_basis/design.fsf design.fsf
@@ -16,23 +16,23 @@ mkdir .files;cp /storage/wmsmfe/fsl-dev/doc/fsl.css .files;cp -r /storage/wmsmfe
 
 /storage/wmsmfe/fsl-dev/bin/fsl_sub -T 10 -l logs -N feat0_init   /storage/wmsmfe/fsl-dev/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_gamma_basis.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_gamma_basis.feat -I 1 -init
 job
-311698
+311896
 
-/storage/wmsmfe/fsl-dev/bin/fsl_sub -T 40 -l logs -N feat2_pre -j 311698  /storage/wmsmfe/fsl-dev/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_gamma_basis.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_gamma_basis.feat -I 1 -prestats
+/storage/wmsmfe/fsl-dev/bin/fsl_sub -T 40 -l logs -N feat2_pre -j 311896  /storage/wmsmfe/fsl-dev/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_gamma_basis.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_gamma_basis.feat -I 1 -prestats
 job
-311699
+311897
 
-/storage/wmsmfe/fsl-dev/bin/fsl_sub -T 1 -l logs -N feat3_film -j 311699  /storage/wmsmfe/fsl-dev/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_gamma_basis.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_gamma_basis.feat -I 1 -stats
+/storage/wmsmfe/fsl-dev/bin/fsl_sub -T 1 -l logs -N feat3_film -j 311897  /storage/wmsmfe/fsl-dev/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_gamma_basis.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_gamma_basis.feat -I 1 -stats
 job
-311700
+311898
 
-/storage/wmsmfe/fsl-dev/bin/fsl_sub -T 119 -l logs -N feat4_post -j 311700  /storage/wmsmfe/fsl-dev/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_gamma_basis.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_gamma_basis.feat -poststats 0 
+/storage/wmsmfe/fsl-dev/bin/fsl_sub -T 119 -l logs -N feat4_post -j 311898  /storage/wmsmfe/fsl-dev/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_gamma_basis.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_gamma_basis.feat -poststats 0 
 job
-311701
+311899
 
-/storage/wmsmfe/fsl-dev/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 311699,311700,311701  /storage/wmsmfe/fsl-dev/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_gamma_basis.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_gamma_basis.feat -stop
+/storage/wmsmfe/fsl-dev/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 311897,311898,311899  /storage/wmsmfe/fsl-dev/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_gamma_basis.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_gamma_basis.feat -stop
 job
-311702
+311900
 </pre><hr>Initialisation<br><pre>
 
 /storage/wmsmfe/fsl-dev/bin/fslmaths /storage/essicd/data/NIDM-Ex/BIDS_Data/DATA/BIDS/ds011/sub-01/func/sub-01_task-tonecounting_bold prefiltered_func_data -odt float
@@ -231,91 +231,91 @@ zfstat2: DLH=0.731651 VOLUME=38344 RESELS=6.33984
 /storage/wmsmfe/fsl-dev/bin/ptoz 0.001
 3.090232
 
-/storage/wmsmfe/fsl-dev/bin/cluster -i thresh_zstat1 -c stats/cope1 -t 3.090232 -d 0.731651 --volume=38344 --othresh=thresh_zstat1 -o cluster_mask_zstat1 --connectivity=26  --olmax=lmax_zstat1.txt --scalarname=Z  --voxuncthresh > cluster_zstat1.txt
+/storage/wmsmfe/fsl-dev/bin/cluster -i thresh_zstat1 -c stats/cope1 -t 3.090232 -d 0.731651 -r 6.33984 --volume=38344 --othresh=thresh_zstat1 -o cluster_mask_zstat1 --connectivity=26  --olmax=lmax_zstat1.txt --scalarname=Z  --voxuncthresh > cluster_zstat1.txt
 
 /storage/wmsmfe/fsl-dev/bin/cluster2html . cluster_zstat1 
 
 /storage/wmsmfe/fsl-dev/bin/ptoz 0.001
 3.090232
 
-/storage/wmsmfe/fsl-dev/bin/cluster -i thresh_zstat2 -c stats/cope2 -t 3.090232 -d 0.731651 --volume=38344 --othresh=thresh_zstat2 -o cluster_mask_zstat2 --connectivity=26  --olmax=lmax_zstat2.txt --scalarname=Z  --voxuncthresh > cluster_zstat2.txt
+/storage/wmsmfe/fsl-dev/bin/cluster -i thresh_zstat2 -c stats/cope2 -t 3.090232 -d 0.731651 -r 6.33984 --volume=38344 --othresh=thresh_zstat2 -o cluster_mask_zstat2 --connectivity=26  --olmax=lmax_zstat2.txt --scalarname=Z  --voxuncthresh > cluster_zstat2.txt
 
 /storage/wmsmfe/fsl-dev/bin/cluster2html . cluster_zstat2 
 
 /storage/wmsmfe/fsl-dev/bin/ptoz 0.001
 3.090232
 
-/storage/wmsmfe/fsl-dev/bin/cluster -i thresh_zstat3 -c stats/cope3 -t 3.090232 -d 0.731651 --volume=38344 --othresh=thresh_zstat3 -o cluster_mask_zstat3 --connectivity=26  --olmax=lmax_zstat3.txt --scalarname=Z  --voxuncthresh > cluster_zstat3.txt
+/storage/wmsmfe/fsl-dev/bin/cluster -i thresh_zstat3 -c stats/cope3 -t 3.090232 -d 0.731651 -r 6.33984 --volume=38344 --othresh=thresh_zstat3 -o cluster_mask_zstat3 --connectivity=26  --olmax=lmax_zstat3.txt --scalarname=Z  --voxuncthresh > cluster_zstat3.txt
 
 /storage/wmsmfe/fsl-dev/bin/cluster2html . cluster_zstat3 
 
 /storage/wmsmfe/fsl-dev/bin/ptoz 0.001
 3.090232
 
-/storage/wmsmfe/fsl-dev/bin/cluster -i thresh_zstat4 -c stats/cope4 -t 3.090232 -d 0.731651 --volume=38344 --othresh=thresh_zstat4 -o cluster_mask_zstat4 --connectivity=26  --olmax=lmax_zstat4.txt --scalarname=Z  --voxuncthresh > cluster_zstat4.txt
+/storage/wmsmfe/fsl-dev/bin/cluster -i thresh_zstat4 -c stats/cope4 -t 3.090232 -d 0.731651 -r 6.33984 --volume=38344 --othresh=thresh_zstat4 -o cluster_mask_zstat4 --connectivity=26  --olmax=lmax_zstat4.txt --scalarname=Z  --voxuncthresh > cluster_zstat4.txt
 
 /storage/wmsmfe/fsl-dev/bin/cluster2html . cluster_zstat4 
 
 /storage/wmsmfe/fsl-dev/bin/ptoz 0.001
 3.090232
 
-/storage/wmsmfe/fsl-dev/bin/cluster -i thresh_zstat5 -c stats/cope5 -t 3.090232 -d 0.731651 --volume=38344 --othresh=thresh_zstat5 -o cluster_mask_zstat5 --connectivity=26  --olmax=lmax_zstat5.txt --scalarname=Z  --voxuncthresh > cluster_zstat5.txt
+/storage/wmsmfe/fsl-dev/bin/cluster -i thresh_zstat5 -c stats/cope5 -t 3.090232 -d 0.731651 -r 6.33984 --volume=38344 --othresh=thresh_zstat5 -o cluster_mask_zstat5 --connectivity=26  --olmax=lmax_zstat5.txt --scalarname=Z  --voxuncthresh > cluster_zstat5.txt
 
 /storage/wmsmfe/fsl-dev/bin/cluster2html . cluster_zstat5 
 
 /storage/wmsmfe/fsl-dev/bin/ptoz 0.001
 3.090232
 
-/storage/wmsmfe/fsl-dev/bin/cluster -i thresh_zstat6 -c stats/cope6 -t 3.090232 -d 0.731651 --volume=38344 --othresh=thresh_zstat6 -o cluster_mask_zstat6 --connectivity=26  --olmax=lmax_zstat6.txt --scalarname=Z  --voxuncthresh > cluster_zstat6.txt
+/storage/wmsmfe/fsl-dev/bin/cluster -i thresh_zstat6 -c stats/cope6 -t 3.090232 -d 0.731651 -r 6.33984 --volume=38344 --othresh=thresh_zstat6 -o cluster_mask_zstat6 --connectivity=26  --olmax=lmax_zstat6.txt --scalarname=Z  --voxuncthresh > cluster_zstat6.txt
 
 /storage/wmsmfe/fsl-dev/bin/cluster2html . cluster_zstat6 
 
 /storage/wmsmfe/fsl-dev/bin/ptoz 0.001
 3.090232
 
-/storage/wmsmfe/fsl-dev/bin/cluster -i thresh_zfstat1  -t 3.090232 -d 0.731651 --volume=38344 --othresh=thresh_zfstat1 -o cluster_mask_zfstat1 --connectivity=26  --olmax=lmax_zfstat1.txt --scalarname=Z  --voxuncthresh > cluster_zfstat1.txt
+/storage/wmsmfe/fsl-dev/bin/cluster -i thresh_zfstat1  -t 3.090232 -d 0.731651 -r 6.33984 --volume=38344 --othresh=thresh_zfstat1 -o cluster_mask_zfstat1 --connectivity=26  --olmax=lmax_zfstat1.txt --scalarname=Z  --voxuncthresh > cluster_zfstat1.txt
 
 /storage/wmsmfe/fsl-dev/bin/cluster2html . cluster_zfstat1 
 
 /storage/wmsmfe/fsl-dev/bin/ptoz 0.001
 3.090232
 
-/storage/wmsmfe/fsl-dev/bin/cluster -i thresh_zfstat2  -t 3.090232 -d 0.731651 --volume=38344 --othresh=thresh_zfstat2 -o cluster_mask_zfstat2 --connectivity=26  --olmax=lmax_zfstat2.txt --scalarname=Z  --voxuncthresh > cluster_zfstat2.txt
+/storage/wmsmfe/fsl-dev/bin/cluster -i thresh_zfstat2  -t 3.090232 -d 0.731651 -r 6.33984 --volume=38344 --othresh=thresh_zfstat2 -o cluster_mask_zfstat2 --connectivity=26  --olmax=lmax_zfstat2.txt --scalarname=Z  --voxuncthresh > cluster_zfstat2.txt
 
 /storage/wmsmfe/fsl-dev/bin/cluster2html . cluster_zfstat2 
 
 /storage/wmsmfe/fsl-dev/bin/ptoz 0.001
 3.090232
 
-/storage/wmsmfe/fsl-dev/bin/cluster -i thresh_zstat1 -c stats/cope1 -t 3.090232   -d 0.731651 --volume=38344 -x reg/example_func2standard.mat --stdvol=reg/standard --mm --connectivity=26 --olmax=lmax_zstat1_std.txt --scalarname=Z  --voxuncthresh > cluster_zstat1_std.txt
+/storage/wmsmfe/fsl-dev/bin/cluster -i thresh_zstat1 -c stats/cope1 -t 3.090232   -d 0.731651 -r 6.33984 --volume=38344 -x reg/example_func2standard.mat --stdvol=reg/standard --mm --connectivity=26 --olmax=lmax_zstat1_std.txt --scalarname=Z  --voxuncthresh > cluster_zstat1_std.txt
 
 /storage/wmsmfe/fsl-dev/bin/cluster2html . cluster_zstat1 -std
 
-/storage/wmsmfe/fsl-dev/bin/cluster -i thresh_zstat2 -c stats/cope2 -t 3.090232   -d 0.731651 --volume=38344 -x reg/example_func2standard.mat --stdvol=reg/standard --mm --connectivity=26 --olmax=lmax_zstat2_std.txt --scalarname=Z  --voxuncthresh > cluster_zstat2_std.txt
+/storage/wmsmfe/fsl-dev/bin/cluster -i thresh_zstat2 -c stats/cope2 -t 3.090232   -d 0.731651 -r 6.33984 --volume=38344 -x reg/example_func2standard.mat --stdvol=reg/standard --mm --connectivity=26 --olmax=lmax_zstat2_std.txt --scalarname=Z  --voxuncthresh > cluster_zstat2_std.txt
 
 /storage/wmsmfe/fsl-dev/bin/cluster2html . cluster_zstat2 -std
 
-/storage/wmsmfe/fsl-dev/bin/cluster -i thresh_zstat3 -c stats/cope3 -t 3.090232   -d 0.731651 --volume=38344 -x reg/example_func2standard.mat --stdvol=reg/standard --mm --connectivity=26 --olmax=lmax_zstat3_std.txt --scalarname=Z  --voxuncthresh > cluster_zstat3_std.txt
+/storage/wmsmfe/fsl-dev/bin/cluster -i thresh_zstat3 -c stats/cope3 -t 3.090232   -d 0.731651 -r 6.33984 --volume=38344 -x reg/example_func2standard.mat --stdvol=reg/standard --mm --connectivity=26 --olmax=lmax_zstat3_std.txt --scalarname=Z  --voxuncthresh > cluster_zstat3_std.txt
 
 /storage/wmsmfe/fsl-dev/bin/cluster2html . cluster_zstat3 -std
 
-/storage/wmsmfe/fsl-dev/bin/cluster -i thresh_zstat4 -c stats/cope4 -t 3.090232   -d 0.731651 --volume=38344 -x reg/example_func2standard.mat --stdvol=reg/standard --mm --connectivity=26 --olmax=lmax_zstat4_std.txt --scalarname=Z  --voxuncthresh > cluster_zstat4_std.txt
+/storage/wmsmfe/fsl-dev/bin/cluster -i thresh_zstat4 -c stats/cope4 -t 3.090232   -d 0.731651 -r 6.33984 --volume=38344 -x reg/example_func2standard.mat --stdvol=reg/standard --mm --connectivity=26 --olmax=lmax_zstat4_std.txt --scalarname=Z  --voxuncthresh > cluster_zstat4_std.txt
 
 /storage/wmsmfe/fsl-dev/bin/cluster2html . cluster_zstat4 -std
 
-/storage/wmsmfe/fsl-dev/bin/cluster -i thresh_zstat5 -c stats/cope5 -t 3.090232   -d 0.731651 --volume=38344 -x reg/example_func2standard.mat --stdvol=reg/standard --mm --connectivity=26 --olmax=lmax_zstat5_std.txt --scalarname=Z  --voxuncthresh > cluster_zstat5_std.txt
+/storage/wmsmfe/fsl-dev/bin/cluster -i thresh_zstat5 -c stats/cope5 -t 3.090232   -d 0.731651 -r 6.33984 --volume=38344 -x reg/example_func2standard.mat --stdvol=reg/standard --mm --connectivity=26 --olmax=lmax_zstat5_std.txt --scalarname=Z  --voxuncthresh > cluster_zstat5_std.txt
 
 /storage/wmsmfe/fsl-dev/bin/cluster2html . cluster_zstat5 -std
 
-/storage/wmsmfe/fsl-dev/bin/cluster -i thresh_zstat6 -c stats/cope6 -t 3.090232   -d 0.731651 --volume=38344 -x reg/example_func2standard.mat --stdvol=reg/standard --mm --connectivity=26 --olmax=lmax_zstat6_std.txt --scalarname=Z  --voxuncthresh > cluster_zstat6_std.txt
+/storage/wmsmfe/fsl-dev/bin/cluster -i thresh_zstat6 -c stats/cope6 -t 3.090232   -d 0.731651 -r 6.33984 --volume=38344 -x reg/example_func2standard.mat --stdvol=reg/standard --mm --connectivity=26 --olmax=lmax_zstat6_std.txt --scalarname=Z  --voxuncthresh > cluster_zstat6_std.txt
 
 /storage/wmsmfe/fsl-dev/bin/cluster2html . cluster_zstat6 -std
 
-/storage/wmsmfe/fsl-dev/bin/cluster -i thresh_zfstat1  -t 3.090232   -d 0.731651 --volume=38344 -x reg/example_func2standard.mat --stdvol=reg/standard --mm --connectivity=26 --olmax=lmax_zfstat1_std.txt --scalarname=Z  --voxuncthresh > cluster_zfstat1_std.txt
+/storage/wmsmfe/fsl-dev/bin/cluster -i thresh_zfstat1  -t 3.090232   -d 0.731651 -r 6.33984 --volume=38344 -x reg/example_func2standard.mat --stdvol=reg/standard --mm --connectivity=26 --olmax=lmax_zfstat1_std.txt --scalarname=Z  --voxuncthresh > cluster_zfstat1_std.txt
 
 /storage/wmsmfe/fsl-dev/bin/cluster2html . cluster_zfstat1 -std
 
-/storage/wmsmfe/fsl-dev/bin/cluster -i thresh_zfstat2  -t 3.090232   -d 0.731651 --volume=38344 -x reg/example_func2standard.mat --stdvol=reg/standard --mm --connectivity=26 --olmax=lmax_zfstat2_std.txt --scalarname=Z  --voxuncthresh > cluster_zfstat2_std.txt
+/storage/wmsmfe/fsl-dev/bin/cluster -i thresh_zfstat2  -t 3.090232   -d 0.731651 -r 6.33984 --volume=38344 -x reg/example_func2standard.mat --stdvol=reg/standard --mm --connectivity=26 --olmax=lmax_zfstat2_std.txt --scalarname=Z  --voxuncthresh > cluster_zfstat2_std.txt
 
 /storage/wmsmfe/fsl-dev/bin/cluster2html . cluster_zfstat2 -std
 
