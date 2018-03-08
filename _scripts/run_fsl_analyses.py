@@ -52,6 +52,7 @@ if __name__ == "__main__":
         ('fsl_motion_reg_der', 'fsl_motion_reg_der.feat'),
         ('fsl_motion_reg', 'fsl_motion_reg.feat'),
         ('fsl_con_f', 'fsl_f_test.feat'),
+	('fsl_con_f_multiple', 'fsl_con_f_multiple_test.feat')
         ('fsl_contrast_mask', 'fsl_contrast_mask.feat'),
         ('fsl_default', 'fsl_voxelwise_p0001.feat'),
         # Do not recompute fsl_full_examples001 as we want to keep
