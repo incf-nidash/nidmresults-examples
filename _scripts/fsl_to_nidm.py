@@ -7,6 +7,9 @@ currdir = os.path.dirname(os.path.realpath(__file__))
 # Data directory
 updir = os.path.dirname(currdir)
 
+if not os.path.isdir('nidms'):
+    os.mkdir('nidms')
+
 # Loop over all analyses
 for dirname in  os.listdir(updir):
     if dirname not in ('fsl_con_f_multiple'):
@@ -34,6 +37,9 @@ for dirname in  os.listdir(updir):
                 print('--')
 
                 check_call(cmd)
+                check_call(['mv',
+                            os.path.join(direc, dirname + '.nidm.zip'),
+                            'nidms'])
 
 
 # nidmfsl [-h] [-g GROUP_NAME NUM_SUBJECTS] [-o OUTPUT_NAME] [-d]
