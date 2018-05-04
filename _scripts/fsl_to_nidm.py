@@ -9,32 +9,31 @@ updir = os.path.dirname(currdir)
 
 # Loop over all analyses
 for dirname in  os.listdir(updir):
-    direc = os.path.join(updir, dirname)
-    print(direc)
+    if dirname not in ('fsl_con_f_multiple'):
+        direc = os.path.join(updir, dirname)
+        print(direc)
 
-    config_f = os.path.join(direc, 'config.json')
-    if os.path.exists(config_f):
-        with open(config_f) as f:
-            data = json.load(f)
+        config_f = os.path.join(direc, 'config.json')
+        if os.path.exists(config_f):
+            with open(config_f) as f:
+                data = json.load(f)
 
-        # Look up for FSL analyses
-        if data['software'] == 'fsl':
-            print(data)
+            # Look up for FSL analyses
+            cmd = ['nidmfsl']
+            if data['software'] == 'fsl':
+                print(data)
 
-            group_opt = ''
-            if 'group_names' in data:
-                for i, group_name in enumerate(data['group_names']):
-                    group_opt += (
-                        ' -g ' + group_name + ' ' +
-                        str(data['num_subjects'][i]))
+                if 'group_names' in data:
+                    for i, group_name in enumerate(data['group_names']):
+                        cmd.append('-g')
+                        cmd.append(group_name)
+                        cmd.append(str(data['num_subjects'][i]))
 
-            print(group_opt)
-            print('--')
+                cmd.append(direc)
+                print(cmd)
+                print('--')
 
-            if group_opt:
-                check_call(["nidmfsl", group_opt, direc])
-            else:
-                check_call(["nidmfsl", direc])
+                check_call(cmd)
 
 
 # nidmfsl [-h] [-g GROUP_NAME NUM_SUBJECTS] [-o OUTPUT_NAME] [-d]
