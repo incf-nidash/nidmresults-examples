@@ -1,34 +1,34 @@
 
 /bin/cp /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/./fsl_group_btw/design.fsf design.fsf
 
-/usr/local/packages/fsl-5.0.8/bin/feat_model design
+/usr/local/packages/fsl-5.0.10/bin/feat_model design
 
-mkdir .files;cp /usr/local/packages/fsl-5.0.8/doc/fsl.css .files;cp -r /usr/local/packages/fsl-5.0.8/doc/images .files/images
+mkdir .files;cp /usr/local/packages/fsl-5.0.10/doc/fsl.css .files;cp -r /usr/local/packages/fsl-5.0.10/doc/images .files/images
 
-/usr/local/packages/fsl-5.0.8/bin/fsl_sub -T 60 -l logs -N feat2_pre   /usr/local/packages/fsl-5.0.8/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_group_btw.gfeat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_group_btw.gfeat -gfeatprep
+/usr/local/packages/fsl-5.0.10/bin/fsl_sub -T 60 -l logs -N feat2_pre   /usr/local/packages/fsl-5.0.10/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_group_btw.gfeat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_group_btw.gfeat -gfeatprep
 job
-307568
+326916
 
-/usr/local/packages/fsl-5.0.8/bin/fsl_sub -T 60 -l logs -N feat3a_flame -j 307568  /usr/local/packages/fsl-5.0.8/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_group_btw.gfeat/cope1.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_group_btw.gfeat/cope1.feat -I 1 -flame1
+/usr/local/packages/fsl-5.0.10/bin/fsl_sub -T 60 -l logs -N feat3a_flame -j 326916  /usr/local/packages/fsl-5.0.10/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_group_btw.gfeat/cope1.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_group_btw.gfeat/cope1.feat -I 1 -flame1
 job
-307569
+326917
 
-/usr/local/packages/fsl-5.0.8/bin/fsl_sub -T 60 -l logs -N feat3b_flame -j 307569 -t ./.flame
+/usr/local/packages/fsl-5.0.10/bin/fsl_sub -T 60 -l logs -N feat3b_flame -j 326917 -t ./.flame
 job
-307570
+326918
 
-/usr/local/packages/fsl-5.0.8/bin/fsl_sub -T 60 -l logs -N feat3c_flame -j 307570  /usr/local/packages/fsl-5.0.8/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_group_btw.gfeat/cope1.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_group_btw.gfeat/cope1.feat -flame3
+/usr/local/packages/fsl-5.0.10/bin/fsl_sub -T 60 -l logs -N feat3c_flame -j 326918  /usr/local/packages/fsl-5.0.10/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_group_btw.gfeat/cope1.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_group_btw.gfeat/cope1.feat -flame3
 job
-307571
+326919
 
-/usr/local/packages/fsl-5.0.8/bin/fsl_sub -T 60 -l logs -N feat4_post -j 307571  /usr/local/packages/fsl-5.0.8/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_group_btw.gfeat/cope1.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_group_btw.gfeat/cope1.feat -poststats 1
+/usr/local/packages/fsl-5.0.10/bin/fsl_sub -T 60 -l logs -N feat4_post -j 326919  /usr/local/packages/fsl-5.0.10/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_group_btw.gfeat/cope1.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_group_btw.gfeat/cope1.feat -poststats 1
 job
-307572
+326920
 
-/usr/local/packages/fsl-5.0.8/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 307572  /usr/local/packages/fsl-5.0.8/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_group_btw.gfeat/cope1.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_group_btw.gfeat/cope1.feat -stop
+/usr/local/packages/fsl-5.0.10/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 326920  /usr/local/packages/fsl-5.0.10/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_group_btw.gfeat/cope1.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_group_btw.gfeat/cope1.feat -stop
 job
-307573
+326921
 
-/usr/local/packages/fsl-5.0.8/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 307573  /usr/local/packages/fsl-5.0.8/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_group_btw.gfeat/cope1.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_group_btw.gfeat -stop
+/usr/local/packages/fsl-5.0.10/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 326921  /usr/local/packages/fsl-5.0.10/bin/feat /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_group_btw.gfeat/cope1.feat/design.fsf -D /storage/essicd/data/NIDM-Ex/BIDS_Data/RESULTS/TEST/nidmresults-examples/fsl_group_btw.gfeat -stop
 job
-307574
+326922
