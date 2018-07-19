@@ -325,7 +325,7 @@ niiri:coordinate_0004_6 a prov:Entity , prov:Location , nidm_Coordinate: ;
 
 niiri:COG_coordinate_0001 a prov:Entity , prov:Location , nidm_Coordinate: ;
 	rdfs:label "Coordinate 0001" ;
-	nidm_coordinateVector: "[-4.5, 28.7, 56.0]"^^xsd:string ;
+	nidm_coordinateVector: "[-4.55, 28.7, 56.0]"^^xsd:string ;
 	nidm_coordinateVectorInVoxels: "[ 32.3, 39.2, 31.0 ]"^^xsd:string .
 
 
